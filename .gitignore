@@ -13,4 +13,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+<<<<<<< HEAD
 *.idea
+=======
+.idea/
+>>>>>>> feature/splash

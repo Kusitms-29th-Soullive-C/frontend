@@ -2,12 +2,9 @@ package com.example.soullive
 
 import android.os.Bundle
 import android.view.View
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.soullive.databinding.ActivityMainBinding
 
@@ -28,8 +25,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hideBottomNavigationView(navController: NavController) {
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            binding.bnv.visibility = when (destination.id) {
+        navController.addOnDestinationChangedListener{ _, destination, _ ->
+            binding.bnv.visibility = when(destination.id){
+                R.id.splashFragment -> View.GONE
                 else -> View.VISIBLE
             }
         }
