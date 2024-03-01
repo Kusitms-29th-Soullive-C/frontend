@@ -11,4 +11,6 @@
     <color name="bg_bnv">#191919</color>
     <color name="primary_100">#DBA7FB</color>
     <color name="ic_unselect">#2E2E2E</color>
+    <color name="grey_150">#9F9F9F</color>
+    <color name="purple_400">#AF3BF7</color>
 </resources>
