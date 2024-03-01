@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_900"
-    tools:context=".ui.bookmark.BookmarkFragment">
+    tools:context=".ui.fitness.FitnessFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/bookmark_toolbar"
@@ -16,26 +16,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/iv_fitness_logo"
             android:src="@drawable/ic_logo_with_name" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/iv_fitness_search"
+            android:src="@drawable/ic_settings" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/iv_fitness_search"
+            android:src="@drawable/ic_search" />
 
     </com.google.android.material.appbar.MaterialToolbar>
 
-
-    <TextView
-        android:id="@+id/fitness"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fitness_btn"
+        android:layout_width="50dp"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:text="분석"
+        android:textColor="@color/grey_900"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

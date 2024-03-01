@@ -4,4 +4,12 @@
     <string name="title_fitness">적합도 분석</string>
     <string name="title_bookmark">찜한 모델</string>
     <string name="title_mypage">마이페이지</string>
+
+    <string name="iv_fitness_logo">적합도 분석 화면의 로고</string>
+    <string name="iv_fitness_search">적합도 분석 화면의 검색 아이콘</string>
+
+    <string name="fitness_title">AI 광고 모델 분석</string>
+    <string name="fitness_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
+    <string name="fitness_btn">시작하기</string>
+    <string name="iv_3d_logo">분석 시작 화면에서 소울라이브의 3d 로고 이미지</string>
 </resources>

@@ -13,15 +13,19 @@
 
     <fragment
         android:id="@+id/navigation_fitness"
-        android:name="com.example.soullive.ui.bookmark.BookmarkFragment"
+        android:name="com.example.soullive.ui.fitness.FitnessFragment"
         android:label="@string/title_fitness"
-        tools:layout="@layout/fragment_bookmark" />
+        tools:layout="@layout/fragment_fitness" >
+        <action
+            android:id="@+id/action_fitness_to_inputStart"
+            app:destination="@id/inputStartFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_bookmark"
-        android:name="com.example.soullive.ui.fitness.FitnessFragment"
+        android:name="com.example.soullive.ui.bookmark.BookmarkFragment"
         android:label="@string/title_bookmark"
-        tools:layout="@layout/fragment_fitness" />
+        tools:layout="@layout/fragment_bookmark" />
 
     <fragment
         android:id="@+id/navigation_mypage"
@@ -37,5 +41,9 @@
             android:id="@+id/action_splashFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
+    <fragment
+        android:id="@+id/inputStartFragment"
+        android:name="com.example.soullive.ui.input_start.InputStartFragment"
+        android:label="InputStartFragment" />
 
 </navigation>

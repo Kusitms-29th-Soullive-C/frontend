@@ -4,17 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.soullive.R
 import com.example.soullive.databinding.FragmentFitnessBinding
 
 class FitnessFragment : Fragment() {
 
     private var _binding: FragmentFitnessBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,17 +19,15 @@ class FitnessFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val fitnessViewModel =
-            ViewModelProvider(this).get(FitnessViewModel::class.java)
-
         _binding = FragmentFitnessBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.fitness
-        fitnessViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.fitnessBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_fitness_to_inputStart)
         }
-        return root
     }
 
     override fun onDestroyView() {
