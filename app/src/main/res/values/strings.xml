@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">soullive</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">홈</string>
+    <string name="title_fitness">적합도 분석</string>
+    <string name="title_bookmark">찜한 모델</string>
+    <string name="title_mypage">마이페이지</string>
 </resources>
