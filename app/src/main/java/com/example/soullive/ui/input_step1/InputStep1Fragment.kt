@@ -133,7 +133,7 @@ class InputStep1Fragment : Fragment() {
 
     private fun nextButton() {
         binding.btnStep1Next.setOnClickListener {
-            findNavController().navigate(R.id.action_inputStep1_to_inputStep3)
+            findNavController().navigate(R.id.action_inputStep1_to_inputStep2)
         }
     }
 

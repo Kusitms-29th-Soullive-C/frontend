@@ -8,7 +8,7 @@
     tools:context=".ui.fitness.FitnessFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/step1_toolbar"
+        android:id="@+id/step2_toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
         android:text="@string/cancel"
         android:textColor="@color/grey_150"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/step1_toolbar"
+        app:layout_constraintBottom_toBottomOf="@id/step2_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +36,7 @@
         android:max="400"
         android:progressBackgroundTint="@color/grey_700"
         android:progressTint="@color/purple_400"
-        app:layout_constraintTop_toBottomOf="@id/step1_toolbar" />
+        app:layout_constraintTop_toBottomOf="@id/step2_toolbar" />
 
     <TextView
         android:id="@+id/tv_step2_title1"
@@ -132,7 +132,7 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/pretendard_medium"
         android:gravity="right"
-        android:text="@string/복수_선택_가능"
+        android:text="@string/복수_입력_가능"
         android:textColor="@color/grey_150"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -51,7 +51,7 @@
     <string name="AI를_통해_전략에_적합한_모델을_분석_및_추천해드려요">AI를 통해 전략에 적합한 모델을 분석 및 추천해드려요.</string>
     <string name="전략방향">전략방향</string>
     <string name="키워드_입력">키워드 입력</string>
-    <string name="복수_선택_가능">복수 선택 가능</string>
+    <string name="복수_입력_가능">복수 입력 가능</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

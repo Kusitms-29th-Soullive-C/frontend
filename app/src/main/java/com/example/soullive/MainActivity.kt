@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.splashFragment -> View.GONE
                 R.id.inputStartFragment -> View.GONE
                 R.id.inputStep1Fragment -> View.GONE
+                R.id.inputStep2Fragment -> View.GONE
                 R.id.inputStep3Fragment -> View.GONE
                 else -> View.VISIBLE
             }
