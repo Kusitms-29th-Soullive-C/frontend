@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             binding.bnv.visibility = when(destination.id){
                 R.id.splashFragment -> View.GONE
                 R.id.inputStartFragment -> View.GONE
+                R.id.inputTargetFragment -> View.GONE
                 else -> View.VISIBLE
             }
         }
