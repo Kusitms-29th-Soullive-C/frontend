@@ -19,7 +19,26 @@
     <string name="input_search_script">입력받은 정보를 토대로 선택한 모델의 적합도를 판단해드려요.</string>
     <string name="input_search_subscript">복수 선택 가능</string>
     <string name="input_search_next">다음</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel">취소</string>
+
+    <string name="input_target_title1">목표하는</string>
+    <string name="input_target_title2">타겟</string>
+    <string name="input_target_title3">에 대해서 알려주세요</string>
+    <string name="input_target_script">타겟층에 대한 영향력을 분석해드릴게요.</string>
+    <string name="input_target_gender">성별</string>
+    <string name="input_target_multi_choice">복수 선택 가능</string>
+    <string name="target_gender_btn_man">남성</string>
+    <string name="target_gender_btn_woman">여성</string>
+    <string name="target_no_matter">상관없음</string>
+    <string name="input_target_age">연령</string>
+    <string name="target_age_btn_age0">10대 미만</string>
+    <string name="target_age_btn_age10">10대</string>
+    <string name="target_age_btn_age20">20대</string>
+    <string name="target_age_btn_age30">30대</string>
+    <string name="target_age_btn_age40">40대</string>
+    <string name="target_age_btn_age50">50대</string>
+    <string name="target_age_btn_age60">60대</string>
+    <string name="btn_next">다음</string>
 
 </resources>

@@ -41,9 +41,19 @@
             android:id="@+id/action_splashFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
+
     <fragment
         android:id="@+id/inputStartFragment"
         android:name="com.example.soullive.ui.input_start.InputStartFragment"
-        android:label="InputStartFragment" />
+        android:label="InputStartFragment" >
+        <action
+            android:id="@+id/action_inputStart_to_inputTarget"
+            app:destination="@id/inputTargetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputTargetFragment"
+        android:name="com.example.soullive.ui.input_target.InputTargetFragment"
+        android:label="InputTargetFragment" />
 
 </navigation>
