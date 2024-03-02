@@ -12,4 +12,25 @@
     <string name="fitness_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
     <string name="fitness_btn">시작하기</string>
     <string name="iv_3d_logo">분석 시작 화면에서 소울라이브의 3d 로고 이미지</string>
+
+    <string name="cancel">취소</string>
+
+    <string name="input_target_title1">목표하는</string>
+    <string name="input_target_title2">타겟</string>
+    <string name="input_target_title3">에 대해서 알려주세요</string>
+    <string name="input_target_script">타겟층에 대한 영향력을 분석해드릴게요.</string>
+    <string name="input_target_gender">성별</string>
+    <string name="input_target_multi_choice">복수 선택 가능</string>
+    <string name="target_gender_btn_man">남성</string>
+    <string name="target_gender_btn_woman">여성</string>
+    <string name="target_no_matter">상관없음</string>
+    <string name="input_target_age">연령</string>
+    <string name="target_age_btn_age0">10대 미만</string>
+    <string name="target_age_btn_age10">10대</string>
+    <string name="target_age_btn_age20">20대</string>
+    <string name="target_age_btn_age30">30대</string>
+    <string name="target_age_btn_age40">40대</string>
+    <string name="target_age_btn_age50">50대</string>
+    <string name="target_age_btn_age60">60대</string>
+    <string name="btn_next">다음</string>
 </resources>
