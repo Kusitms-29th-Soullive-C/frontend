@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.soullive.R
 import com.example.soullive.databinding.FragmentInputTargetBinding
 
 class InputTargetFragment : Fragment() {
@@ -99,6 +100,9 @@ class InputTargetFragment : Fragment() {
         val isAnyAgeSelected = listOf(binding.btnAge0, binding.btnAge10, binding.btnAge20, binding.btnAge30, binding.btnAge40, binding.btnAge50, binding.btnAge60, binding.btnAge).any { it.isSelected }
 
         binding.btnTargetNext.isEnabled = isAnyGenderSelected && isAnyAgeSelected
+        binding.btnTargetNext.setOnClickListener {
+            findNavController().navigate(R.id.action_inputTarget_to_inputSearch)
+        }
     }
 
     override fun onDestroyView() {

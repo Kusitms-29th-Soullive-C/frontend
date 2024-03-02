@@ -54,6 +54,15 @@
     <fragment
         android:id="@+id/inputTargetFragment"
         android:name="com.example.soullive.ui.input_target.InputTargetFragment"
-        android:label="InputTargetFragment" />
+        android:label="InputTargetFragment" >
+        <action
+            android:id="@+id/action_inputTarget_to_inputSearch"
+            app:destination="@id/inputSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputSearchFragment"
+        android:name="com.example.soullive.ui.input_search.InputSerachFragment"
+        android:label="InputSearchFragment" />
 
 </navigation>
