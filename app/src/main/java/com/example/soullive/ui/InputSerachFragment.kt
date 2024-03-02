@@ -28,7 +28,6 @@ class InputSerachFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setBackButton()
         animation()
-        // startButton()
     }
 
     private fun setBackButton() {
