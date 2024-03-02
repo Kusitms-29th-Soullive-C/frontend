@@ -33,6 +33,7 @@ class InputStep1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.btnStep1Next.isEnabled = false
         setBackButton()
         setProgressBar()
         binding.root.setOnClickListener {
