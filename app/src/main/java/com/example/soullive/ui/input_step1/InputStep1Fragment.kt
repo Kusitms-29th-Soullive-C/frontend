@@ -1,4 +1,4 @@
-package com.example.soullive.ui
+package com.example.soullive.ui.input_step1
 
 import android.content.Context
 import androidx.lifecycle.ViewModelProvider
@@ -16,6 +16,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.soullive.R
 import com.example.soullive.databinding.FragmentInputStep1Binding
 import com.example.soullive.databinding.FragmentInputStep3Binding
+import com.google.android.material.internal.ViewUtils.hideKeyboard
 
 class InputStep1Fragment : Fragment() {
 
@@ -36,6 +37,7 @@ class InputStep1Fragment : Fragment() {
         binding.btnStep1Next.isEnabled = false
         setBackButton()
         setProgressBar()
+        setupClickListeners()
         binding.root.setOnClickListener {
             hideKeyboard()
         }
@@ -43,6 +45,33 @@ class InputStep1Fragment : Fragment() {
         editTextChangedListener()
     }
 
+
+    private fun setupClickListeners(){
+        binding.etInput1.setOnFocusChangeListener { v, hasFocus ->
+            // 포커스가 주어졌을 때 동작
+            if (hasFocus) {
+                binding.input1.isPressed = true
+            } else {
+                binding.input1.isPressed = false
+            }
+        }
+        binding.etInput2.setOnFocusChangeListener { v, hasFocus ->
+            // 포커스가 주어졌을 때 동작
+            if (hasFocus) {
+                binding.input2.isPressed = true
+            } else {
+                binding.input2.isPressed = false
+            }
+        }
+        binding.etInput3.setOnFocusChangeListener { v, hasFocus ->
+            // 포커스가 주어졌을 때 동작
+            if (hasFocus) {
+                binding.input3.isPressed = true
+            } else {
+                binding.input3.isPressed = false
+            }
+        }
+    }
     private fun setBackButton() {
         binding.step1Toolbar.setNavigationOnClickListener {
             val navController = findNavController()

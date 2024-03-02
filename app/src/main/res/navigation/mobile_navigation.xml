@@ -57,7 +57,7 @@
         android:label="InputStep3Fragment" />
     <fragment
         android:id="@+id/inputStep1Fragment"
-        android:name="com.example.soullive.ui.InputStep1Fragment"
+        android:name="com.example.soullive.ui.input_step1.InputStep1Fragment"
         android:label="InputStep1Fragment" >
         <action
             android:id="@+id/action_inputStep1_to_inputStep3"
