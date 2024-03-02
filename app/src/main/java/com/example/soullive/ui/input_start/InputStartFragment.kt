@@ -28,7 +28,7 @@ class InputStartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setBackButton()
         animation()
-       // startButton()
+        startButton()
     }
 
     private fun setBackButton() {
@@ -46,7 +46,7 @@ class InputStartFragment : Fragment() {
 
     private fun startButton(){
         binding.btnStart.setOnClickListener {
-           // findNavController().navigate(R.id.)
+           findNavController().navigate(R.id.action_inputStart_to_inputTarget)
         }
     }
 
