@@ -33,4 +33,16 @@
     <string name="target_age_btn_age50">50대</string>
     <string name="target_age_btn_age60">60대</string>
     <string name="btn_next">다음</string>
+
+    <string name="광고하고자_하는">광고하고자 하는</string>
+    <string name="제품">제품</string>
+    <string name="에_대해_알려주세요">에 대해 알려주세요</string>
+    <string name="기업_브랜드_제품_이미지에_적합한_광고_모델을_선별해_드려요">기업, 브랜드, 제품 이미지에 적합한\n광고 모델을 선별해 드려요.</string>
+    <string name="기업">기업</string>
+    <string name="기업명_입력">기업명 입력</string>
+    <string name="next_btn">다음</string>
+    <string name="브랜드">브랜드</string>
+    <string name="브랜드명_입력">브랜드명 입력</string>
+    <string name="상품">상품</string>
+    <string name="상품명_입력">상품명 입력</string>
 </resources>

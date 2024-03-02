@@ -47,13 +47,21 @@
         android:name="com.example.soullive.ui.input_start.InputStartFragment"
         android:label="InputStartFragment" >
         <action
-            android:id="@+id/action_inputStart_to_inputTarget"
-            app:destination="@id/inputStep3Fragment" />
+            android:id="@+id/action_inputStart_to_inputStep1"
+            app:destination="@id/inputStep1Fragment" />
     </fragment>
 
     <fragment
         android:id="@+id/inputStep3Fragment"
         android:name="com.example.soullive.ui.input_step3.InputStep3Fragment"
         android:label="InputStep3Fragment" />
+    <fragment
+        android:id="@+id/inputStep1Fragment"
+        android:name="com.example.soullive.ui.InputStep1Fragment"
+        android:label="InputStep1Fragment" >
+        <action
+            android:id="@+id/action_inputStep1Fragment_to_inputStep3Fragment"
+            app:destination="@id/inputStep3Fragment" />
+    </fragment>
 
 </navigation>
