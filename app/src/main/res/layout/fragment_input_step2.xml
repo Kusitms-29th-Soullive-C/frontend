@@ -39,54 +39,54 @@
         app:layout_constraintTop_toBottomOf="@id/step1_toolbar" />
 
     <TextView
-        android:id="@+id/tv_step1_title1"
+        android:id="@+id/tv_step2_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/pretendard_bold"
-        android:text="@string/광고하고자_하는"
+        android:text="@string/전략에_대한"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/progress_horizontal" />
 
     <TextView
-        android:id="@+id/tv_step1_title2"
+        android:id="@+id/tv_step2_title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/pretendard_bold"
-        android:text="@string/제품"
+        android:text="@string/세부정보"
         android:textColor="@color/purple_400"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_step1_title1" />
+        app:layout_constraintTop_toBottomOf="@id/tv_step2_title1" />
 
     <TextView
-        android:id="@+id/tv_step1_title3"
+        android:id="@+id/tv_step3_title3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/pretendard_bold"
-        android:text="@string/에_대해_알려주세요"
+        android:text="@string/를_제공해_주세요"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@id/tv_step1_title2"
-        app:layout_constraintTop_toBottomOf="@id/tv_step1_title1" />
+        app:layout_constraintStart_toEndOf="@id/tv_step2_title2"
+        app:layout_constraintTop_toBottomOf="@id/tv_step2_title1" />
 
     <TextView
-        android:id="@+id/tv_step1_script"
+        android:id="@+id/tv_step2_script"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/pretendard_medium"
-        android:text="@string/기업_브랜드_제품_이미지에_적합한_광고_모델을_선별해_드려요"
+        android:text="@string/AI를_통해_전략에_적합한_모델을_분석_및_추천해드려요"
         android:textColor="@color/grey_150"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_step1_title2" />
+        app:layout_constraintTop_toBottomOf="@id/tv_step2_title2" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -100,13 +100,13 @@
         android:paddingVertical="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_step1_script">
+        app:layout_constraintTop_toBottomOf="@id/tv_step2_script">
 
         <TextView
             android:id="@+id/tv_input1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/기업"
+            android:text="@string/전략방향"
             android:textColor="@color/grey_150"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -116,82 +116,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:hint="@string/기업명_입력"
+            android:hint="@string/키워드_입력"
             android:inputType="text"
             android:theme="@style/EditTextDefault"
             app:layout_constraintTop_toBottomOf="@id/tv_input1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/input2"
+    <TextView
+        android:id="@+id/tv_step2_script2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_btn_input_selector"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:gravity="right"
+        android:text="@string/복수_선택_가능"
+        android:textColor="@color/grey_150"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input1">
-
-        <TextView
-            android:id="@+id/tv_input2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/브랜드"
-            android:textColor="@color/grey_150"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/et_input2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="@string/브랜드명_입력"
-            android:inputType="text"
-            android:theme="@style/EditTextDefault"
-            app:layout_constraintTop_toBottomOf="@id/tv_input2" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/input3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_btn_input_selector"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input2">
-
-        <TextView
-            android:id="@+id/tv_input3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/상품"
-            android:textColor="@color/grey_150"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/et_input3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="@string/상품명_입력"
-            android:inputType="text"
-            android:theme="@style/EditTextDefault"
-            app:layout_constraintTop_toBottomOf="@id/tv_input3" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        app:layout_constraintTop_toBottomOf="@id/input1" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_step1_next"
+        android:id="@+id/btn_step2_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"

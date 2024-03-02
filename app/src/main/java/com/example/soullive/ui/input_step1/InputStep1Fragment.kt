@@ -46,7 +46,7 @@ class InputStep1Fragment : Fragment() {
     }
 
 
-    private fun setupClickListeners(){
+    private fun setupClickListeners() {
         binding.etInput1.setOnFocusChangeListener { v, hasFocus ->
             // 포커스가 주어졌을 때 동작
             if (hasFocus) {
@@ -72,6 +72,7 @@ class InputStep1Fragment : Fragment() {
             }
         }
     }
+
     private fun setBackButton() {
         binding.step1Toolbar.setNavigationOnClickListener {
             val navController = findNavController()
