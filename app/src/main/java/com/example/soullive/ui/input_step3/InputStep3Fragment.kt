@@ -1,4 +1,4 @@
-package com.example.soullive.ui.input_target
+package com.example.soullive.ui.input_step3
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,18 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.soullive.databinding.FragmentInputTargetBinding
+import com.example.soullive.databinding.FragmentInputStep3Binding
 
-class InputTargetFragment : Fragment() {
+class InputStep3Fragment : Fragment() {
 
-    private var _binding: FragmentInputTargetBinding? = null
+    private var _binding: FragmentInputStep3Binding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentInputTargetBinding.inflate(inflater, container, false)
+        _binding = FragmentInputStep3Binding.inflate(inflater, container, false)
         return binding.root
     }
 
