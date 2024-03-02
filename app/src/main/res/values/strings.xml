@@ -12,4 +12,14 @@
     <string name="fitness_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
     <string name="fitness_btn">시작하기</string>
     <string name="iv_3d_logo">분석 시작 화면에서 소울라이브의 3d 로고 이미지</string>
+
+    <string name="input_search_title">관심있는</string>
+    <string name="input_search_model">모델</string>
+    <string name="input_search_title2">에 대해 알려주세요</string>
+    <string name="input_search_script">입력받은 정보를 토대로 선택한 모델의 적합도를 판단해드려요.</string>
+    <string name="input_search_subscript">복수 선택 가능</string>
+    <string name="input_search_next">다음</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
