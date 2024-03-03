@@ -8,13 +8,44 @@
     <string name="iv_fitness_logo">적합도 분석 화면의 로고</string>
     <string name="iv_fitness_search">적합도 분석 화면의 검색 아이콘</string>
 
+    <!--input start-->
     <string name="fitness_title">AI 광고 모델 분석</string>
     <string name="fitness_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
     <string name="fitness_btn">시작하기</string>
     <string name="iv_3d_logo">분석 시작 화면에서 소울라이브의 3d 로고 이미지</string>
 
+    <!--input start-->
+    <string name="input_search_title">관심있는</string>
+    <string name="input_search_model">모델</string>
+    <string name="input_search_title2">에 대해 알려주세요</string>
+    <string name="input_search_script">입력받은 정보를 토대로</string>
+    <string name="input_search_script2">선택한 모델의 적합도를 판단해드려요.</string>
+    <string name="input_search_subscript">복수 선택 가능</string>
+    <string name="input_search_placeholder">모델명 입력</string>
+    <string name="input_search_selected_model">선택한 모델</string>
     <string name="cancel">취소</string>
 
+    <!--input step1,2-->
+    <string name="광고하고자_하는">광고하고자 하는</string>
+    <string name="제품">제품</string>
+    <string name="에_대해_알려주세요">에 대해 알려주세요</string>
+    <string name="기업_브랜드_제품_이미지에_적합한_광고_모델을_선별해_드려요">기업, 브랜드, 제품 이미지에 적합한\n광고 모델을 선별해 드려요.</string>
+    <string name="기업">기업</string>
+    <string name="기업명_입력">기업명 입력</string>
+    <string name="next_btn">다음</string>
+    <string name="브랜드">브랜드</string>
+    <string name="브랜드명_입력">브랜드명 입력</string>
+    <string name="상품">상품</string>
+    <string name="상품명_입력">상품명 입력</string>
+    <string name="전략에_대한">전략에 대한</string>
+    <string name="세부정보">세부정보</string>
+    <string name="를_제공해_주세요">를 제공해 주세요</string>
+    <string name="AI를_통해_전략에_적합한_모델을_분석_및_추천해드려요">AI를 통해 전략에 적합한 모델을 분석 및 추천해드려요.</string>
+    <string name="전략방향">전략방향</string>
+    <string name="키워드_입력">키워드 입력</string>
+    <string name="복수_입력_가능">복수 입력 가능</string>
+
+    <!--input step3-->
     <string name="input_target_title1">목표하는</string>
     <string name="input_target_title2">타겟</string>
     <string name="input_target_title3">에 대해서 알려주세요</string>
@@ -34,24 +65,16 @@
     <string name="target_age_btn_age60">60대</string>
     <string name="btn_next">다음</string>
 
-    <string name="광고하고자_하는">광고하고자 하는</string>
-    <string name="제품">제품</string>
-    <string name="에_대해_알려주세요">에 대해 알려주세요</string>
-    <string name="기업_브랜드_제품_이미지에_적합한_광고_모델을_선별해_드려요">기업, 브랜드, 제품 이미지에 적합한\n광고 모델을 선별해 드려요.</string>
-    <string name="기업">기업</string>
-    <string name="기업명_입력">기업명 입력</string>
-    <string name="next_btn">다음</string>
-    <string name="브랜드">브랜드</string>
-    <string name="브랜드명_입력">브랜드명 입력</string>
-    <string name="상품">상품</string>
-    <string name="상품명_입력">상품명 입력</string>
-    <string name="전략에_대한">전략에 대한</string>
-    <string name="세부정보">세부정보</string>
-    <string name="를_제공해_주세요">를 제공해 주세요</string>
-    <string name="AI를_통해_전략에_적합한_모델을_분석_및_추천해드려요">AI를 통해 전략에 적합한 모델을 분석 및 추천해드려요.</string>
-    <string name="전략방향">전략방향</string>
-    <string name="키워드_입력">키워드 입력</string>
-    <string name="복수_입력_가능">복수 입력 가능</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--input step5-->
+    <string name="input_step5_title1">입력하신 정보를 바탕으로</string>
+    <string name="input_step5_title2">모델의</string>
+    <string name="input_step5_title3">적합도를</string>
+    <string name="input_step5_title4">분석중입니다.</string>
+    <string name="input_step5_btn">확인하기</string>
+    <string name ="iv_loading">분석화면의 로딩 이미지</string>
+    <string name="input_step5_analyze">기업 및 제품 정보를 분석하고 있어요...</string>
+    <string name="input_step5_waiting">조금만 기다려 주세요.</string>
+    <string name="new_analyze_text">분석이 완료되었어요!</string>
+    <string name="new_waiting_text">버튼을 눌러 분석 결과를 확인해주세요.</string>
+
 </resources>

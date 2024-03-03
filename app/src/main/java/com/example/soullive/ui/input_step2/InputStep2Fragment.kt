@@ -12,7 +12,6 @@ import android.view.inputmethod.InputMethodManager
 import androidx.navigation.fragment.findNavController
 import com.example.soullive.R
 import com.example.soullive.databinding.FragmentInputStep2Binding
-import com.google.android.material.internal.ViewUtils.hideKeyboard
 
 data class KeywordModel(
     val keyword: String,
@@ -37,10 +36,10 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         _binding = FragmentInputStep2Binding.inflate(inflater, container, false)
         return binding.root
     }
@@ -48,15 +47,15 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setBackButton()
-        checkNextButtonState()
         setProgressBar()
+        setCancleButton()
+        checkNextButtonState()
         setupClickListeners()
         binding.recyclerView.adapter = KeywordAdapter(KeywordModel.KeywordList, this)
         binding.root.setOnClickListener {
             hideKeyboard()
         }
     }
-
 
     private fun setBackButton() {
         binding.step2Toolbar.setNavigationOnClickListener {
@@ -69,9 +68,21 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
         binding.progressHorizontal.progress = 100
     }
 
+    private fun setCancleButton() {
+        binding.step2Cancle.setOnClickListener {
+            findNavController().navigate(R.id.action_inputStep2_to_navigation_home)
+        }
+    }
+    private fun checkNextButtonState() {
+        if (KeywordModel.KeywordList.isEmpty()) {
+            binding.btnStep2Next.isEnabled = false
+        } else {
+            binding.btnStep2Next.isEnabled = true
+        }
+    }
+
     private fun setupClickListeners() {
         binding.etInput1.setOnFocusChangeListener { v, hasFocus ->
-            // 포커스가 주어졌을 때 동작
             if (hasFocus) {
                 binding.input1.isPressed = true
             } else {
@@ -107,14 +118,6 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
                 requireActivity().currentFocus?.windowToken,
                 InputMethodManager.HIDE_NOT_ALWAYS
             )
-        }
-    }
-
-    private fun checkNextButtonState() {
-        if (KeywordModel.KeywordList.isEmpty()) {
-            binding.btnStep2Next.isEnabled = false
-        } else {
-            binding.btnStep2Next.isEnabled = true
         }
     }
 
