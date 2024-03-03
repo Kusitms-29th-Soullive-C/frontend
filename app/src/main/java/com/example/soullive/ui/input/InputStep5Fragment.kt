@@ -48,7 +48,7 @@ class InputStep5Fragment : Fragment() {
 
     private fun setCancleButton() {
         binding.inputStep5Cancle.setOnClickListener {
-            findNavController().navigate(R.id.action_inputStep5Fragment_to_navigation_home)
+            findNavController().navigate(R.id.action_inputStep5_to_navigation_home)
         }
     }
 

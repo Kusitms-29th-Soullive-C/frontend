@@ -40,7 +40,7 @@ class InputStep3Fragment : Fragment() {
 
     private fun setCancleButton() {
         binding.targetCancle.setOnClickListener {
-            findNavController().navigate(R.id.action_inputStep3Fragment_to_navigation_home)
+            findNavController().navigate(R.id.action_inputStep3_to_navigation_home)
         }
     }
 
@@ -98,13 +98,15 @@ class InputStep3Fragment : Fragment() {
         val isAnyAgeSelected = listOf(binding.btnAge0, binding.btnAge10, binding.btnAge20, binding.btnAge30, binding.btnAge40, binding.btnAge50, binding.btnAge60, binding.btnAge).any { it.isSelected }
 
         binding.btnTargetNext.isEnabled = isAnyGenderSelected && isAnyAgeSelected
-        if (binding.btnTargetNext.isEnabled)
-            nextButton()
+        binding.btnTargetNext.setOnClickListener {
+            if (binding.btnTargetNext.isEnabled)
+                nextButton()
+        }
     }
 
     private fun nextButton() {
         binding.btnTargetNext.setOnClickListener {
-            findNavController().navigate(R.id.action_inputStep3Fragment_to_inputStep5Fragment)
+            findNavController().navigate(R.id.action_inputStep3_to_inputStep4)
         }
     }
 

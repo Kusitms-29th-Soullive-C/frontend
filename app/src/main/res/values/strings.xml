@@ -13,6 +13,15 @@
     <string name="fitness_btn">시작하기</string>
     <string name="iv_3d_logo">분석 시작 화면에서 소울라이브의 3d 로고 이미지</string>
 
+    <string name="input_search_title">관심있는</string>
+    <string name="input_search_model">모델</string>
+    <string name="input_search_title2">에 대해 알려주세요</string>
+    <string name="input_search_script">입력받은 정보를 토대로</string>
+    <string name="input_search_script2">선택한 모델의 적합도를 판단해드려요.</string>
+    <string name="input_search_subscript">복수 선택 가능</string>
+    <string name="input_search_placeholder">모델명 입력</string>
+    <string name="input_search_selected_model">선택한 모델</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cancel">취소</string>
 
     <string name="input_target_title1">목표하는</string>

@@ -44,7 +44,7 @@ class InputStartFragment : Fragment() {
 
     private fun startButton(){
         binding.btnStart.setOnClickListener {
-           findNavController().navigate(R.id.action_inputStartFragment_to_inputStep3Fragment)
+           findNavController().navigate(R.id.action_inputStart_to_inputStep3)
         }
     }
 

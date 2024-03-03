@@ -38,7 +38,7 @@
         android:name="com.example.soullive.ui.input.InputStartFragment"
         android:label="InputStartFragment" >
         <action
-            android:id="@+id/action_inputStartFragment_to_inputStep3Fragment"
+            android:id="@+id/action_inputStart_to_inputStep3"
             app:destination="@id/inputStep3Fragment" />
     </fragment>
 
@@ -47,13 +47,27 @@
         android:name="com.example.soullive.ui.input.InputStep3Fragment"
         android:label="InputStep3Fragment" >
         <action
-            android:id="@+id/action_inputStep3Fragment_to_navigation_home"
+            android:id="@+id/action_inputStep3_to_navigation_home"
             app:destination="@id/navigation_home"
             app:popUpTo="@id/navigation_home"
             app:popUpToInclusive="true"/>
         <action
-            android:id="@+id/action_inputStep3Fragment_to_inputStep5Fragment"
+            android:id="@+id/action_inputStep3_to_inputStep4"
+            app:destination="@id/inputStep4Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputStep4Fragment"
+        android:name="com.example.soullive.ui.input_search.InputStep4Fragment"
+        android:label="InputStep4Fragment" >
+        <action
+            android:id="@+id/action_inputStep4_to_inputStep5"
             app:destination="@id/inputStep5Fragment" />
+        <action
+            android:id="@+id/action_inputStep4_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -61,7 +75,7 @@
         android:name="com.example.soullive.ui.input.InputStep5Fragment"
         android:label="InputStep5Fragment" >
         <action
-            android:id="@+id/action_inputStep5Fragment_to_navigation_home"
+            android:id="@+id/action_inputStep5_to_navigation_home"
             app:destination="@id/navigation_home"
             app:popUpTo="@id/navigation_home"
             app:popUpToInclusive="true"/>
