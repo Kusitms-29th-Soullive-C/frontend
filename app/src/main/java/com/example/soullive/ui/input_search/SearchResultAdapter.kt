@@ -31,6 +31,7 @@ class SearchResultAdapter(private val onItemClicked: (Map<String, Any>, Boolean)
         holder.textView.text = itemName
         holder.textJobView.text = jobName
 
+
         holder.itemView.isSelected = selectedItems.any { it["이름"] == itemName }
 
         holder.itemView.setOnClickListener {
