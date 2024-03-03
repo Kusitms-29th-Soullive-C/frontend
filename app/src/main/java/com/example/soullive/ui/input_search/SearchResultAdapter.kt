@@ -5,20 +5,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
 
-//class SearchResultAdapter : RecyclerView.Adapter<SearchResultAdapter.ViewHolder>() {
-class SearchResultAdapter(private val onItemClicked: (String, Boolean) -> Unit) : RecyclerView.Adapter<SearchResultAdapter.ViewHolder>() {
-    private var items: List<String> = emptyList()
-    private var selectedItems: MutableList<String> = mutableListOf()
+class SearchResultAdapter(private val onItemClicked: (Map<String, Any>, Boolean) -> Unit) : RecyclerView.Adapter<SearchResultAdapter.ViewHolder>() {
+    private var items: List<Map<String, Any>> = emptyList()
+    private var selectedItems: MutableList<Map<String, Any>> = mutableListOf()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.findViewById(R.id.text_view_result)
+        val textView: TextView = view.findViewById(R.id.search_selected_name)
+        val textJobView : TextView = view.findViewById(R.id.search_view_result_job)
     }
 
-    fun setData(newData: List<String>) {
+    fun setData(newData: List<Map<String, Any>>) {
         items = newData
         notifyDataSetChanged()
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_search_result, parent, false)
@@ -27,20 +26,24 @@ class SearchResultAdapter(private val onItemClicked: (String, Boolean) -> Unit) 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        holder.textView.text = item
-        holder.itemView.isSelected = selectedItems.contains(item)
+        val itemName = item["이름"] as? String ?: ""
+        val jobName = item["직업"] as? String ?: ""
+        holder.textView.text = itemName
+        holder.textJobView.text = jobName
+
+        holder.itemView.isSelected = selectedItems.any { it["이름"] == itemName }
 
         holder.itemView.setOnClickListener {
-            if(selectedItems.contains(item)) {
-                selectedItems.remove(item)
+            val isSelected = selectedItems.any { it["이름"] == itemName }
+            if(isSelected) {
+                selectedItems.removeAll { it["이름"] == itemName }
                 onItemClicked(item, false)
             } else {
                 selectedItems.add(item)
-               onItemClicked(item, true)
+                onItemClicked(item, true)
             }
             notifyItemChanged(position)
         }
-
     }
 
     override fun getItemCount(): Int = items.size

@@ -22,15 +22,44 @@ class InputSerachFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    private val dummyData = listOf(
-        "잇섭",
-        "이선빈",
-        "이수현",
-        "고윤정",
-        "고윤아",
-        "고준희",
-        "고말숙"
+    val dummyData = listOf(
+        mapOf(
+            "이름" to "잇섭",
+            "직업" to "기술 리뷰어",
+            "키워드" to listOf("정보통", "매력있는", "신뢰도 높은")
+        ),
+        mapOf(
+            "이름" to "이선빈",
+            "직업" to "배우",
+            "키워드" to listOf("다재다능한", "매력적인", "예술적인")
+        ),
+        mapOf(
+            "이름" to "이수현",
+            "직업" to "가수",
+            "키워드" to listOf("감성적인", "매력있는", "독특한 목소리")
+        ),
+        mapOf(
+            "이름" to "고윤정",
+            "직업" to "모델",
+            "키워드" to listOf("스타일리시한", "매력적인", "패션 센스")
+        ),
+        mapOf(
+            "이름" to "고윤아",
+            "직업" to "프로그래머",
+            "키워드" to listOf("혁신적인", "지적인", "문제 해결사")
+        ),
+        mapOf(
+            "이름" to "고준희",
+            "직업" to "디자이너",
+            "키워드" to listOf("창의적인", "예술적인", "세심한 주의")
+        ),
+        mapOf(
+            "이름" to "고말숙",
+            "직업" to "작가",
+            "키워드" to listOf("상상력 풍부한", "문학적인", "섬세한 표현력")
+        )
     )
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -116,11 +145,11 @@ class InputSerachFragment : Fragment() {
 
 
     private fun filterData(text: String) {
-        val filteredList = dummyData.filter { it.contains(text, ignoreCase = true) }
+        val filteredList = dummyData.filter {
+            (it["이름"] as? String)?.contains(text, ignoreCase = true) ?: false
+        }
         searchResultAdapter.setData(filteredList)
     }
-
-
     private fun setBackButton() {
         binding.inputSearchToolbar.setNavigationOnClickListener {
             val navController = findNavController()

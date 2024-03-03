@@ -15,6 +15,7 @@
     <color name="grey_300">#585858</color>
     <color name="grey_700">#212121</color>
     <color name="purple_400">#AF3BF7</color>
+    <color name="purple_600">#802BB4</color>
     <color name="purple_800">#2C0F3E</color>
     <color name="purple_900">#13061B</color>
 </resources>
