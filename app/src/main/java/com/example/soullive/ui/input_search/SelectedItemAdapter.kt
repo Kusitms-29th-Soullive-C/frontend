@@ -2,6 +2,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.TextView
@@ -16,7 +17,7 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
         val textView: TextView = view.findViewById(R.id.search_view_selected_item)
         val textViewjob : TextView = view.findViewById(R.id.search_view_selected_job)
         val keywordsContainer : LinearLayout = view.findViewById(R.id.keywords_container)
-
+        val imageView: ImageView = view.findViewById(R.id.search_selected_imageView)
     }
 
     fun addItem(item: Map<String, Any>) {
@@ -46,6 +47,7 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
         val item = items[position]
         holder.textView.text = item["이름"] as? String
         holder.textViewjob.text = item["직업"] as? String
+
         val keywords = item["키워드"] as? List<String> ?: emptyList()
 
         holder.keywordsContainer.removeAllViews()
@@ -54,6 +56,17 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
             val keywordView = LayoutInflater.from(holder.itemView.context).inflate(R.layout.item_search_keywords, holder.keywordsContainer, false) as TextView
             keywordView.text = keyword
             holder.keywordsContainer.addView(keywordView)
+        }
+
+        val imageResId = item["이미지"] as? Int
+        if (imageResId != null) {
+            holder.imageView.setImageResource(imageResId)
+        }
+
+
+        holder.itemView.setOnClickListener {
+            onItemClicked(item, false)
+            notifyDataSetChanged()
         }
 
 

@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.soullive.databinding.FragmentInputSerachBinding
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.soullive.R
 
 
 class InputSerachFragment : Fragment() {
@@ -41,7 +42,8 @@ class InputSerachFragment : Fragment() {
         mapOf(
             "이름" to "고윤정",
             "직업" to "모델",
-            "키워드" to listOf("스타일리시한", "매력적인", "패션 센스")
+            "키워드" to listOf("스타일리시한", "매력적인", "패션 센스"),
+            "이미지" to R.drawable.ic_search_1
         ),
         mapOf(
             "이름" to "고윤아",
