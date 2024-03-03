@@ -11,7 +11,7 @@ class SearchResultAdapter(private val onItemClicked: (Map<String, Any>, Boolean)
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.search_selected_name)
-        val textJobView : TextView = view.findViewById(R.id.search_view_result_job)
+        val textJobView: TextView = view.findViewById(R.id.search_selected_job)
     }
 
     fun setData(newData: List<Map<String, Any>>) {

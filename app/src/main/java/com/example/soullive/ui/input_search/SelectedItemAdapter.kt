@@ -10,8 +10,10 @@ class SelectedItemsAdapter : RecyclerView.Adapter<SelectedItemsAdapter.ViewHolde
     private var items: MutableList<Map<String, Any>> = mutableListOf()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
         val textView: TextView = view.findViewById(R.id.search_view_selected_item)
-        val textViewjob: TextView = view.findViewById(R.id.search_selected_job)
+        val textViewjob : TextView = view.findViewById(R.id.search_view_result_job)
+
     }
 
     fun addItem(item: Map<String, Any>) {

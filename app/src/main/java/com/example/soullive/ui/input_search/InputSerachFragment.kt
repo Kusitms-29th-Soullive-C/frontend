@@ -103,6 +103,7 @@ class InputSerachFragment : Fragment() {
     }
 
     private fun setupSearchView() {
+        binding.inputSearchResult.visibility = View.GONE
         binding.inputSearchField.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -115,9 +116,11 @@ class InputSerachFragment : Fragment() {
             override fun afterTextChanged(s: Editable?) {
                 if (s.isNullOrEmpty()) {
                     binding.inputSearchResult.visibility = View.GONE
+                    binding.btnSearchNext.visibility = View.GONE
                 } else {
                     filterData(s.toString())
                     binding.inputSearchResult.visibility = View.VISIBLE
+                    binding.btnSearchNext.visibility = View.VISIBLE
                 }
             }
         })
