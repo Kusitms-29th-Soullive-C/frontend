@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
 
-class SelectedItemsAdapter : RecyclerView.Adapter<SelectedItemsAdapter.ViewHolder>() {
+class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean) -> Unit) : RecyclerView.Adapter<SelectedItemsAdapter.ViewHolder>() {
     private var items: MutableList<Map<String, Any>> = mutableListOf()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -43,6 +43,11 @@ class SelectedItemsAdapter : RecyclerView.Adapter<SelectedItemsAdapter.ViewHolde
         val item = items[position]
         holder.textView.text = item["이름"] as? String
         holder.textViewjob.text = item["직업"] as? String
+
+        holder.itemView.setOnClickListener {
+            onItemClicked(item, false)
+            notifyDataSetChanged()
+        }
     }
 
     override fun getItemCount(): Int = items.size

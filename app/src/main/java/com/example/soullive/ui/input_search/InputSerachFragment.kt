@@ -25,7 +25,7 @@ class InputSerachFragment : Fragment() {
     val dummyData = listOf(
         mapOf(
             "이름" to "잇섭",
-            "직업" to "기술 리뷰어",
+            "직업" to "유튜버",
             "키워드" to listOf("정보통", "매력있는", "신뢰도 높은")
         ),
         mapOf(
@@ -72,6 +72,8 @@ class InputSerachFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.inputSearchSelectedModel.visibility = View.GONE
+        binding.inputSearchSelectedCount.visibility = View.GONE
         setBackButton()
         setProgressBar()
         setupSearchView()
@@ -80,14 +82,28 @@ class InputSerachFragment : Fragment() {
     }
 
 
+    private fun updateSelectedItemCount() {
+        val itemCount = selectedItemsAdapter.itemCount
+        val text = "$itemCount/5"
+        binding.inputSearchSelectedCount.text = text
+    }
 
     private fun setupRecyclerView() {
         searchResultAdapter = SearchResultAdapter { item, isSelected ->
-            if (isSelected) {
+            if (isSelected && selectedItemsAdapter.itemCount < 5) {
                 selectedItemsAdapter.addItem(item)
-            } else {
+            } else if (!isSelected) {
                 selectedItemsAdapter.removeItem(item)
             }
+
+            if (selectedItemsAdapter.itemCount > 0) {
+               binding.inputSearchSelectedModel.visibility = View.VISIBLE
+                binding.inputSearchSelectedCount.visibility = View.VISIBLE
+            } else {
+                binding.inputSearchSelectedModel.visibility = View.GONE
+                binding.inputSearchSelectedCount.visibility = View.GONE
+            }
+            updateSelectedItemCount()
         }
 
         binding.inputSearchResult.apply {
@@ -95,7 +111,20 @@ class InputSerachFragment : Fragment() {
             adapter = searchResultAdapter
         }
 
-        selectedItemsAdapter = SelectedItemsAdapter()
+        selectedItemsAdapter = SelectedItemsAdapter { item, isSelected ->
+            if (isSelected && selectedItemsAdapter.itemCount < 5) {
+            } else if (!isSelected) {
+                selectedItemsAdapter.removeItem(item)
+            }
+            if (selectedItemsAdapter.itemCount > 0) {
+                binding.inputSearchSelectedModel.visibility = View.VISIBLE
+                binding.inputSearchSelectedCount.visibility = View.VISIBLE
+            } else {
+                binding.inputSearchSelectedModel.visibility = View.GONE
+                binding.inputSearchSelectedCount.visibility = View.GONE
+            }
+            updateSelectedItemCount()
+        }
         binding.inputSearchSelectedItems.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = selectedItemsAdapter
