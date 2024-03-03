@@ -15,7 +15,6 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-
 class InputStep5Fragment : Fragment() {
     private var _binding: FragmentInputStep5Binding? = null
     private val binding get() = _binding!!
@@ -57,7 +56,6 @@ class InputStep5Fragment : Fragment() {
     }
 
     private fun setImgLoading() {
-        // GIF 로드
         Glide.with(this)
             .asGif()
             .load(R.raw.ic_loading)

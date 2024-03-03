@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{ _, destination, _ ->
             binding.bnv.visibility = when(destination.id){
                 R.id.inputStartFragment -> View.GONE
+                R.id.inputStep1Fragment -> View.GONE
+                R.id.inputStep2Fragment -> View.GONE
                 R.id.inputStep3Fragment -> View.GONE
                 R.id.inputStep4Fragment -> View.GONE
                 R.id.inputStep5Fragment -> View.GONE

@@ -15,7 +15,7 @@
         android:id="@+id/navigation_fitness"
         android:name="com.example.soullive.ui.fitness.FitnessFragment"
         android:label="@string/title_fitness"
-        tools:layout="@layout/fragment_fitness" >
+        tools:layout="@layout/fragment_fitness">
         <action
             android:id="@+id/action_fitness_to_inputStart"
             app:destination="@id/inputStartFragment" />
@@ -36,30 +36,58 @@
     <fragment
         android:id="@+id/inputStartFragment"
         android:name="com.example.soullive.ui.input.InputStartFragment"
-        android:label="InputStartFragment" >
+        android:label="InputStartFragment">
         <action
-            android:id="@+id/action_inputStart_to_inputStep3"
+            android:id="@+id/action_inputStart_to_inputStep1"
+            app:destination="@id/inputStep1Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputStep1Fragment"
+        android:name="com.example.soullive.ui.input.InputStep1Fragment"
+        android:label="InputStep1Fragment">
+        <action
+            android:id="@+id/action_inputStep1_to_inputStep2"
+            app:destination="@id/inputStep2Fragment" />
+        <action
+            android:id="@+id/action_inputStep1_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputStep2Fragment"
+        android:name="com.example.soullive.ui.input_step2.InputStep2Fragment"
+        android:label="InputStep2Fragment">
+        <action
+            android:id="@+id/action_inputStep2_to_inputStep3"
             app:destination="@id/inputStep3Fragment" />
+        <action
+            android:id="@+id/action_inputStep2_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
         android:id="@+id/inputStep3Fragment"
         android:name="com.example.soullive.ui.input.InputStep3Fragment"
-        android:label="InputStep3Fragment" >
+        android:label="InputStep3Fragment">
+        <action
+            android:id="@+id/action_inputStep3_to_inputStep4"
+            app:destination="@id/inputStep4Fragment" />
         <action
             android:id="@+id/action_inputStep3_to_navigation_home"
             app:destination="@id/navigation_home"
             app:popUpTo="@id/navigation_home"
-            app:popUpToInclusive="true"/>
-        <action
-            android:id="@+id/action_inputStep3_to_inputStep4"
-            app:destination="@id/inputStep4Fragment" />
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
         android:id="@+id/inputStep4Fragment"
         android:name="com.example.soullive.ui.input_search.InputStep4Fragment"
-        android:label="InputStep4Fragment" >
+        android:label="InputStep4Fragment">
         <action
             android:id="@+id/action_inputStep4_to_inputStep5"
             app:destination="@id/inputStep5Fragment" />
@@ -73,12 +101,12 @@
     <fragment
         android:id="@+id/inputStep5Fragment"
         android:name="com.example.soullive.ui.input.InputStep5Fragment"
-        android:label="InputStep5Fragment" >
+        android:label="InputStep5Fragment">
         <action
             android:id="@+id/action_inputStep5_to_navigation_home"
             app:destination="@id/navigation_home"
             app:popUpTo="@id/navigation_home"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>
