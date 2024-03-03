@@ -46,12 +46,32 @@ class InputStep5Fragment : Fragment() {
         }
     }
 
+    private fun setCancleButton() {
+        binding.inputStep5Cancle.setOnClickListener {
+            findNavController().navigate(R.id.action_inputStep5Fragment_to_navigation_home)
+        }
+    }
+
     private fun setProgressBar() {
         binding.inputStep5Progress.progress = 400
     }
 
     private fun setImgLoading() {
+        // GIF 로드
         Glide.with(this)
+            .asGif()
+            .load(R.raw.ic_loading)
+            .into(binding.ivLoading)
+
+        lifecycleScope.launch {
+            delay(4500)
+            showFirstFrameAsStaticImage()
+        }
+    }
+
+    private fun showFirstFrameAsStaticImage() {
+        Glide.with(this)
+            .asBitmap()
             .load(R.raw.ic_loading)
             .into(binding.ivLoading)
     }
@@ -70,16 +90,17 @@ class InputStep5Fragment : Fragment() {
             binding.btnInputStep5.isEnabled = false
             delay(4500)
             animator.cancel()
-            binding.tvInputStep5Waiting.alpha = 0.3f
-            binding.btnInputStep5.isEnabled = true
+            completeAnalyze()
         }
     }
 
-    private fun setCancleButton() {
-        binding.inputStep5Cancle.setOnClickListener {
-            findNavController().navigate(R.id.action_inputStep5Fragment_to_navigation_home)
-        }
+    private fun completeAnalyze() {
+        binding.tvInputStep5Analyze.alpha = 1f
+        binding.tvInputStep5Analyze.text = getString(R.string.new_analyze_text)
+        binding.tvInputStep5Waiting.text = getString(R.string.new_waiting_text)
+        binding.btnInputStep5.isEnabled = true
     }
+
 
     override fun onDestroyView() {
         jobs.forEach { it.cancel() }
