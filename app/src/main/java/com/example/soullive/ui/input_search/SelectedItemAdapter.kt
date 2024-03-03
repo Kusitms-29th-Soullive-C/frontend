@@ -39,7 +39,7 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_search_result, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_search_selected, parent, false)
         return ViewHolder(view)
     }
 
