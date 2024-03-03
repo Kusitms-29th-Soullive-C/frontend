@@ -36,7 +36,7 @@ class SearchResultAdapter(private val onItemClicked: (Map<String, Any>, Boolean)
 
         holder.itemView.setOnClickListener {
             val isSelected = selectedItems.any { it["이름"] == itemName }
-            if(isSelected) {
+            if (isSelected) {
                 selectedItems.removeAll { it["이름"] == itemName }
                 onItemClicked(item, false)
             } else {

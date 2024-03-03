@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -27,10 +28,10 @@ class MainActivity : AppCompatActivity() {
     private fun hideBottomNavigationView(navController: NavController) {
         navController.addOnDestinationChangedListener{ _, destination, _ ->
             binding.bnv.visibility = when(destination.id){
-                R.id.splashFragment -> View.GONE
                 R.id.inputStartFragment -> View.GONE
-                R.id.inputTargetFragment -> View.GONE
-                R.id.inputSearchFragment -> View.GONE
+                R.id.inputStep3Fragment -> View.GONE
+                R.id.inputStep4Fragment -> View.GONE
+                R.id.inputStep5Fragment -> View.GONE
                 else -> View.VISIBLE
             }
         }

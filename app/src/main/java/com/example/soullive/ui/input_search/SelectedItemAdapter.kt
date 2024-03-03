@@ -1,10 +1,8 @@
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.ListView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
@@ -15,8 +13,8 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val textView: TextView = view.findViewById(R.id.search_view_selected_item)
-        val textViewjob : TextView = view.findViewById(R.id.search_view_selected_job)
-        val keywordsContainer : LinearLayout = view.findViewById(R.id.keywords_container)
+        val textViewjob: TextView = view.findViewById(R.id.search_view_selected_job)
+        val keywordsContainer: LinearLayout = view.findViewById(R.id.keywords_container)
         val imageView: ImageView = view.findViewById(R.id.search_selected_imageView)
     }
 
@@ -36,7 +34,6 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
             notifyDataSetChanged()
         }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_search_selected, parent, false)
@@ -63,12 +60,10 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
             holder.imageView.setImageResource(imageResId)
         }
 
-
         holder.itemView.setOnClickListener {
             onItemClicked(item, false)
             notifyDataSetChanged()
         }
-
 
         holder.itemView.setOnClickListener {
             onItemClicked(item, false)
