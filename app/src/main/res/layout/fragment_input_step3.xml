@@ -170,6 +170,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_man" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/input_target_multi_choice"
+        android:textColor="@color/grey_150"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_target_age"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_age0"
         android:layout_width="0dp"
