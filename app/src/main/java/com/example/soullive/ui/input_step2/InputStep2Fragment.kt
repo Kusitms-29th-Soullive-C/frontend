@@ -117,6 +117,7 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
             binding.btnStep2Next.isEnabled = true
         }
     }
+
     override fun onKeywordDeleted() {
         checkNextButtonState()
     }

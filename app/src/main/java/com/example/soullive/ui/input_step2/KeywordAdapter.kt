@@ -9,8 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
 import com.example.soullive.ui.input_step2.KeywordModel.Companion.KeywordList
 
-class KeywordAdapter(private val keywordList: MutableList<KeywordModel>, private val fragment: InputStep2Fragment) :
-    RecyclerView.Adapter<KeywordAdapter.KeywordViewHolder>() {
+class KeywordAdapter(
+    private val keywordList: MutableList<KeywordModel>, private val fragment: InputStep2Fragment
+) : RecyclerView.Adapter<KeywordAdapter.KeywordViewHolder>() {
     inner class KeywordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(keyword: KeywordModel) {
             itemView.findViewById<TextView>(R.id.tv_keyword).text = keyword.keyword

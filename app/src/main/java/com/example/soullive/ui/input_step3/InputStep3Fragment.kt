@@ -36,10 +36,21 @@ class InputStep3Fragment : Fragment() {
         }
     }
 
-    private fun setCancleButton(){
+    private fun setCancleButton() {
         binding.targetCancle.setOnClickListener {
-            listOf(binding.btnMan, binding.btnWoman, binding.btnGender).forEach { it.isSelected = false }
-            listOf(binding.btnAge0, binding.btnAge10, binding.btnAge20, binding.btnAge30, binding.btnAge40, binding.btnAge50, binding.btnAge60, binding.btnAge).forEach { it.isSelected = false }
+            listOf(binding.btnMan, binding.btnWoman, binding.btnGender).forEach {
+                it.isSelected = false
+            }
+            listOf(
+                binding.btnAge0,
+                binding.btnAge10,
+                binding.btnAge20,
+                binding.btnAge30,
+                binding.btnAge40,
+                binding.btnAge50,
+                binding.btnAge60,
+                binding.btnAge
+            ).forEach { it.isSelected = false }
 
             checkNextButtonState()
         }
@@ -68,7 +79,15 @@ class InputStep3Fragment : Fragment() {
             checkNextButtonState()
         }
 
-        val ageButtons = listOf(binding.btnAge0, binding.btnAge10, binding.btnAge20, binding.btnAge30, binding.btnAge40, binding.btnAge50, binding.btnAge60)
+        val ageButtons = listOf(
+            binding.btnAge0,
+            binding.btnAge10,
+            binding.btnAge20,
+            binding.btnAge30,
+            binding.btnAge40,
+            binding.btnAge50,
+            binding.btnAge60
+        )
         ageButtons.forEach { button ->
             button.setOnClickListener {
                 button.isSelected = !button.isSelected
@@ -95,8 +114,18 @@ class InputStep3Fragment : Fragment() {
     }
 
     private fun checkNextButtonState() {
-        val isAnyGenderSelected = listOf(binding.btnMan, binding.btnWoman, binding.btnGender).any { it.isSelected }
-        val isAnyAgeSelected = listOf(binding.btnAge0, binding.btnAge10, binding.btnAge20, binding.btnAge30, binding.btnAge40, binding.btnAge50, binding.btnAge60, binding.btnAge).any { it.isSelected }
+        val isAnyGenderSelected =
+            listOf(binding.btnMan, binding.btnWoman, binding.btnGender).any { it.isSelected }
+        val isAnyAgeSelected = listOf(
+            binding.btnAge0,
+            binding.btnAge10,
+            binding.btnAge20,
+            binding.btnAge30,
+            binding.btnAge40,
+            binding.btnAge50,
+            binding.btnAge60,
+            binding.btnAge
+        ).any { it.isSelected }
 
         binding.btnTargetNext.isEnabled = isAnyGenderSelected && isAnyAgeSelected
     }
