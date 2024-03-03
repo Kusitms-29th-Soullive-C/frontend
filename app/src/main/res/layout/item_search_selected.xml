@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_search_rounded_container"
+    android:layout_marginBottom="5dp"
     android:padding="8dp">
 
     <ImageView
@@ -32,8 +33,8 @@
         android:textSize="16sp"
         android:textColor="@color/purple_500"
         android:padding="3dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="8dp"
         android:layout_below="@id/search_view_selected_item"
         android:layout_toEndOf="@id/search_selected_imageView"
         android:layout_toRightOf="@id/search_selected_imageView"/>

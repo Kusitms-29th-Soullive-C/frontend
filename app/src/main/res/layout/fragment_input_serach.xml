@@ -161,6 +161,8 @@
         android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="10dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/bg_search_field"
         android:hint="@string/input_search_placeholder"
@@ -214,11 +216,12 @@
         android:fontFamily="@font/pretendard_medium"
         android:text="@string/input_target_multi_choice"
         android:textColor="@color/grey_150"
-        android:layout_marginStart="180dp"
+        android:layout_marginStart="190dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_search_count_container"
         app:layout_constraintStart_toEndOf="@id/input_search_selected_model"
         app:layout_constraintTop_toBottomOf="@+id/input_search_result" />
 

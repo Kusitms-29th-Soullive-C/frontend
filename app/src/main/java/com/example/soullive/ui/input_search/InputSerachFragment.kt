@@ -134,6 +134,16 @@ class InputSerachFragment : Fragment() {
         }
     }
 
+    private fun setupEditFocus(){
+        binding.inputSearchField.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                binding.inputSearchField.isPressed = true
+            } else {
+                binding.inputSearchField.isPressed = true
+            }
+        }
+    }
+
     private fun setupSearchView() {
         binding.inputSearchResult.visibility = View.GONE
         binding.inputSearchField.addTextChangedListener(object : TextWatcher {
