@@ -1,4 +1,4 @@
-package com.example.soullive.ui.input_start
+package com.example.soullive.ui.input
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -37,7 +37,6 @@ class InputStartFragment : Fragment() {
         }
     }
 
-
     private fun animation(){
         val animation = AnimationUtils.loadAnimation(context, R.anim.move_up_down)
         binding.iv3dLogo.startAnimation(animation)
@@ -45,7 +44,7 @@ class InputStartFragment : Fragment() {
 
     private fun startButton(){
         binding.btnStart.setOnClickListener {
-           findNavController().navigate(R.id.action_inputStart_to_inputStep3)
+           findNavController().navigate(R.id.action_inputStartFragment_to_inputStep3Fragment)
         }
     }
 

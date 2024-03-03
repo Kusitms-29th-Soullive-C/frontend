@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/splashFragment">
+    app:startDestination="@+id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -34,26 +34,37 @@
         tools:layout="@layout/fragment_mypage" />
 
     <fragment
-        android:id="@+id/splashFragment"
-        android:name="com.example.soullive.ui.splash.SplashFragment"
-        android:label="SplashFragment" >
-        <action
-            android:id="@+id/action_splashFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
-    </fragment>
-
-    <fragment
         android:id="@+id/inputStartFragment"
-        android:name="com.example.soullive.ui.input_start.InputStartFragment"
+        android:name="com.example.soullive.ui.input.InputStartFragment"
         android:label="InputStartFragment" >
         <action
-            android:id="@+id/action_inputStart_to_inputTarget"
+            android:id="@+id/action_inputStartFragment_to_inputStep3Fragment"
             app:destination="@id/inputStep3Fragment" />
     </fragment>
 
     <fragment
         android:id="@+id/inputStep3Fragment"
-        android:name="com.example.soullive.ui.input_step3.InputStep3Fragment"
-        android:label="InputStep3Fragment" />
+        android:name="com.example.soullive.ui.input.InputStep3Fragment"
+        android:label="InputStep3Fragment" >
+        <action
+            android:id="@+id/action_inputStep3Fragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_inputStep3Fragment_to_inputStep5Fragment"
+            app:destination="@id/inputStep5Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputStep5Fragment"
+        android:name="com.example.soullive.ui.input.InputStep5Fragment"
+        android:label="InputStep5Fragment" >
+        <action
+            android:id="@+id/action_inputStep5Fragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true"/>
+    </fragment>
 
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.soullive.ui.input_step3
+package com.example.soullive.ui.input
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,7 +17,7 @@ class InputStep3Fragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentInputStep3Binding.inflate(inflater, container, false)
         return binding.root
@@ -38,12 +38,9 @@ class InputStep3Fragment : Fragment() {
         }
     }
 
-    private fun setCancleButton(){
+    private fun setCancleButton() {
         binding.targetCancle.setOnClickListener {
-            listOf(binding.btnMan, binding.btnWoman, binding.btnGender).forEach { it.isSelected = false }
-            listOf(binding.btnAge0, binding.btnAge10, binding.btnAge20, binding.btnAge30, binding.btnAge40, binding.btnAge50, binding.btnAge60, binding.btnAge).forEach { it.isSelected = false }
-
-            checkNextButtonState()
+            findNavController().navigate(R.id.action_inputStep3Fragment_to_navigation_home)
         }
     }
 
@@ -107,10 +104,9 @@ class InputStep3Fragment : Fragment() {
 
     private fun nextButton() {
         binding.btnTargetNext.setOnClickListener {
-            findNavController().navigate(R.id.action_inputStep3_to_inputStep5)
+            findNavController().navigate(R.id.action_inputStep3Fragment_to_inputStep5Fragment)
         }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
