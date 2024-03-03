@@ -1,6 +1,8 @@
 package com.example.soullive.ui.input_search
 
 import SearchResultAdapter
+import SelectedItemsAdapter
+import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 class InputSerachFragment : Fragment() {
     private var _binding: FragmentInputSerachBinding? = null
     private lateinit var searchResultAdapter: SearchResultAdapter
+    private lateinit var selectedItemsAdapter: SelectedItemsAdapter
 
     private val binding get() = _binding!!
 
@@ -43,16 +46,30 @@ class InputSerachFragment : Fragment() {
         setBackButton()
         setProgressBar()
         setupSearchView()
+        setupKeyboardVisibilityListener()
         setupRecyclerView()
     }
 
 
 
     private fun setupRecyclerView() {
-        searchResultAdapter = SearchResultAdapter()
+        searchResultAdapter = SearchResultAdapter { item, isSelected ->
+            if (isSelected) {
+                selectedItemsAdapter.addItem(item)
+            } else {
+                selectedItemsAdapter.removeItem(item)
+            }
+        }
+
         binding.inputSearchResult.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = searchResultAdapter
+        }
+
+        selectedItemsAdapter = SelectedItemsAdapter()
+        binding.inputSearchSelectedItems.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = selectedItemsAdapter
         }
     }
 
@@ -76,6 +93,27 @@ class InputSerachFragment : Fragment() {
             }
         })
     }
+
+
+    private fun setupKeyboardVisibilityListener() {
+        val rootView = activity?.findViewById<View>(android.R.id.content) ?: return
+        val btnSearchNext = binding.btnSearchNext
+
+        rootView.viewTreeObserver.addOnGlobalLayoutListener {
+            val rect = Rect()
+            rootView.getWindowVisibleDisplayFrame(rect)
+            val screenHeight = rootView.height
+
+            val keypadHeight = screenHeight - rect.bottom
+
+            if (keypadHeight > screenHeight * 0.7) {
+                btnSearchNext.visibility = View.GONE
+            } else {
+                btnSearchNext.visibility = View.VISIBLE
+            }
+        }
+    }
+
 
     private fun filterData(text: String) {
         val filteredList = dummyData.filter { it.contains(text, ignoreCase = true) }

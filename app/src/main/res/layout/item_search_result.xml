@@ -11,4 +11,12 @@
         android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/search_view_selected_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
+
 </LinearLayout>
