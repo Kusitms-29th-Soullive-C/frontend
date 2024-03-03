@@ -92,16 +92,44 @@
         android:layout_height="0dp"
         android:contentDescription="@string/iv_loading"
         android:src="@raw/ic_loading"
+        app:layout_constraintBottom_toTopOf="@id/tv_input_step5_analyze"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_input_step5_title4" />
+
+    <TextView
+        android:id="@+id/tv_input_step5_analyze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/input_step5_analyze"
+        android:textColor="@color/purple_400"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_input_step5_waiting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_loading" />
+
+    <TextView
+        android:id="@+id/tv_input_step5_waiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/input_step5_waiting"
+        android:textColor="@color/grey_150"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@id/btn_input_step5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_input_step5_title4"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_input_step5_analyze" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_input_step5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/bg_input_btn_selector"
@@ -112,6 +140,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_input_step5_waiting" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
