@@ -14,6 +14,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.soullive.databinding.FragmentInputSerachBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.soullive.R
+import android.view.inputmethod.EditorInfo
+import android.view.KeyEvent
 
 
 class InputSerachFragment : Fragment() {
@@ -80,6 +82,7 @@ class InputSerachFragment : Fragment() {
         setBackButton()
         setProgressBar()
         setupSearchView()
+        setupEditFocus()
         setupKeyboardVisibilityListener()
         setupRecyclerView()
     }
@@ -137,9 +140,9 @@ class InputSerachFragment : Fragment() {
     private fun setupEditFocus(){
         binding.inputSearchField.setOnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
-                binding.inputSearchField.isPressed = true
+                binding.inputSearchField.setBackgroundResource(R.drawable.bg_search_edittext_focused)
             } else {
-                binding.inputSearchField.isPressed = true
+                binding.inputSearchField.setBackgroundResource(R.drawable.bg_search_edittext_normal)
             }
         }
     }
@@ -166,6 +169,28 @@ class InputSerachFragment : Fragment() {
                 }
             }
         })
+
+        binding.inputSearchField.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_SEARCH || event?.action == KeyEvent.ACTION_DOWN && event.keyCode == KeyEvent.KEYCODE_ENTER) {
+                selectItemIfMatched(binding.inputSearchField.text.toString())
+                true
+            } else {
+                false
+            }
+        }
+    }
+
+    private fun selectItemIfMatched(text: String) {
+        val matchedItem = dummyData.firstOrNull {
+            (it["이름"] as? String)?.contains(text, ignoreCase = true) ?: false
+        }
+
+        matchedItem?.let { item ->
+            val isSelected = false
+            if (!isSelected) {
+                selectedItemsAdapter.addItem(item)
+            }
+        }
     }
 
 

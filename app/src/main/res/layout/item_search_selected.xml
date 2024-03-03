@@ -28,6 +28,7 @@
         android:layout_toRightOf="@id/search_selected_imageView"/>
 
     <ImageView
+        android:id="@+id/search_icon_subtract"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/ic_subtract"
