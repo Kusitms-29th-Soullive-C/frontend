@@ -23,8 +23,19 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
         android:layout_toEndOf="@id/search_selected_imageView"
         android:layout_toRightOf="@id/search_selected_imageView"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_subtract"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/search_view_selected_item"
+        android:layout_toRightOf="@id/search_selected_imageView"
+        />
 
     <TextView
         android:id="@+id/search_view_selected_job"
