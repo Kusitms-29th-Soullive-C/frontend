@@ -9,20 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
 import com.example.soullive.ui.input_step2.KeywordModel.Companion.KeywordList
 
-data class KeywordModel(
-    val keyword: String,
-) {
-    companion object {
-        val KeywordList = mutableListOf(
-            KeywordModel("프리미엄"),
-            KeywordModel("프리미엄라인인 S시리즈 강조"),
-            KeywordModel("새로 들어간 AI "),
-            KeywordModel("새로 들어간 AI통역 기능 각인"),
-        )
-    }
-}
-
-class KeywordAdapter(private val keywordList: MutableList<KeywordModel>) :
+class KeywordAdapter(private val keywordList: MutableList<KeywordModel>, private val fragment: InputStep2Fragment) :
     RecyclerView.Adapter<KeywordAdapter.KeywordViewHolder>() {
     inner class KeywordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(keyword: KeywordModel) {
@@ -34,6 +21,9 @@ class KeywordAdapter(private val keywordList: MutableList<KeywordModel>) :
                     keywordList.removeAt(position)
                     notifyItemRemoved(position)
                     notifyItemRangeChanged(position, keywordList.size)
+                    if (keywordList.isEmpty()) {
+                        fragment.onKeywordDeleted()
+                    }
                 }
             }
         }
