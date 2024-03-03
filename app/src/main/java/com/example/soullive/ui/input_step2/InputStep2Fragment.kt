@@ -34,10 +34,10 @@ class InputStep2Fragment : Fragment() {
         setBackButton()
         setProgressBar()
         setupClickListeners()
+        binding.recyclerView.adapter = KeywordAdapter(KeywordModel.KeywordList)
         binding.root.setOnClickListener {
             hideKeyboard()
         }
-        editTextChangedListener()
         nextButton()
     }
 
@@ -72,38 +72,6 @@ class InputStep2Fragment : Fragment() {
                 requireActivity().currentFocus?.windowToken,
                 InputMethodManager.HIDE_NOT_ALWAYS
             )
-        }
-    }
-
-    inner class MyEditWatcher : TextWatcher {
-        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-        }
-
-        // 값 변경 시 실행되는 함수
-        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            // 버튼 활성화 여부
-            activateRegisterBtn()
-        }
-
-        override fun afterTextChanged(s: Editable?) {}
-    }
-
-    private fun activateRegisterBtn() {
-        with(binding) {
-            val isInputWritten1 = etInput1.text.toString()
-
-            if (isInputWritten1 != "") {
-                binding.btnStep2Next.isEnabled = true
-            } else {
-                binding.btnStep2Next.isEnabled = false
-            }
-        }
-    }
-
-    private fun editTextChangedListener() {
-        with(binding) {
-            val watcher = MyEditWatcher()
-            etInput1.addTextChangedListener(watcher)
         }
     }
 

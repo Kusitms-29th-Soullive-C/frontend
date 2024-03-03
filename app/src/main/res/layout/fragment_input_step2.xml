@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_900"
-    tools:context=".ui.fitness.FitnessFragment">
+    tools:context=".ui.input_step2.InputStep2Fragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/step2_toolbar"
@@ -137,6 +137,16 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_step2_script2"
+        tools:listitem="@layout/view_recyclerview_list_keyword" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_step2_next"

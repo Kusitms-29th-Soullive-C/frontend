@@ -12,7 +12,9 @@
     <color name="primary_100">#DBA7FB</color>
     <color name="ic_unselect">#2E2E2E</color>
     <color name="grey_150">#9F9F9F</color>
+    <color name="grey_200">#737373</color>
     <color name="grey_300">#585858</color>
+    <color name="grey_500">#2E2E2E</color>
     <color name="grey_800">#191919</color>
     <color name="grey_700">#212121</color>
     <color name="purple_400">#AF3BF7</color>
