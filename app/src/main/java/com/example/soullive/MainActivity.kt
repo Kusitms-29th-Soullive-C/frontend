@@ -1,8 +1,13 @@
 package com.example.soullive
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.View
+import android.view.animation.AnticipateInterpolator
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.animation.doOnEnd
+import androidx.core.splashscreen.SplashScreen
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -14,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -27,9 +33,9 @@ class MainActivity : AppCompatActivity() {
     private fun hideBottomNavigationView(navController: NavController) {
         navController.addOnDestinationChangedListener{ _, destination, _ ->
             binding.bnv.visibility = when(destination.id){
-                R.id.splashFragment -> View.GONE
                 R.id.inputStartFragment -> View.GONE
                 R.id.inputStep3Fragment -> View.GONE
+                R.id.inputStep5Fragment -> View.GONE
                 else -> View.VISIBLE
             }
         }
