@@ -2,7 +2,7 @@
     <string name="app_name">soullive</string>
     <string name="title_home">홈</string>
     <string name="title_fitness">적합도 분석</string>
-    <string name="title_bookmark">찜한 모델</string>
+    <string name="title_bookmark">북마크</string>
     <string name="title_mypage">마이페이지</string>
 
     <string name="iv_fitness_logo">적합도 분석 화면의 로고</string>
@@ -13,17 +13,6 @@
     <string name="fitness_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
     <string name="fitness_btn">시작하기</string>
     <string name="iv_3d_logo">분석 시작 화면에서 소울라이브의 3d 로고 이미지</string>
-
-    <!--input start-->
-    <string name="input_search_title">관심있는</string>
-    <string name="input_search_model">모델</string>
-    <string name="input_search_title2">에 대해 알려주세요</string>
-    <string name="input_search_script">입력받은 정보를 토대로</string>
-    <string name="input_search_script2">선택한 모델의 적합도를 판단해드려요.</string>
-    <string name="input_search_subscript">복수 선택 가능</string>
-    <string name="input_search_placeholder">모델명 입력</string>
-    <string name="input_search_selected_model">선택한 모델</string>
-    <string name="cancel">취소</string>
 
     <!--input step1,2-->
     <string name="광고하고자_하는">광고하고자 하는</string>
@@ -64,6 +53,17 @@
     <string name="target_age_btn_age50">50대</string>
     <string name="target_age_btn_age60">60대</string>
     <string name="btn_next">다음</string>
+
+    <!--input step4-->
+    <string name="input_search_title">관심있는</string>
+    <string name="input_search_model">모델</string>
+    <string name="input_search_title2">에 대해 알려주세요</string>
+    <string name="input_search_script">입력받은 정보를 토대로</string>
+    <string name="input_search_script2">선택한 모델의 적합도를 판단해드려요.</string>
+    <string name="input_search_subscript">복수 선택 가능</string>
+    <string name="input_search_placeholder">모델명 입력</string>
+    <string name="input_search_selected_model">선택한 모델</string>
+    <string name="cancel">취소</string>
 
     <!--input step5-->
     <string name="input_step5_title1">입력하신 정보를 바탕으로</string>
