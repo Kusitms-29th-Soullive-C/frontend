@@ -27,7 +27,8 @@ class InputSerachFragment : Fragment() {
         mapOf(
             "이름" to "잇섭",
             "직업" to "유튜버",
-            "키워드" to listOf("정보통", "매력있는", "신뢰도 높은")
+            "키워드" to listOf("정보통", "매력있는", "신뢰도 높은"),
+            "이미지" to R.drawable.ic_itsub
         ),
         mapOf(
             "이름" to "이선빈",
@@ -43,7 +44,7 @@ class InputSerachFragment : Fragment() {
             "이름" to "고윤정",
             "직업" to "모델",
             "키워드" to listOf("스타일리시한", "매력적인", "패션 센스"),
-            "이미지" to R.drawable.ic_search_1
+            "이미지" to R.drawable.ic_goyoonjung
         ),
         mapOf(
             "이름" to "고윤아",
