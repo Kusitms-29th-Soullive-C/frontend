@@ -1,3 +1,5 @@
+import android.content.Context
+import android.view.inputmethod.InputMethodManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -6,6 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
+
 
 class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean) -> Unit) : RecyclerView.Adapter<SelectedItemsAdapter.ViewHolder>() {
     private var items: MutableList<Map<String, Any>> = mutableListOf()
@@ -18,7 +21,7 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
         val imageView: ImageView = view.findViewById(R.id.search_selected_imageView)
     }
 
-    fun addItem(item: Map<String, Any>) {
+    fun addItem(item: Map<String, Any>, context: Context) {
         val itemName = item["이름"] as? String ?: return
         if (!items.any { (it["이름"] as? String ?: "") == itemName }) {
             items.add(item)
@@ -26,7 +29,7 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
         }
     }
 
-    fun removeItem(item: Map<String, Any>) {
+    fun removeItem(item: Map<String, Any>, context: Context) {
         val itemName = item["이름"] as? String ?: return
         val index = items.indexOfFirst { (it["이름"] as? String ?: "") == itemName }
         if (index != -1) {
@@ -34,6 +37,7 @@ class SelectedItemsAdapter(private val onItemClicked: (Map<String, Any>, Boolean
             notifyDataSetChanged()
         }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_search_selected, parent, false)
