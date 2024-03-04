@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_900"
-    tools:context=".ui.input_step1.InputStep1Fragment">
+    tools:context=".ui.sign_up.SignUpFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/step1_toolbar"
+        android:id="@+id/sign_up_toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,78 +16,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_arrow_left" />
 
-    <TextView
-        android:id="@+id/step1_cancle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:text="@string/cancel"
-        android:textColor="@color/grey_150"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/step1_toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/progress_horizontal"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:max="400"
-        android:progressBackgroundTint="@color/grey_700"
-        android:progressTint="@color/purple_400"
-        app:layout_constraintTop_toBottomOf="@id/step1_toolbar" />
 
     <TextView
-        android:id="@+id/tv_step1_title1"
+        android:id="@+id/tv_sign_up_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/pretendard_bold"
-        android:text="@string/광고하고자_하는"
+        android:text="@string/회원가입"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/progress_horizontal" />
-
-    <TextView
-        android:id="@+id/tv_step1_title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/pretendard_bold"
-        android:text="@string/제품"
-        android:textColor="@color/purple_400"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_step1_title1" />
-
-    <TextView
-        android:id="@+id/tv_step1_title3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pretendard_bold"
-        android:text="@string/에_대해_알려주세요"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@id/tv_step1_title2"
-        app:layout_constraintTop_toBottomOf="@id/tv_step1_title1" />
-
-    <TextView
-        android:id="@+id/tv_step1_script"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="@string/기업_브랜드_제품_이미지에_적합한_광고_모델을_선별해_드려요"
-        android:textColor="@color/grey_150"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_step1_title2" />
-
+        app:layout_constraintTop_toBottomOf="@id/sign_up_toolbar" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/input1"
@@ -100,13 +41,13 @@
         android:paddingVertical="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_step1_script">
+        app:layout_constraintTop_toBottomOf="@id/tv_sign_up_title">
 
         <TextView
             android:id="@+id/tv_input1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/기업"
+            android:text="@string/기업_이메일"
             android:textColor="@color/grey_150"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -116,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:hint="@string/기업명_입력"
+            android:hint="@string/이메일_주소_입력"
             android:inputType="text"
             android:theme="@style/EditTextDefault"
             app:layout_constraintStart_toStartOf="parent"
@@ -153,7 +94,7 @@
             android:id="@+id/tv_input2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/브랜드"
+            android:text="@string/인증번호"
             android:textColor="@color/grey_150"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -163,20 +104,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:hint="@string/브랜드명_입력"
+            android:hint="@string/인증번호_입력"
             android:inputType="text"
             android:theme="@style/EditTextDefault"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_input2" />
 
-        <ImageButton
-            android:id="@+id/btn_tv_delete2"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_certification"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/ic_delete"
-            android:visibility="invisible"
+            android:layout_height="26dp"
+            android:background="@drawable/bg_btn_certification_selector"
+            android:text="@string/인증번호_받기"
+            android:textColor="@color/white"
+            android:textSize="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -200,7 +141,7 @@
             android:id="@+id/tv_input3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/상품"
+            android:text="@string/비밀번호"
             android:textColor="@color/grey_150"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -210,14 +151,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:hint="@string/상품명_입력"
+            android:hint="@string/비밀번호_입력"
             android:inputType="text"
             android:theme="@style/EditTextDefault"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_input3" />
 
         <ImageButton
-            android:id="@+id/btn_tv_delete3"
+            android:id="@+id/btn_tv_delete2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -229,13 +170,60 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/tv_sign_up_sub1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/SoulFit"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_sign_up_sub3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sign_up_sub2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/이용약관"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_sign_up_sub3"
+        app:layout_constraintStart_toEndOf="@id/tv_sign_up_sub1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toTopOf="@id/tv_sign_up_sub3"
+        app:layout_constraintStart_toEndOf="@id/tv_sign_up_sub2" />
+
+    <TextView
+        android:id="@+id/tv_sign_up_sub3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:paddingTop="4dp"
+        android:text="@string/본인은_기업_관계자이며_약관_내용을_확인하였습니다"
+        android:textColor="@color/grey_150"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_sign_up_next"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_step1_next"
+        android:id="@+id/btn_sign_up_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="24dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/bg_btn_target_next_selector"
         android:fontFamily="@font/pretendard_medium"
         android:gravity="center"
