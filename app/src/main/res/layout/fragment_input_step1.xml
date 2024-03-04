@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_900"
-    tools:context=".ui.input.InputStep1Fragment">
+    tools:context=".ui.input_step1.InputStep1Fragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/step1_toolbar"
@@ -104,7 +104,7 @@
 
         <TextView
             android:id="@+id/tv_input1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/기업"
             android:textColor="@color/grey_150"
@@ -113,13 +113,26 @@
 
         <EditText
             android:id="@+id/et_input1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="@string/기업명_입력"
             android:inputType="text"
             android:theme="@style/EditTextDefault"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_input1" />
+
+        <ImageButton
+            android:id="@+id/btn_tv_delete1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_delete"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -138,7 +151,7 @@
 
         <TextView
             android:id="@+id/tv_input2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/브랜드"
             android:textColor="@color/grey_150"
@@ -147,13 +160,27 @@
 
         <EditText
             android:id="@+id/et_input2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="@string/브랜드명_입력"
             android:inputType="text"
             android:theme="@style/EditTextDefault"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_input2" />
+
+        <ImageButton
+            android:id="@+id/btn_tv_delete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_delete"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -171,7 +198,7 @@
 
         <TextView
             android:id="@+id/tv_input3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/상품"
             android:textColor="@color/grey_150"
@@ -180,13 +207,26 @@
 
         <EditText
             android:id="@+id/et_input3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="@string/상품명_입력"
             android:inputType="text"
             android:theme="@style/EditTextDefault"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_input3" />
+
+        <ImageButton
+            android:id="@+id/btn_tv_delete3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_delete"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -196,7 +236,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="24dp"
-        android:background="@drawable/bg_input_btn_selector"
+        android:background="@drawable/bg_btn_target_next_selector"
         android:fontFamily="@font/pretendard_medium"
         android:gravity="center"
         android:text="@string/next_btn"
