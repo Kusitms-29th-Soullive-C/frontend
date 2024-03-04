@@ -17,6 +17,7 @@ import com.example.soullive.R
 import android.view.inputmethod.EditorInfo
 import android.view.KeyEvent
 import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.widget.AppCompatButton
 import com.example.soullive.databinding.FragmentInputStep4Binding
 
 
@@ -24,6 +25,7 @@ class InputStep4Fragment : Fragment() {
     private var _binding: FragmentInputStep4Binding? = null
     private lateinit var searchResultAdapter: SearchResultAdapter
     private lateinit var selectedItemsAdapter: SelectedItemsAdapter
+    private lateinit var button: AppCompatButton
 
     private val binding get() = _binding!!
 
@@ -79,6 +81,7 @@ class InputStep4Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        button = view.findViewById(R.id.btn_search_next)
         binding.inputSearchSelectedModel.visibility = View.GONE
         binding.inputSearchSelectedCount.visibility = View.GONE
         binding.root.setOnClickListener {
@@ -87,6 +90,7 @@ class InputStep4Fragment : Fragment() {
         setBackButton()
         setProgressBar()
         setCancleButton()
+        updateButtonState()
         setupSearchView()
         setupEditFocus()
         setupKeyboardVisibilityListener()
@@ -221,9 +225,11 @@ class InputStep4Fragment : Fragment() {
             if (selectedItemsAdapter.itemCount > 0) {
                 binding.inputSearchSelectedModel.visibility = View.VISIBLE
                 binding.inputSearchSelectedCount.visibility = View.VISIBLE
+                binding.btnSearchNext.isEnabled = true
             } else {
                 binding.inputSearchSelectedModel.visibility = View.GONE
                 binding.inputSearchSelectedCount.visibility = View.GONE
+                binding.btnSearchNext.isEnabled = false
             }
             updateSelectedItemCount()
         }
@@ -263,6 +269,12 @@ class InputStep4Fragment : Fragment() {
 
     private fun onSearchView() {
 
+    }
+
+
+    private fun updateButtonState() {
+        val isConditionMet = true
+        button.isEnabled = isConditionMet
     }
 
     private fun nextButton() {
