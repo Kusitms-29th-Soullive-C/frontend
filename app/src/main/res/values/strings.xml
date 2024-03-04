@@ -8,6 +8,19 @@
     <string name="iv_fitness_logo">적합도 분석 화면의 로고</string>
     <string name="iv_fitness_search">적합도 분석 화면의 검색 아이콘</string>
 
+    <!--sign up-->
+    <string name="회원가입">회원가입</string>
+    <string name="기업_이메일">기업 이메일</string>
+    <string name="이메일_주소_입력">이메일 주소 입력</string>
+    <string name="인증번호">인증번호</string>
+    <string name="인증번호_입력">인증번호 입력</string>
+    <string name="인증번호_받기">인증번호 받기</string>
+    <string name="비밀번호">비밀번호</string>
+    <string name="비밀번호_입력">비밀번호 입력</string>
+    <string name="SoulFit">SoulFit</string>
+    <string name="이용약관">이용약관</string>
+    <string name="본인은_기업_관계자이며_약관_내용을_확인하였습니다">본인은 기업 관계자이며, 약관 내용을 확인하였습니다.</string>
+
     <!--input start-->
     <string name="fitness_title">AI 광고 모델 분석</string>
     <string name="fitness_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
@@ -71,10 +84,12 @@
     <string name="input_step5_title3">적합도를</string>
     <string name="input_step5_title4">분석중입니다.</string>
     <string name="input_step5_btn">확인하기</string>
-    <string name ="iv_loading">분석화면의 로딩 이미지</string>
+    <string name="iv_loading">분석화면의 로딩 이미지</string>
     <string name="input_step5_analyze">기업 및 제품 정보를 분석하고 있어요...</string>
     <string name="input_step5_waiting">조금만 기다려 주세요.</string>
     <string name="new_analyze_text">분석이 완료되었어요!</string>
     <string name="new_waiting_text">버튼을 눌러 분석 결과를 확인해주세요.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
