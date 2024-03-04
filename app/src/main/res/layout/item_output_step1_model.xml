@@ -1,31 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/bg_search_rounded_container"
+    android:layout_marginBottom="5dp"
     android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/output_step1_imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="0dp"
+        android:layout_alignParentLeft="true"
+        />
 
     <TextView
         android:id="@+id/output_step1_itemName"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Name" />
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/output_step1_imageView"
+        android:layout_toRightOf="@id/output_step1_imageView"/>
+
+
+    <ImageView
+        android:id="@+id/output_icon_bookmark"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_bookmark"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/output_step1_itemName"
+        android:layout_toRightOf="@id/output_step1_imageView"
+        />
+
 
     <TextView
         android:id="@+id/output_step1_itemJob"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textColor="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@id/output_step1_itemName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Job" />
+        android:textColor="@color/purple_500"
+        android:padding="3dp"
+        android:layout_below="@id/output_step1_itemName"
+        android:layout_toEndOf="@id/output_step1_imageView"
+        android:layout_toRightOf="@id/output_step1_imageView"
+         />
+
+    <LinearLayout
+        android:id="@+id/output_keywords_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/output_step1_imageView"
+        android:layout_toRightOf="@id/output_step1_imageView"
+        android:layout_below="@id/output_step1_itemJob"
+        >
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
