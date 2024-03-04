@@ -71,10 +71,18 @@
     <string name="input_step5_title3">적합도를</string>
     <string name="input_step5_title4">분석중입니다.</string>
     <string name="input_step5_btn">확인하기</string>
-    <string name ="iv_loading">분석화면의 로딩 이미지</string>
+    <string name="iv_loading">분석화면의 로딩 이미지</string>
     <string name="input_step5_analyze">기업 및 제품 정보를 분석하고 있어요...</string>
     <string name="input_step5_waiting">조금만 기다려 주세요.</string>
     <string name="new_analyze_text">분석이 완료되었어요!</string>
     <string name="new_waiting_text">버튼을 눌러 분석 결과를 확인해주세요.</string>
+
+
+    <!--output step1-->
+    <string name="output_step1_title1">분석 결과</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
