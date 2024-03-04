@@ -9,9 +9,9 @@
     <string name="iv_fitness_search">적합도 분석 화면의 검색 아이콘</string>
 
     <!--input start-->
-    <string name="fitness_title">AI 광고 모델 분석</string>
-    <string name="fitness_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
-    <string name="fitness_btn">시작하기</string>
+    <string name="input_start_title">AI 광고 모델 분석</string>
+    <string name="input_start_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
+    <string name="input_start_btn">시작하기</string>
     <string name="iv_3d_logo">분석 시작 화면에서 소울라이브의 3d 로고 이미지</string>
 
     <!--input step1,2-->
@@ -71,10 +71,34 @@
     <string name="input_step5_title3">적합도를</string>
     <string name="input_step5_title4">분석중입니다.</string>
     <string name="input_step5_btn">확인하기</string>
-    <string name ="iv_loading">분석화면의 로딩 이미지</string>
+    <string name="iv_loading">분석화면의 로딩 이미지</string>
     <string name="input_step5_analyze">기업 및 제품 정보를 분석하고 있어요...</string>
     <string name="input_step5_waiting">조금만 기다려 주세요.</string>
     <string name="new_analyze_text">분석이 완료되었어요!</string>
     <string name="new_waiting_text">버튼을 눌러 분석 결과를 확인해주세요.</string>
 
+    <!--fitness-->
+    <string name="fitness_title1">어떤 모델이 광고에 적합한지</string>
+    <string name="fitness_title2">고민이신가요?</string>
+    <string name="tv_fitness_goto">AI 적합도 분석하러 가기</string>
+    <string name="iv_qna">분석화면의 물음표 이미지</string>
+    <string name="iv_fitness_btn">분석하기 버튼</string>
+    <string name="iv_fitness_goto_logo">분석하기 버튼에 있는 분석 로딩 이미지</string>
+    <string name="iv_fitness_arrow_right">분석하기 버튼의 오른쪽 화살표</string>
+    <string name="tv_fitness_history">과거 적합도 분석 히스토리</string>
+    <string name="iv_fitness_history_box">과거 적합도 분석 히스토리 박스</string>
+    <string name="tv_history1_title">Galaxy S30</string>
+    <string name="tv_history1_date">2024.03.03</string>
+    <string name="iv_fitness_history_mini_box">히스토리의 작은 상자</string>
+    <string name="tv_fitness_history_age">연령</string>
+    <string name="tv_fitness_history1_age_detail">40-60세</string>
+    <string name="tv_fitness_history_gender">성별</string>
+    <string name="tv_fitness_history1_gender_detail">무관</string>
+    <string name="tv_fitness_history_model">모델</string>
+    <string name="tv_fitness_history1_model_detail">황정음</string>
+    <string name="tv_history2_title">iPhone 15</string>
+    <string name="tv_history2_date">2024.03.06</string>
+    <string name="tv_fitness_history2_age_detail">10-20세</string>
+    <string name="tv_fitness_history2_gender_detail">무관</string>
+    <string name="tv_fitness_history2_model_detail">뉴진스</string>
 </resources>
