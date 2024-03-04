@@ -54,11 +54,11 @@
         android:id="@+id/icon2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_search"
+        android:src="@drawable/ic_heart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/output_step1_toolbar"
         app:layout_constraintBottom_toBottomOf="@id/output_step1_toolbar"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="18dp" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/output_step1_modelView"
@@ -67,5 +67,15 @@
         app:layout_constraintTop_toBottomOf="@id/div"
         app:layout_constraintBottom_toBottomOf="parent"
         android:padding="16dp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabDots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@android:color/transparent"
+        app:tabTextColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
