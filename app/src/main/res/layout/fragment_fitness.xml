@@ -8,7 +8,7 @@
     tools:context=".ui.fitness.FitnessFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/bookmark_toolbar"
+        android:id="@+id/fitness_toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/grey_900"
@@ -40,16 +40,447 @@
 
     </com.google.android.material.appbar.MaterialToolbar>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/fitness_btn"
-        android:layout_width="50dp"
-        android:layout_height="52dp"
-        android:background="@color/white"
-        android:text="분석"
-        android:textColor="@color/grey_900"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/fitness_div"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/fitness_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_fitness_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/fitness_title1"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fitness_div" />
+
+    <TextView
+        android:id="@+id/tv_fitness_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/fitness_title2"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fitness_title1" />
+
+    <ImageView
+        android:id="@+id/iv_qna"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/iv_qna"
+        android:src="@drawable/ic_qna"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fitness_div" />
+
+    <ImageView
+        android:id="@+id/fitness_btn"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_btn_fitness"
+        android:contentDescription="@string/iv_fitness_btn"
+        android:textColor="@color/grey_900"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_qna" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_goto_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/iv_fitness_goto_logo"
+        android:src="@drawable/ic_goto_analyze"
+        app:layout_constraintBottom_toBottomOf="@id/fitness_btn"
+        app:layout_constraintStart_toStartOf="@id/fitness_btn"
+        app:layout_constraintTop_toTopOf="@id/fitness_btn" />
+
+    <TextView
+        android:id="@+id/tv_fitness_goto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/tv_fitness_goto"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/fitness_btn"
+        app:layout_constraintStart_toEndOf="@id/iv_fitness_goto_logo"
+        app:layout_constraintTop_toTopOf="@id/fitness_btn"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/iv_fitness_arrow_right"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@id/fitness_btn"
+        app:layout_constraintEnd_toEndOf="@id/fitness_btn"
+        app:layout_constraintTop_toTopOf="@id/fitness_btn"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/tv_fitness_history"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fitness_btn" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_history1_box"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/iv_fitness_history_box"
+        android:src="@drawable/bg_fitness_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fitness_history" />
+
+    <TextView
+        android:id="@+id/tv_history1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/tv_history1_title"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history1_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history1_box" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_history1_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/iv_fitness_arrow_right"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintEnd_toEndOf="@id/iv_fitness_history1_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history1_box" />
+
+    <TextView
+        android:id="@+id/tv_history1_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_history1_date"
+        android:textColor="@color/grey_150"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history1_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_history1_title" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_history1_age_box"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/iv_fitness_history_box"
+        android:src="@drawable/bg_btn_target"
+        app:layout_constraintEnd_toStartOf="@id/iv_fitness_history1_gender_box"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history1_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_history1_date" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history1_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history_age"
+        android:textColor="@color/purple_300"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history1_age_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history1_age_box" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history1_age_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history1_age_detail"
+        android:textColor="@color/grey_150"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fitness_history1_age_box"
+        app:layout_constraintStart_toStartOf="@id/tv_fitness_history1_age"
+        app:layout_constraintTop_toBottomOf="@id/tv_fitness_history1_age" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_history1_gender_box"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/iv_fitness_history_box"
+        android:src="@drawable/bg_btn_target"
+        app:layout_constraintEnd_toStartOf="@id/iv_fitness_history1_model_box"
+        app:layout_constraintStart_toEndOf="@id/iv_fitness_history1_age_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_history1_date" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history1_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history_gender"
+        android:textColor="@color/purple_300"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history1_gender_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history1_gender_box" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history1_gender_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history1_gender_detail"
+        android:textColor="@color/grey_150"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fitness_history1_gender_box"
+        app:layout_constraintStart_toStartOf="@id/tv_fitness_history1_gender"
+        app:layout_constraintTop_toBottomOf="@id/tv_fitness_history1_gender" />
+
+
+    <ImageView
+        android:id="@+id/iv_fitness_history1_model_box"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/iv_fitness_history_box"
+        android:src="@drawable/bg_btn_target"
+        app:layout_constraintEnd_toEndOf="@id/iv_fitness_history1_box"
+        app:layout_constraintStart_toEndOf="@id/iv_fitness_history1_gender_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_history1_date" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history1_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history_model"
+        android:textColor="@color/purple_300"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history1_model_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history1_model_box" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history1_model_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history1_model_detail"
+        android:textColor="@color/grey_150"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fitness_history1_model_box"
+        app:layout_constraintStart_toStartOf="@id/tv_fitness_history1_model"
+        app:layout_constraintTop_toBottomOf="@id/tv_fitness_history1_model" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_history2_box"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/iv_fitness_history_box"
+        android:src="@drawable/bg_fitness_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_fitness_history1_box" />
+
+    <TextView
+        android:id="@+id/tv_history2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/tv_history2_title"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history2_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history2_box" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_history2_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/iv_fitness_arrow_right"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintEnd_toEndOf="@id/iv_fitness_history2_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history2_box" />
+
+    <TextView
+        android:id="@+id/tv_history2_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_history2_date"
+        android:textColor="@color/grey_150"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history2_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_history2_title" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_history2_age_box"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/iv_fitness_history_box"
+        android:src="@drawable/bg_btn_target"
+        app:layout_constraintEnd_toStartOf="@id/iv_fitness_history1_gender_box"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history2_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_history2_date" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history2_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history_age"
+        android:textColor="@color/purple_300"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history2_age_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history2_age_box" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history2_age_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history2_age_detail"
+        android:textColor="@color/grey_150"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fitness_history2_age_box"
+        app:layout_constraintStart_toStartOf="@id/tv_fitness_history2_age"
+        app:layout_constraintTop_toBottomOf="@id/tv_fitness_history2_age" />
+
+    <ImageView
+        android:id="@+id/iv_fitness_history2_gender_box"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/iv_fitness_history_box"
+        android:src="@drawable/bg_btn_target"
+        app:layout_constraintEnd_toStartOf="@id/iv_fitness_history2_model_box"
+        app:layout_constraintStart_toEndOf="@id/iv_fitness_history2_age_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_history2_date" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history2_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history_gender"
+        android:textColor="@color/purple_300"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history2_gender_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history2_gender_box" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history2_gender_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history2_gender_detail"
+        android:textColor="@color/grey_150"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fitness_history2_gender_box"
+        app:layout_constraintStart_toStartOf="@id/tv_fitness_history2_gender"
+        app:layout_constraintTop_toBottomOf="@id/tv_fitness_history2_gender" />
+
+
+    <ImageView
+        android:id="@+id/iv_fitness_history2_model_box"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/iv_fitness_history_box"
+        android:src="@drawable/bg_btn_target"
+        app:layout_constraintEnd_toEndOf="@id/iv_fitness_history2_box"
+        app:layout_constraintStart_toEndOf="@id/iv_fitness_history1_gender_box"
+        app:layout_constraintTop_toBottomOf="@id/tv_history2_date" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history2_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history_model"
+        android:textColor="@color/purple_300"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/iv_fitness_history2_model_box"
+        app:layout_constraintTop_toTopOf="@id/iv_fitness_history2_model_box" />
+
+    <TextView
+        android:id="@+id/tv_fitness_history2_model_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:text="@string/tv_fitness_history2_model_detail"
+        android:textColor="@color/grey_150"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fitness_history2_model_box"
+        app:layout_constraintStart_toStartOf="@id/tv_fitness_history2_model"
+        app:layout_constraintTop_toBottomOf="@id/tv_fitness_history2_model" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
