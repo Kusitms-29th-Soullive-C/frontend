@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             binding.bnv.visibility = when (destination.id) {
                 R.id.onBoardingFragment -> View.GONE
+                R.id.signUpFragment -> View.GONE
                 R.id.inputStartFragment -> View.GONE
                 R.id.inputStep1Fragment -> View.GONE
                 R.id.inputStep2Fragment -> View.GONE
