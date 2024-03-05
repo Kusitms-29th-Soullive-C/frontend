@@ -20,7 +20,6 @@ import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.widget.AppCompatButton
 import com.example.soullive.databinding.FragmentInputStep4Binding
 
-
 class InputStep4Fragment : Fragment() {
     private var _binding: FragmentInputStep4Binding? = null
     private lateinit var searchResultAdapter: SearchResultAdapter
