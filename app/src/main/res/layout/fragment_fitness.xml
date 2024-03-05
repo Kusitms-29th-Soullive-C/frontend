@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/iv_fitness_logo"
+            android:contentDescription="@string/iv_logo"
             android:src="@drawable/ic_logo_with_name" />
 
         <ImageView
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="20dp"
-            android:contentDescription="@string/iv_fitness_search"
+            android:contentDescription="@string/iv_setting"
             android:src="@drawable/ic_settings" />
 
         <ImageView
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="20dp"
-            android:contentDescription="@string/iv_fitness_search"
+            android:contentDescription="@string/iv_search"
             android:src="@drawable/ic_search" />
 
     </com.google.android.material.appbar.MaterialToolbar>
@@ -127,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:contentDescription="@string/iv_fitness_arrow_right"
+        android:contentDescription="@string/iv_arrow_right"
         android:src="@drawable/ic_arrow_right"
         app:layout_constraintBottom_toBottomOf="@id/fitness_btn"
         app:layout_constraintEnd_toEndOf="@id/fitness_btn"
@@ -155,7 +155,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="20dp"
         android:contentDescription="@string/iv_fitness_history_box"
-        android:src="@drawable/bg_fitness_history"
+        android:src="@drawable/bg_grey800_4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_fitness_history" />
@@ -179,7 +179,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:contentDescription="@string/iv_fitness_arrow_right"
+        android:contentDescription="@string/iv_arrow_right"
         android:src="@drawable/ic_arrow_right"
         app:layout_constraintEnd_toEndOf="@id/iv_fitness_history1_box"
         app:layout_constraintTop_toTopOf="@id/iv_fitness_history1_box" />
@@ -205,7 +205,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:contentDescription="@string/iv_fitness_history_box"
-        android:src="@drawable/bg_btn_target"
+        android:src="@drawable/bg_grey700_4dp"
         app:layout_constraintEnd_toStartOf="@id/iv_fitness_history1_gender_box"
         app:layout_constraintStart_toStartOf="@id/iv_fitness_history1_box"
         app:layout_constraintTop_toBottomOf="@id/tv_history1_date" />
@@ -244,7 +244,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/iv_fitness_history_box"
-        android:src="@drawable/bg_btn_target"
+        android:src="@drawable/bg_grey700_4dp"
         app:layout_constraintEnd_toStartOf="@id/iv_fitness_history1_model_box"
         app:layout_constraintStart_toEndOf="@id/iv_fitness_history1_age_box"
         app:layout_constraintTop_toBottomOf="@id/tv_history1_date" />
@@ -284,7 +284,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@string/iv_fitness_history_box"
-        android:src="@drawable/bg_btn_target"
+        android:src="@drawable/bg_grey700_4dp"
         app:layout_constraintEnd_toEndOf="@id/iv_fitness_history1_box"
         app:layout_constraintStart_toEndOf="@id/iv_fitness_history1_gender_box"
         app:layout_constraintTop_toBottomOf="@id/tv_history1_date" />
@@ -323,7 +323,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="20dp"
         android:contentDescription="@string/iv_fitness_history_box"
-        android:src="@drawable/bg_fitness_history"
+        android:src="@drawable/bg_grey800_4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_fitness_history1_box" />
@@ -347,7 +347,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:contentDescription="@string/iv_fitness_arrow_right"
+        android:contentDescription="@string/iv_arrow_right"
         android:src="@drawable/ic_arrow_right"
         app:layout_constraintEnd_toEndOf="@id/iv_fitness_history2_box"
         app:layout_constraintTop_toTopOf="@id/iv_fitness_history2_box" />
@@ -373,7 +373,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:contentDescription="@string/iv_fitness_history_box"
-        android:src="@drawable/bg_btn_target"
+        android:src="@drawable/bg_grey700_4dp"
         app:layout_constraintEnd_toStartOf="@id/iv_fitness_history1_gender_box"
         app:layout_constraintStart_toStartOf="@id/iv_fitness_history2_box"
         app:layout_constraintTop_toBottomOf="@id/tv_history2_date" />
@@ -412,7 +412,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/iv_fitness_history_box"
-        android:src="@drawable/bg_btn_target"
+        android:src="@drawable/bg_grey700_4dp"
         app:layout_constraintEnd_toStartOf="@id/iv_fitness_history2_model_box"
         app:layout_constraintStart_toEndOf="@id/iv_fitness_history2_age_box"
         app:layout_constraintTop_toBottomOf="@id/tv_history2_date" />
@@ -452,7 +452,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@string/iv_fitness_history_box"
-        android:src="@drawable/bg_btn_target"
+        android:src="@drawable/bg_grey700_4dp"
         app:layout_constraintEnd_toEndOf="@id/iv_fitness_history2_box"
         app:layout_constraintStart_toEndOf="@id/iv_fitness_history1_gender_box"
         app:layout_constraintTop_toBottomOf="@id/tv_history2_date" />

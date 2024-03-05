@@ -157,7 +157,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/bg_search_field"
+                android:background="@drawable/bg_grey700_4dp"
                 android:drawableStart="@drawable/ic_search"
                 android:drawablePadding="10dp"
                 android:hint="@string/input_search_placeholder"
@@ -178,7 +178,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/bg_search_results_container"
+                android:background="@drawable/bg_grey600_8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/input_search_field" />
