@@ -27,6 +27,8 @@ class SubscribeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setBackButton()
+        checkNextButtonState()
+        setupClickListeners()
         nextButton()
     }
 
@@ -34,6 +36,30 @@ class SubscribeFragment : Fragment() {
         binding.subscribeToolbar.setNavigationOnClickListener {
             val navController = findNavController()
             navController.navigateUp()
+        }
+    }
+
+    private fun setupClickListeners() {
+        binding.subscribe1.setOnClickListener {
+            it.isSelected = true
+            binding.subscribe2.isSelected = false
+            checkNextButtonState()
+        }
+        binding.subscribe2.setOnClickListener {
+            it.isSelected = true
+            binding.subscribe1.isSelected = false
+            checkNextButtonState()
+        }
+    }
+
+    private fun checkNextButtonState() {
+        val isAnySubscribeSelected =
+            listOf(binding.subscribe1, binding.subscribe2).any { it.isSelected }
+
+        binding.btnSubscribeNext.isEnabled = isAnySubscribeSelected
+        binding.btnSubscribeNext.setOnClickListener {
+            if (binding.btnSubscribeNext.isEnabled)
+                nextButton()
         }
     }
 
