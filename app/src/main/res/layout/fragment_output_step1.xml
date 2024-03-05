@@ -71,14 +71,15 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <Spinner
                 android:id="@+id/output_filter_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/pretendard_medium"
                 android:entries="@array/output_filter_options"
@@ -89,6 +90,38 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/output_filter_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_900"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:padding="8dp"
+                android:paddingTop="10dp"
+                android:text="@string/output_step1_filter1"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/output_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:padding="8dp"
+                android:text="@string/output_step1_change"
+                android:textColor="@color/grey_150"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.953"
+                app:layout_constraintStart_toEndOf="@id/output_filter_textview"
+                app:layout_constraintTop_toTopOf="@id/output_filter_textview" />
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/output_step1_modelView"
@@ -169,40 +202,59 @@
 
 
 
-                <LinearLayout
-                    android:id="@+id/similar_filtered_btns"
-                    android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/similar_filtered_btns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/output_step1_script">
+
+                <TextView
+                    android:id="@+id/similar_btnFit"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@id/output_step1_script"
-                    tools:ignore="MissingConstraints">
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_output_rounded_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/output_step1_filter3"
+                    android:padding="8dp"
+                    android:textColor="@color/grey_150"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                    <Button
-                        android:id="@+id/similar_btnFit"
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="적합도"
-                        android:background="@drawable/bg_output_rounded_btn" />
+                <TextView
+                    android:id="@+id/similar_btnTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_output_rounded_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/output_step1_filter4"
+                    android:padding="8dp"
+                    android:textColor="@color/grey_150"
+                    app:iconTint="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent" />
 
+                <TextView
+                    android:id="@+id/similar_btnStrategy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/output_step1_filter5"
+                    android:padding="8dp"
+                    android:textColor="@color/grey_150"
+                    android:background="@drawable/bg_output_rounded_btn"/>
+            </LinearLayout>
 
-                    <Button
-                        android:id="@+id/similar_btnTarget"
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="타겟 선호도"
-                        android:background="@drawable/bg_output_rounded_btn" />
-
-
-                    <Button
-                        android:id="@+id/similar_btnStrategy"
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="전략"
-                        android:background="@drawable/bg_output_rounded_btn" />
-                </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/output_step1_similarModelView"

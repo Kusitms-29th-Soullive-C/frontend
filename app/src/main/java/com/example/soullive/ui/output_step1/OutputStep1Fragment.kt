@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.soullive.R
@@ -110,17 +111,25 @@ class OutputStep1Fragment : Fragment() {
 
         val similarModelAdapter = SimilarModelAdapter(similardummyList)
         binding.outputStep1SimilarModelView.adapter = similarModelAdapter
+        val similarFilterButtons = listOf(binding.similarBtnFit, binding.similarBtnTarget, binding.similarBtnStrategy)
 
         binding.similarBtnFit.setOnClickListener {
+            updateSelection(it, similarFilterButtons)
             filterAndSortList("적합도")
         }
 
         binding.similarBtnTarget.setOnClickListener {
+            updateSelection(it, similarFilterButtons)
             filterAndSortList("타겟 선호도")
         }
 
         binding.similarBtnStrategy.setOnClickListener {
+            updateSelection(it, similarFilterButtons)
             filterAndSortList("전략")
+        }
+
+        binding.outputFilterTextview.setOnClickListener {
+            binding.outputFilterSpinner.performClick()
         }
 
 
@@ -170,6 +179,7 @@ class OutputStep1Fragment : Fragment() {
                     1 -> sortAndGroupListBy("화제성순")
                     2 -> sortAndGroupListBy("광고비순")
                 }
+                binding.outputFilterTextview.text = parent.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -191,6 +201,12 @@ class OutputStep1Fragment : Fragment() {
             else -> similardummyList
         }
         updateSimilarModelAdapter(sortedList)
+    }
+
+    private fun updateSelection(clickedView: View, buttons: List<View>) {
+        buttons.forEach { button ->
+            button.isSelected = button == clickedView
+        }
     }
 
     private fun updateSimilarModelAdapter(newList: List<Map<String, Any>>) {
