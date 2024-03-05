@@ -19,7 +19,7 @@ class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter
         val rankTextView : TextView = view.findViewById(R.id.output_rankTextView)
         val relevanceTextView : TextView = view.findViewById(R.id.output_relevanceTextView)
         val bookmark : ImageView = view.findViewById(R.id.output_icon_bookmark)
-
+        val ItemRankText : TextView = view.findViewById(R.id.output_item_index)
 
         fun bind(item: Model) {
             nameTextView.text = item.name
@@ -27,7 +27,6 @@ class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter
             rankTextView.text = "${item.rank}순위"
             relevanceTextView.text = "적합도 ${item.relevance}점"
             ModelImageView.setImageResource(item.imageResId)
-
 
             val keywords = item.keywords as? List<String> ?: emptyList()
             keywordsContainer.removeAllViews()
@@ -50,7 +49,8 @@ class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter
         holder.itemView.setOnClickListener{
             holder.detailConatiner.visibility =  if (holder.detailConatiner.visibility == View.GONE) View.VISIBLE else View.GONE
         }
-
+        val Rank = position +1
+        holder.ItemRankText.setText(Rank.toString())
         holder.bookmark.setOnClickListener {
             val item = items[holder.adapterPosition]
             item.isBookmarked = !item.isBookmarked
