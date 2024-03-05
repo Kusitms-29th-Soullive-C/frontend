@@ -114,8 +114,8 @@
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up">
         <action
-            android:id="@+id/action_signUp_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            android:id="@+id/action_signUp_to_eventPopup"
+            app:destination="@id/eventPopupFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
@@ -125,6 +125,15 @@
         <action
             android:id="@+id/action_onBoarding_to_signUp"
             app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventPopupFragment"
+        android:name="com.example.soullive.ui.event.eventPopupFragment"
+        android:label="fragment_event_popup"
+        tools:layout="@layout/fragment_event_popup" >
+        <action
+            android:id="@+id/action_eventPopup_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 
 </navigation>

@@ -101,7 +101,7 @@ class SignUpFragment : Fragment() {
 
     private fun nextButton() {
         binding.btnSignUpNext.setOnClickListener {
-            findNavController().navigate(R.id.action_signUp_to_navigation_home)
+            findNavController().navigate(R.id.action_signUp_to_eventPopup)
         }
     }
 
