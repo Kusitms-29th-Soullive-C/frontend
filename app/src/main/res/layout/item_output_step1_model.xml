@@ -35,7 +35,9 @@
         android:layout_marginEnd="10dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:onClick="toggleBookmark"
+        />
 
     <TextView
         android:id="@+id/output_step1_itemJob"

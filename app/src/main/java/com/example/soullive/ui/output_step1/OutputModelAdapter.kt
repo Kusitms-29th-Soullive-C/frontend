@@ -18,6 +18,7 @@ class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter
         val detailConatiner : LinearLayout = view.findViewById(R.id.output_model_Detail)
         val rankTextView : TextView = view.findViewById(R.id.output_rankTextView)
         val relevanceTextView : TextView = view.findViewById(R.id.output_relevanceTextView)
+        val bookmark : ImageView = view.findViewById(R.id.output_icon_bookmark)
 
 
         fun bind(item: Model) {
@@ -48,6 +49,14 @@ class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter
         holder.bind(items[position])
         holder.itemView.setOnClickListener{
             holder.detailConatiner.visibility =  if (holder.detailConatiner.visibility == View.GONE) View.VISIBLE else View.GONE
+        }
+
+        holder.bookmark.setOnClickListener {
+            val item = items[holder.adapterPosition]
+            item.isBookmarked = !item.isBookmarked
+            holder.bookmark.setImageResource(
+                if (item.isBookmarked) R.drawable.ic_bookmark_purple else R.drawable.ic_bookmark
+            )
         }
     }
 

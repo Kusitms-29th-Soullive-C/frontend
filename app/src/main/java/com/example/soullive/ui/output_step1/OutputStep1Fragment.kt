@@ -23,7 +23,8 @@ data class Model(
     val hotness: Int,
     val negativeIssues: String,
     val ImageText: String,
-    val imageResId: Int
+    val imageResId: Int,
+    var isBookmarked: Boolean = false
 )
 
 
