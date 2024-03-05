@@ -4,10 +4,15 @@
     <string name="title_fitness">적합도 분석</string>
     <string name="title_bookmark">북마크</string>
     <string name="title_mypage">마이페이지</string>
-
     <string name="iv_fitness_logo">적합도 분석 화면의 로고</string>
     <string name="iv_fitness_search">적합도 분석 화면의 검색 아이콘</string>
 
+    <!--on boarding-->
+    <string name="모델_정하기_고민_끝">모델 정하기 고민 끝.</string>
+    <string name="에_오신_것을">에 오신 것을</string>
+    <string name="환영합니다">환영합니다!</string>
+    <string name="삼초_가입으로_적합한_모델을_만나보세요">3초 가입으로 적합한 모델을 만나보세요.</string>
+    <string name="시작하기">시작하기</string>
     <!--sign up-->
     <string name="회원가입">회원가입</string>
     <string name="기업_이메일">기업 이메일</string>
@@ -116,4 +121,6 @@
     <string name="tv_fitness_history2_age_detail">10-20세</string>
     <string name="tv_fitness_history2_gender_detail">무관</string>
     <string name="tv_fitness_history2_model_detail">뉴진스</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
