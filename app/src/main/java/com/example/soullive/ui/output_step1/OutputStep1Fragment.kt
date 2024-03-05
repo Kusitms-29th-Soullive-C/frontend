@@ -39,6 +39,39 @@ class OutputStep1Fragment : Fragment() {
         Model("고윤정5","배우", listOf("Keyword1", "Keyword2"), 1, 95,3,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_goyoonjung),
     )
 
+    val similardummyList = listOf(
+        mapOf(
+            "이름" to "고윤정",
+            "직업" to "모델",
+            "이미지" to R.drawable.ic_goyoonjung
+        ),
+        mapOf(
+            "이름" to "고윤정2",
+            "직업" to "모델",
+            "이미지" to R.drawable.ic_goyoonjung
+        ),
+        mapOf(
+            "이름" to "고윤정3",
+            "직업" to "모델",
+            "이미지" to R.drawable.ic_goyoonjung
+        ),
+        mapOf(
+            "이름" to "고윤정4",
+            "직업" to "모델",
+            "이미지" to R.drawable.ic_goyoonjung
+        ),
+        mapOf(
+            "이름" to "고윤정5",
+            "직업" to "모델",
+            "이미지" to R.drawable.ic_goyoonjung
+        ),
+        mapOf(
+            "이름" to "고윤정6",
+            "직업" to "모델",
+            "이미지" to R.drawable.ic_goyoonjung
+        ),
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -55,6 +88,9 @@ class OutputStep1Fragment : Fragment() {
         val groupedItems = dummyList.chunked(3)
         val groupedItemsAdapter = GroupedItemsAdapter(groupedItems)
         binding.outputStep1ModelView.adapter = groupedItemsAdapter
+
+        val similarModelAdapter = SimilarModelAdapter(similardummyList)
+        binding.outputStep1SimilarModelView.adapter = similarModelAdapter
 
         TabLayoutMediator(binding.outputStep1TabDots, binding.outputStep1ModelView) { tab, position ->
 
