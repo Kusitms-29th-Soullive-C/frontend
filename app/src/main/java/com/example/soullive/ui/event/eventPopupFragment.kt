@@ -38,6 +38,7 @@ class eventPopupFragment : Fragment() {
             findNavController().navigate(R.id.action_eventPopup_to_navigation_home)
         }
     }
+
     private fun nextButton() {
         binding.btnEventPopupNext.setOnClickListener {
             findNavController().navigate(R.id.action_eventPopup_to_subscribe)

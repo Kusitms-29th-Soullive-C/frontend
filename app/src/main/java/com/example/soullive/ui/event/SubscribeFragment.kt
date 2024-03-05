@@ -29,6 +29,7 @@ class SubscribeFragment : Fragment() {
         setBackButton()
         nextButton()
     }
+
     private fun setBackButton() {
         binding.subscribeToolbar.setNavigationOnClickListener {
             val navController = findNavController()
