@@ -66,25 +66,43 @@ class InputStep1Fragment : Fragment() {
 
     private fun setupClickListeners() {
         binding.etInput1.setOnFocusChangeListener { v, hasFocus ->
+            // 포커스가 주어졌을 때 동작
             if (hasFocus) {
                 binding.input1.isPressed = true
+                binding.btnTvDelete1.visibility = View.VISIBLE
             } else {
                 binding.input1.isPressed = false
+                binding.btnTvDelete1.visibility = View.INVISIBLE
             }
         }
         binding.etInput2.setOnFocusChangeListener { v, hasFocus ->
+            // 포커스가 주어졌을 때 동작
             if (hasFocus) {
                 binding.input2.isPressed = true
+                binding.btnTvDelete2.visibility = View.VISIBLE
             } else {
                 binding.input2.isPressed = false
+                binding.btnTvDelete2.visibility = View.INVISIBLE
             }
         }
         binding.etInput3.setOnFocusChangeListener { v, hasFocus ->
+            // 포커스가 주어졌을 때 동작
             if (hasFocus) {
                 binding.input3.isPressed = true
+                binding.btnTvDelete3.visibility = View.VISIBLE
             } else {
                 binding.input3.isPressed = false
+                binding.btnTvDelete3.visibility = View.INVISIBLE
             }
+        }
+        binding.btnTvDelete1.setOnClickListener {
+            binding.etInput1.text = null // 입력창 초기화
+        }
+        binding.btnTvDelete2.setOnClickListener {
+            binding.etInput2.text = null // 입력창 초기화
+        }
+        binding.btnTvDelete3.setOnClickListener {
+            binding.etInput3.text = null // 입력창 초기화
         }
     }
 

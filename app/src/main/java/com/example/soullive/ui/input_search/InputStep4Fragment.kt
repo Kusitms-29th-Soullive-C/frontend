@@ -2,6 +2,7 @@ package com.example.soullive.ui.input_search
 
 import SearchResultAdapter
 import SelectedItemsAdapter
+import android.content.Context
 import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
@@ -15,6 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.soullive.R
 import android.view.inputmethod.EditorInfo
 import android.view.KeyEvent
+import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.widget.AppCompatButton
 import com.example.soullive.databinding.FragmentInputStep4Binding
 
 
@@ -22,6 +25,7 @@ class InputStep4Fragment : Fragment() {
     private var _binding: FragmentInputStep4Binding? = null
     private lateinit var searchResultAdapter: SearchResultAdapter
     private lateinit var selectedItemsAdapter: SelectedItemsAdapter
+    private lateinit var button: AppCompatButton
 
     private val binding get() = _binding!!
 
@@ -77,11 +81,16 @@ class InputStep4Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        button = view.findViewById(R.id.btn_search_next)
         binding.inputSearchSelectedModel.visibility = View.GONE
         binding.inputSearchSelectedCount.visibility = View.GONE
+        binding.root.setOnClickListener {
+            hideKeyboard()
+        }
         setBackButton()
         setProgressBar()
         setCancleButton()
+        updateButtonState()
         setupSearchView()
         setupEditFocus()
         setupKeyboardVisibilityListener()
@@ -93,6 +102,17 @@ class InputStep4Fragment : Fragment() {
         binding.inputSearchToolbar.setNavigationOnClickListener {
             val navController = findNavController()
             navController.navigateUp()
+        }
+    }
+
+    private fun hideKeyboard() {
+        if (activity != null && requireActivity().currentFocus != null) {
+            val inputManager: InputMethodManager =
+                requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputManager.hideSoftInputFromWindow(
+                requireActivity().currentFocus?.windowToken,
+                InputMethodManager.HIDE_NOT_ALWAYS
+            )
         }
     }
 
@@ -168,20 +188,26 @@ class InputStep4Fragment : Fragment() {
         }
     }
 
+
+
     private fun setupRecyclerView() {
         searchResultAdapter = SearchResultAdapter { item, isSelected ->
             if (isSelected && selectedItemsAdapter.itemCount < 5) {
-                selectedItemsAdapter.addItem(item)
+                selectedItemsAdapter.addItem(item, requireContext())
+                hideKeyboard()
             } else if (!isSelected) {
-                selectedItemsAdapter.removeItem(item)
+                selectedItemsAdapter.removeItem(item, requireContext())
+                hideKeyboard()
             }
 
             if (selectedItemsAdapter.itemCount > 0) {
                 binding.inputSearchSelectedModel.visibility = View.VISIBLE
                 binding.inputSearchSelectedCount.visibility = View.VISIBLE
+                binding.btnSearchNext.isEnabled = true
             } else {
                 binding.inputSearchSelectedModel.visibility = View.GONE
                 binding.inputSearchSelectedCount.visibility = View.GONE
+                binding.btnSearchNext.isEnabled = false
             }
             updateSelectedItemCount()
         }
@@ -194,14 +220,16 @@ class InputStep4Fragment : Fragment() {
         selectedItemsAdapter = SelectedItemsAdapter { item, isSelected ->
             if (isSelected && selectedItemsAdapter.itemCount < 5) {
             } else if (!isSelected) {
-                selectedItemsAdapter.removeItem(item)
+                selectedItemsAdapter.removeItem(item, requireContext())
             }
             if (selectedItemsAdapter.itemCount > 0) {
                 binding.inputSearchSelectedModel.visibility = View.VISIBLE
                 binding.inputSearchSelectedCount.visibility = View.VISIBLE
+                binding.btnSearchNext.isEnabled = true
             } else {
                 binding.inputSearchSelectedModel.visibility = View.GONE
                 binding.inputSearchSelectedCount.visibility = View.GONE
+                binding.btnSearchNext.isEnabled = false
             }
             updateSelectedItemCount()
         }
@@ -226,7 +254,7 @@ class InputStep4Fragment : Fragment() {
         matchedItem?.let { item ->
             val isSelected = false
             if (!isSelected) {
-                selectedItemsAdapter.addItem(item)
+                selectedItemsAdapter.addItem(item, requireContext())
             }
         }
     }
@@ -241,6 +269,12 @@ class InputStep4Fragment : Fragment() {
 
     private fun onSearchView() {
 
+    }
+
+
+    private fun updateButtonState() {
+        val isConditionMet = true
+        button.isEnabled = isConditionMet
     }
 
     private fun nextButton() {

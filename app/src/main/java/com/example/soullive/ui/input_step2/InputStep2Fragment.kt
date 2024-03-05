@@ -83,10 +83,13 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
 
     private fun setupClickListeners() {
         binding.etInput1.setOnFocusChangeListener { v, hasFocus ->
+            // 포커스가 주어졌을 때 동작
             if (hasFocus) {
                 binding.input1.isPressed = true
+                binding.btnTvDelete.visibility = View.VISIBLE
             } else {
                 binding.input1.isPressed = false
+                binding.btnTvDelete.visibility = View.INVISIBLE
             }
         }
         binding.etInput1.setOnEditorActionListener { _, actionId, event ->
@@ -107,6 +110,9 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
         }
         binding.btnStep2Next.setOnClickListener {
             findNavController().navigate(R.id.action_inputStep2_to_inputStep3)
+        }
+        binding.btnTvDelete.setOnClickListener {
+            binding.etInput1.text = null // 입력창 초기화
         }
     }
 

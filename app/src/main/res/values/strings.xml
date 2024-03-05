@@ -8,10 +8,23 @@
     <string name="iv_fitness_logo">적합도 분석 화면의 로고</string>
     <string name="iv_fitness_search">적합도 분석 화면의 검색 아이콘</string>
 
+    <!--sign up-->
+    <string name="회원가입">회원가입</string>
+    <string name="기업_이메일">기업 이메일</string>
+    <string name="이메일_주소_입력">이메일 주소 입력</string>
+    <string name="인증번호">인증번호</string>
+    <string name="인증번호_입력">인증번호 입력</string>
+    <string name="인증번호_받기">인증번호 받기</string>
+    <string name="비밀번호">비밀번호</string>
+    <string name="비밀번호_입력">비밀번호 입력</string>
+    <string name="SoulFit">SoulFit</string>
+    <string name="이용약관">이용약관</string>
+    <string name="본인은_기업_관계자이며_약관_내용을_확인하였습니다">본인은 기업 관계자이며, 약관 내용을 확인하였습니다.</string>
+
     <!--input start-->
-    <string name="fitness_title">AI 광고 모델 분석</string>
-    <string name="fitness_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
-    <string name="fitness_btn">시작하기</string>
+    <string name="input_start_title">AI 광고 모델 분석</string>
+    <string name="input_start_script">기업 및 제품 정보, 광고전략, 목표타겟, 관심 셀럽을 입력하면 AI를 통해 적합도를 분석해드려요.</string>
+    <string name="input_start_btn">시작하기</string>
     <string name="iv_3d_logo">분석 시작 화면에서 소울라이브의 3d 로고 이미지</string>
 
     <!--input step1,2-->
@@ -76,6 +89,8 @@
     <string name="input_step5_waiting">조금만 기다려 주세요.</string>
     <string name="new_analyze_text">분석이 완료되었어요!</string>
     <string name="new_waiting_text">버튼을 눌러 분석 결과를 확인해주세요.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     <!--output step1-->
@@ -101,4 +116,28 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+    <!--fitness-->
+    <string name="fitness_title1">어떤 모델이 광고에 적합한지</string>
+    <string name="fitness_title2">고민이신가요?</string>
+    <string name="tv_fitness_goto">AI 적합도 분석하러 가기</string>
+    <string name="iv_qna">분석화면의 물음표 이미지</string>
+    <string name="iv_fitness_btn">분석하기 버튼</string>
+    <string name="iv_fitness_goto_logo">분석하기 버튼에 있는 분석 로딩 이미지</string>
+    <string name="iv_fitness_arrow_right">분석하기 버튼의 오른쪽 화살표</string>
+    <string name="tv_fitness_history">과거 적합도 분석 히스토리</string>
+    <string name="iv_fitness_history_box">과거 적합도 분석 히스토리 박스</string>
+    <string name="tv_history1_title">Galaxy S30</string>
+    <string name="tv_history1_date">2024.03.03</string>
+    <string name="iv_fitness_history_mini_box">히스토리의 작은 상자</string>
+    <string name="tv_fitness_history_age">연령</string>
+    <string name="tv_fitness_history1_age_detail">40-60세</string>
+    <string name="tv_fitness_history_gender">성별</string>
+    <string name="tv_fitness_history1_gender_detail">무관</string>
+    <string name="tv_fitness_history_model">모델</string>
+    <string name="tv_fitness_history1_model_detail">황정음</string>
+    <string name="tv_history2_title">iPhone 15</string>
+    <string name="tv_history2_date">2024.03.06</string>
+    <string name="tv_fitness_history2_age_detail">10-20세</string>
+    <string name="tv_fitness_history2_gender_detail">무관</string>
+    <string name="tv_fitness_history2_model_detail">뉴진스</string>
 </resources>
