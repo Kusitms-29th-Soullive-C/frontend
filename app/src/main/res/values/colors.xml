@@ -14,9 +14,11 @@
     <color name="purple_700">#3D1556</color>
     <color name="purple_800">#2C0F3E</color>
     <color name="purple_900">#13061B</color>
+    <color name="grey_100">#BEBEBE</color>
     <color name="grey_150">#9F9F9F</color>
     <color name="grey_200">#737373</color>
     <color name="grey_300">#585858</color>
+    <color name="grey_400">#444444</color>
     <color name="grey_500">#2E2E2E</color>
     <color name="grey_600">#2A2A2A</color>
     <color name="grey_700">#212121</color>
