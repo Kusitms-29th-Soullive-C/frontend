@@ -18,7 +18,6 @@ class GroupedItemsAdapter(private var groupedItems: List<List<Model>>) : Recycle
         notifyDataSetChanged()
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.page_models_layout, parent, false)
         return ViewHolder(view)
@@ -33,7 +32,7 @@ class GroupedItemsAdapter(private var groupedItems: List<List<Model>>) : Recycle
         }
         with(holder.itemsRecyclerView) {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-            adapter = OutputModelAdapter(groupedItems[position],startRanks[position])
+            adapter = OutputModelAdapter(groupedItems[position], startRanks[position])
         }
     }
 

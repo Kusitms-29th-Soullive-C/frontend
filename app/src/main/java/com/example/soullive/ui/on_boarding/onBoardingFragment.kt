@@ -17,7 +17,7 @@ class onBoardingFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = FragmentOnBoardingBinding.inflate(inflater, container, false)
         return binding.root

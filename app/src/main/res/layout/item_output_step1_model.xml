@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -26,16 +27,14 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/bg_grey800_4dp">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/output_step1_imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="0dp"
-            android:background="@drawable/bg_output_rounded_image"
-            android:clipToOutline="true"
-            android:scaleType="centerCrop" />
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
 
         <TextView
             android:id="@+id/output_step1_itemName"

@@ -38,7 +38,7 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentInputStep2Binding.inflate(inflater, container, false)
         return binding.root
@@ -73,6 +73,7 @@ class InputStep2Fragment : Fragment(), KeywordDeleteListener {
             findNavController().navigate(R.id.action_inputStep2_to_navigation_home)
         }
     }
+
     private fun checkNextButtonState() {
         if (KeywordModel.KeywordList.isEmpty()) {
             binding.btnStep2Next.isEnabled = false

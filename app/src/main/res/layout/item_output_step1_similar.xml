@@ -5,24 +5,26 @@
     android:layout_height="wrap_content"
     android:padding="8dp">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/similar_model_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:shapeAppearanceOverlay="@style/top4dp_bottom0dp" />
 
     <TextView
         android:id="@+id/similar_model_rank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
+        android:background="@drawable/bg_output_overlay"
         android:elevation="4dp"
         android:padding="8dp"
         android:text="1"
         android:textColor="@color/primary_500"
-        android:background="@drawable/bg_output_overlay"
         app:layout_constraintStart_toStartOf="@id/similar_model_image"
         app:layout_constraintTop_toTopOf="@id/similar_model_image" />
 
@@ -30,19 +32,19 @@
         android:id="@+id/similar_model_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard_bold"
         android:text="Model Name"
         android:textColor="@color/grey_100"
-        android:fontFamily="@font/pretendard_bold"
-        app:layout_constraintTop_toBottomOf="@id/similar_model_image"
-        app:layout_constraintStart_toStartOf="@id/similar_model_image"/>
+        app:layout_constraintStart_toStartOf="@id/similar_model_image"
+        app:layout_constraintTop_toBottomOf="@id/similar_model_image" />
 
     <TextView
         android:id="@+id/similar_model_job"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/primary_500"
         android:text="Model Job"
-        app:layout_constraintTop_toBottomOf="@id/similar_model_name"
-        app:layout_constraintStart_toStartOf="@id/similar_model_name"/>
+        android:textColor="@color/primary_500"
+        app:layout_constraintStart_toStartOf="@id/similar_model_name"
+        app:layout_constraintTop_toBottomOf="@id/similar_model_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -189,7 +189,6 @@ class InputStep4Fragment : Fragment() {
     }
 
 
-
     private fun setupRecyclerView() {
         searchResultAdapter = SearchResultAdapter { item, isSelected ->
             if (isSelected && selectedItemsAdapter.itemCount < 5) {

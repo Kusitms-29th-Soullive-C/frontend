@@ -20,7 +20,7 @@ class MypageFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         val mypageViewModel =
             ViewModelProvider(this).get(MypageViewModel::class.java)

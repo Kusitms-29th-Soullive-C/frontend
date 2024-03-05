@@ -17,8 +17,8 @@ class InputStartFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View{
+        savedInstanceState: Bundle?,
+    ): View {
         _binding = FragmentInputStartBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -37,14 +37,14 @@ class InputStartFragment : Fragment() {
         }
     }
 
-    private fun animation(){
+    private fun animation() {
         val animation = AnimationUtils.loadAnimation(context, R.anim.move_up_down)
         binding.iv3dLogo.startAnimation(animation)
     }
 
-    private fun startButton(){
+    private fun startButton() {
         binding.btnStart.setOnClickListener {
-           findNavController().navigate(R.id.action_inputStart_to_inputStep1)
+            findNavController().navigate(R.id.action_inputStart_to_inputStep1)
         }
     }
 

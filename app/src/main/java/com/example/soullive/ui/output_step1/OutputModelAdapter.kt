@@ -9,17 +9,17 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
 
-class OutputModelAdapter (private val items: List<Model>,private val startRank: Int) : RecyclerView.Adapter<OutputModelAdapter.ItemViewHolder>() {
+class OutputModelAdapter(private val items: List<Model>, private val startRank: Int) : RecyclerView.Adapter<OutputModelAdapter.ItemViewHolder>() {
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val nameTextView: TextView = view.findViewById(R.id.output_step1_itemName)
         private val jobTextView: TextView = view.findViewById(R.id.output_step1_itemJob)
-        private val ModelImageView : ImageView = view.findViewById(R.id.output_step1_imageView)
+        private val ModelImageView: ImageView = view.findViewById(R.id.output_step1_imageView)
         val keywordsContainer: LinearLayout = view.findViewById(R.id.output_keywords_container)
-        val detailConatiner : LinearLayout = view.findViewById(R.id.output_model_Detail)
-        val rankTextView : TextView = view.findViewById(R.id.output_rankTextView)
-        val relevanceTextView : TextView = view.findViewById(R.id.output_relevanceTextView)
-        val bookmark : ImageView = view.findViewById(R.id.output_icon_bookmark)
-        val ItemRankText : TextView = view.findViewById(R.id.output_item_index)
+        val detailConatiner: LinearLayout = view.findViewById(R.id.output_model_Detail)
+        val rankTextView: TextView = view.findViewById(R.id.output_rankTextView)
+        val relevanceTextView: TextView = view.findViewById(R.id.output_relevanceTextView)
+        val bookmark: ImageView = view.findViewById(R.id.output_icon_bookmark)
+        val ItemRankText: TextView = view.findViewById(R.id.output_item_index)
 
         fun bind(item: Model) {
             nameTextView.text = item.name
@@ -46,8 +46,8 @@ class OutputModelAdapter (private val items: List<Model>,private val startRank: 
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.bind(items[position])
-        holder.itemView.setOnClickListener{
-            holder.detailConatiner.visibility =  if (holder.detailConatiner.visibility == View.GONE) View.VISIBLE else View.GONE
+        holder.itemView.setOnClickListener {
+            holder.detailConatiner.visibility = if (holder.detailConatiner.visibility == View.GONE) View.VISIBLE else View.GONE
         }
         val Rank = startRank + position
         holder.ItemRankText.setText(Rank.toString())

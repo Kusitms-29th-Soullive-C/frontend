@@ -10,7 +10,7 @@ import com.example.soullive.R
 import com.example.soullive.ui.input_step2.KeywordModel.Companion.KeywordList
 
 class KeywordAdapter(
-    private val keywordList: MutableList<KeywordModel>, private val fragment: InputStep2Fragment
+    private val keywordList: MutableList<KeywordModel>, private val fragment: InputStep2Fragment,
 ) : RecyclerView.Adapter<KeywordAdapter.KeywordViewHolder>() {
     inner class KeywordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(keyword: KeywordModel) {

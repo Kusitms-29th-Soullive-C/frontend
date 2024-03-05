@@ -25,23 +25,22 @@ data class Model(
     val negativeIssues: String,
     val ImageText: String,
     val imageResId: Int,
-    var isBookmarked: Boolean = false
+    var isBookmarked: Boolean = false,
 )
-
 
 class OutputStep1Fragment : Fragment() {
 
     private var _binding: FragmentOutputStep1Binding? = null
     private val binding get() = _binding!!
-    private lateinit var viewPager : ViewPager2
-    private lateinit var OutputModelAdapter : OutputModelAdapter
+    private lateinit var viewPager: ViewPager2
+    private lateinit var OutputModelAdapter: OutputModelAdapter
 
     val dummyList = listOf(
-        Model("고윤정","배우", listOf("Keyword1", "Keyword2"), 1, 95,3,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리", R.drawable.ic_goyoonjung),
-        Model("잇섭","유튜버", listOf("Keyword1", "Keyword2"), 2, 88,4,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_itsub),
-        Model("한소희","배우", listOf("도도한", "럭셔리한","호감형의"), 3, 33,1,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_sohee),
-        Model("고윤정4","배우", listOf("Keyword1", "Keyword2"), 4, 100,5,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_output4),
-        Model("이재욱","배우", listOf("Keyword1", "Keyword2"), 5, 98,2,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_output5),
+        Model("고윤정", "배우", listOf("Keyword1", "Keyword2"), 1, 95, 3, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_goyoonjung),
+        Model("잇섭", "유튜버", listOf("Keyword1", "Keyword2"), 2, 88, 4, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_itsub),
+        Model("한소희", "배우", listOf("도도한", "럭셔리한", "호감형의"), 3, 33, 1, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_sohee),
+        Model("고윤정4", "배우", listOf("Keyword1", "Keyword2"), 4, 100, 5, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_output4),
+        Model("이재욱", "배우", listOf("Keyword1", "Keyword2"), 5, 98, 2, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_output5),
     )
 
     val similardummyList = listOf(
@@ -98,8 +97,8 @@ class OutputStep1Fragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View{
+        savedInstanceState: Bundle?,
+    ): View {
         _binding = FragmentOutputStep1Binding.inflate(inflater, container, false)
         return binding.root
     }
@@ -194,7 +193,7 @@ class OutputStep1Fragment : Fragment() {
     }
 
     private fun filterAndSortList(criteria: String) {
-        val sortedList = when(criteria) {
+        val sortedList = when (criteria) {
             "적합도" -> similardummyList.sortedByDescending { it["적합도"] as Int }
             "타겟 선호도" -> similardummyList.sortedByDescending { it["타겟선호도"] as Int }
             "전략" -> similardummyList.sortedByDescending { it["전략"] as Int }

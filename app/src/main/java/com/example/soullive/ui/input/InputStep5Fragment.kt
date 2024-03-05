@@ -101,7 +101,7 @@ class InputStep5Fragment : Fragment() {
     }
 
 
-    private fun gotoOutputButton(){
+    private fun gotoOutputButton() {
         binding.btnInputStep5.setOnClickListener {
             findNavController().navigate(R.id.action_inputStep5_to_OutputStep1Fragment)
         }
