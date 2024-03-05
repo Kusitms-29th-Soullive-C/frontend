@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.onBoardingFragment -> View.GONE
                 R.id.signUpFragment -> View.GONE
                 R.id.eventPopupFragment -> View.GONE
-                R.id.SubscribeFragment -> View.GONE
+                R.id.subscribeFragment -> View.GONE
                 R.id.inputStartFragment -> View.GONE
                 R.id.inputStep1Fragment -> View.GONE
                 R.id.inputStep2Fragment -> View.GONE
