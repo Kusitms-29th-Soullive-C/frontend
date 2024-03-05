@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
         val navController = navHostFragment.navController
         binding.bnv.setupWithNavController(navController)
 
@@ -26,8 +27,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hideBottomNavigationView(navController: NavController) {
-        navController.addOnDestinationChangedListener{ _, destination, _ ->
-            binding.bnv.visibility = when(destination.id){
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            binding.bnv.visibility = when (destination.id) {
+                R.id.onBoardingFragment -> View.GONE
+                R.id.signUpFragment -> View.GONE
+                R.id.eventPopupFragment -> View.GONE
+                R.id.subscribeFragment -> View.GONE
                 R.id.inputStartFragment -> View.GONE
                 R.id.inputStep1Fragment -> View.GONE
                 R.id.inputStep2Fragment -> View.GONE

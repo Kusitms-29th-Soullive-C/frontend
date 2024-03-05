@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/signUpFragment">
+    app:startDestination="@id/onBoardingFragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -121,7 +121,37 @@
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up">
         <action
-            android:id="@+id/action_signUp_to_navigation_home"
+            android:id="@+id/action_signUp_to_eventPopup"
+            app:destination="@id/eventPopupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.soullive.ui.on_boarding.onBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoarding_to_signUp"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventPopupFragment"
+        android:name="com.example.soullive.ui.event.eventPopupFragment"
+        android:label="fragment_event_popup"
+        tools:layout="@layout/fragment_event_popup" >
+        <action
+            android:id="@+id/action_eventPopup_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_eventPopup_to_subscribe"
+            app:destination="@id/subscribeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subscribeFragment"
+        android:name="com.example.soullive.ui.event.SubscribeFragment"
+        android:label="fragment_subscribe"
+        tools:layout="@layout/fragment_subscribe" >
+        <action
+            android:id="@+id/action_subscribe_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
 

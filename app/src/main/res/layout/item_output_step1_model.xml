@@ -11,11 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:paddingVertical="4dp"
-        android:paddingHorizontal="8dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginLeft="3dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/bg_output_rounded_rank"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
         android:text="1"
         android:textColor="@color/black"
         android:textSize="14sp" />
@@ -23,78 +23,74 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_search_rounded_container"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_grey800_4dp">
 
-    <ImageView
-        android:id="@+id/output_step1_imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:scaleType="centerCrop"
-        android:layout_marginStart="0dp"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/bg_output_rounded_image"
-        android:clipToOutline="true"
+        <ImageView
+            android:id="@+id/output_step1_imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="0dp"
+            android:background="@drawable/bg_output_rounded_image"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop" />
 
-        />
+        <TextView
+            android:id="@+id/output_step1_itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/output_step1_imageView"
+            android:layout_toRightOf="@id/output_step1_imageView"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/output_step1_itemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:layout_toEndOf="@id/output_step1_imageView"
-        android:layout_toRightOf="@id/output_step1_imageView"/>
+        <ImageView
+            android:id="@+id/output_icon_bookmark"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="16dp"
+            android:onClick="toggleBookmark"
+            android:src="@drawable/ic_bookmark" />
 
-    <ImageView
-        android:id="@+id/output_icon_bookmark"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/ic_bookmark"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"
-        android:onClick="toggleBookmark"
-        />
+        <TextView
+            android:id="@+id/output_step1_itemJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/output_step1_itemName"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/output_step1_imageView"
+            android:layout_toRightOf="@id/output_step1_imageView"
+            android:padding="3dp"
+            android:textColor="@color/primary_500"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/output_step1_itemJob"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@color/primary_500"
-        android:padding="3dp"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@id/output_step1_itemName"
-        android:layout_toEndOf="@id/output_step1_imageView"
-        android:layout_toRightOf="@id/output_step1_imageView"/>
+        <LinearLayout
+            android:id="@+id/output_keywords_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/output_step1_itemJob"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/output_step1_imageView"
+            android:layout_toRightOf="@id/output_step1_imageView"
+            android:orientation="horizontal" />
 
-    <LinearLayout
-        android:id="@+id/output_keywords_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_toEndOf="@id/output_step1_imageView"
-        android:layout_toRightOf="@id/output_step1_imageView"
-        android:layout_below="@id/output_step1_itemJob">
-    </LinearLayout>
+        <include
+            layout="@layout/item_output_step1_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/output_keywords_container"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp" />
 
-    <include
-        layout="@layout/item_output_step1_detail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="15dp"
-        android:layout_below="@id/output_keywords_container"/>
-
-</RelativeLayout>
+    </RelativeLayout>
 </LinearLayout>

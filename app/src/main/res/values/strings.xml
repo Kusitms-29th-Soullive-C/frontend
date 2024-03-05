@@ -5,9 +5,43 @@
     <string name="title_bookmark">북마크</string>
     <string name="title_mypage">마이페이지</string>
 
-    <string name="iv_fitness_logo">적합도 분석 화면의 로고</string>
-    <string name="iv_fitness_search">적합도 분석 화면의 검색 아이콘</string>
+    <string name="iv_logo">화면의 상단 로고</string>
+    <string name="iv_search">검색 아이콘</string>
+    <string name="iv_setting">설정 아이콘</string>
+    <string name="iv_arrow_right">오른쪽 화살표</string>
+    <string name="iv_bg_grey800_4dp">grey400 색상의 배경</string>
+    <string name="iv_bg_grey500">grey500색상의 배경</string>
+    <string name="iv_bg_grey800">grey800색상의 배경</string>
 
+    <!--on boarding-->
+    <string name="모델_정하기_고민_끝">모델 정하기 고민 끝.</string>
+    <string name="에_오신_것을">에 오신 것을</string>
+    <string name="환영합니다">환영합니다!</string>
+    <string name="삼초_가입으로_적합한_모델을_만나보세요">3초 가입으로 적합한 모델을 만나보세요.</string>
+    <string name="시작하기">시작하기</string>
+    <!--event popup-->
+    <string name="진심으로_환영합니다">진심으로 환영합니다.</string>
+    <string name="SoulFit이_준비한_신규회원_이벤트를_신청해보세요">SoulFit이 준비한 신규회원 이벤트를 신청해보세요.</string>
+    <string name="첫_구독_이벤트_바로가기">첫 구독 이벤트 바로가기</string>
+    <string name="원플러스원_구독_이벤트">1+1개월 구독 이벤트</string>
+    <string name="모델_검색_무제한">모델 검색 무제한</string>
+    <string name="모델_적합도_분석_무제한">모델 적합도 분석 무제한</string>
+    <!--subscribe-->
+    <string name="AI_분석_기능">AI 분석 기능</string>
+    <string name="을">을</string>
+    <string name="무제한">무제한</string>
+    <string name="으로_즐겨보세요">으로 즐겨보세요!</string>
+    <string name="일주일_무료체험_후의_요금제를_선택하세요">일주일 무료체험 후의 요금제를 선택하세요.</string>
+    <string name="인기">인기</string>
+    <string name="삼십이퍼센트_할인">32% 할인</string>
+    <string name="삼십만원">300,000원</string>
+    <string name="구만팔천원">98,000원</string>
+    <string name="팔천백육십칠원월">8,167원/월</string>
+    <string name="만구천오백원월">19,500원/월</string>
+    <string name="십이개월">12개월</string>
+    <string name="일개월">1개월</string>
+    <string name="상세_조건_확인하기">상세 조건 확인하기</string>
+    <string name="일주일간_무료_체험_시작하기">일주일간 무료 체험 시작하기</string>
     <!--sign up-->
     <string name="회원가입">회원가입</string>
     <string name="기업_이메일">기업 이메일</string>
@@ -89,8 +123,6 @@
     <string name="input_step5_waiting">조금만 기다려 주세요.</string>
     <string name="new_analyze_text">분석이 완료되었어요!</string>
     <string name="new_waiting_text">버튼을 눌러 분석 결과를 확인해주세요.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     <!--output step1-->
@@ -123,7 +155,6 @@
     <string name="iv_qna">분석화면의 물음표 이미지</string>
     <string name="iv_fitness_btn">분석하기 버튼</string>
     <string name="iv_fitness_goto_logo">분석하기 버튼에 있는 분석 로딩 이미지</string>
-    <string name="iv_fitness_arrow_right">분석하기 버튼의 오른쪽 화살표</string>
     <string name="tv_fitness_history">과거 적합도 분석 히스토리</string>
     <string name="iv_fitness_history_box">과거 적합도 분석 히스토리 박스</string>
     <string name="tv_history1_title">Galaxy S30</string>
@@ -140,4 +171,44 @@
     <string name="tv_fitness_history2_age_detail">10-20세</string>
     <string name="tv_fitness_history2_gender_detail">무관</string>
     <string name="tv_fitness_history2_model_detail">뉴진스</string>
+
+    <!--home-->
+    <string name="iv_home_banner">홈 화면에 있는 3d로고</string>
+    <string name="tv_home_title1">오늘도</string>
+    <string name="tv_home_title2">SoulFit</string>
+    <string name="tv_home_title3">과 함께</string>
+    <string name="tv_home_title4">기업과 딱 맞는 모델을 찾아보세요!</string>
+    <string name="tv_home_model">SOUL LIVE의 검증된 모델</string>
+    <string name="tv_home_verified1_name">가전주부</string>
+    <string name="tv_home_verified1_job">유튜버</string>
+    <string name="tv_home_verified1_tag1">차분한 보이스</string>
+    <string name="tv_home_verified1_tag2">라이프 스타일</string>
+    <string name="tv_home_verified1_tag3">IT 제품</string>
+    <string name="tv_home_verified2_name">손채리</string>
+    <string name="tv_home_verified2_job">유튜버</string>
+    <string name="tv_home_verified2_tag1">독보적인</string>
+    <string name="tv_home_verified2_tag2">패션</string>
+    <string name="tv_home_verified2_tag3">글로벌</string>
+    <string name="tv_home_verified3_name">하루하루 문숙</string>
+    <string name="tv_home_verified3_job">배우</string>
+    <string name="tv_home_verified3_tag1">우아한</string>
+    <string name="tv_home_verified3_tag2">자연 건강</string>
+    <string name="tv_home_verified3_tag3">의식이 높은</string>
+    <string name="tv_home_brand">브랜드 평판 순위</string>
+    <string name="tv_home_brand1">광고 모델</string>
+    <string name="tv_home_brand2">배우</string>
+    <string name="tv_home_brand3">가수</string>
+    <string name="tv_home_brand4">스포츠</string>
+    <string name="tv_home_brand5">예능인</string>
+    <string name="tv_home_brand6">개인방송</string>
+    <string name="tv_home_rank1_name">임영웅</string>
+    <string name="tv_home_rank2_name">뉴진스</string>
+    <string name="tv_home_rank3_name">손흥민</string>
+    <string name="tv_home_rank3_job">운동선수</string>
+    <string name="tv_home_rank4_name">차은우</string>
+    <string name="tv_home_rank_job_singer">가수</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>
