@@ -13,6 +13,13 @@
     <string name="환영합니다">환영합니다!</string>
     <string name="삼초_가입으로_적합한_모델을_만나보세요">3초 가입으로 적합한 모델을 만나보세요.</string>
     <string name="시작하기">시작하기</string>
+    <!--event popup-->
+    <string name="진심으로_환영합니다">진심으로 환영합니다.</string>
+    <string name="SoulFit이_준비한_신규회원_이벤트를_신청해보세요">SoulFit이 준비한 신규회원 이벤트를 신청해보세요.</string>
+    <string name="첫_구독_이벤트_바로가기">첫 구독 이벤트 바로가기</string>
+    <string name="원플러스원_구독_이벤트">1+1개월 구독 이벤트</string>
+    <string name="모델_검색_무제한">모델 검색 무제한</string>
+    <string name="모델_적합도_분석_무제한">모델 적합도 분석 무제한</string>
     <!--sign up-->
     <string name="회원가입">회원가입</string>
     <string name="기업_이메일">기업 이메일</string>
