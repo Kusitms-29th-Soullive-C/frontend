@@ -38,8 +38,8 @@
         android:name="com.example.soullive.ui.input.InputStartFragment"
         android:label="InputStartFragment">
         <action
-            android:id="@+id/action_inputStart_to_output"
-            app:destination="@id/outputStep1Fragment">
+            android:id="@+id/action_inputStart_to_inputStep1"
+            app:destination="@id/inputStep1Fragment">
         </action>
     </fragment>
 
