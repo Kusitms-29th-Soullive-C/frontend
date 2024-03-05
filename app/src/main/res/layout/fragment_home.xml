@@ -16,26 +16,847 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/iv_logo"
             android:src="@drawable/ic_logo_with_name" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/iv_setting"
+            android:src="@drawable/ic_settings" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/iv_search"
+            android:src="@drawable/ic_search" />
     </com.google.android.material.appbar.MaterialToolbar>
 
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/home_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_home_banner"
+                android:layout_width="0dp"
+                android:layout_height="146dp"
+                android:contentDescription="@string/iv_home_banner"
+                android:src="@drawable/ic_home_banner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_home_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="88dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/tv_home_title1"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_home_title4"
+                app:layout_constraintEnd_toStartOf="@id/tv_home_title2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_home_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="88dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/tv_home_title2"
+                android:textColor="@color/purple_400"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_home_title4"
+                app:layout_constraintEnd_toStartOf="@id/tv_home_title3"
+                app:layout_constraintStart_toEndOf="@id/tv_home_title1" />
+
+            <TextView
+                android:id="@+id/tv_home_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/tv_home_title3"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_home_title4"
+                app:layout_constraintStart_toEndOf="@id/tv_home_title2" />
+
+            <TextView
+                android:id="@+id/tv_home_title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/tv_home_title4"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_title1" />
+
+            <TextView
+                android:id="@+id/tv_home_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/tv_home_model"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_title4" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/iv_arrow_right"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_title4" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/iv_bg_grey800_4dp"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_model" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_home_verified1_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_jubu"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified1"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified1"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified1"
+                app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+            <TextView
+                android:id="@+id/tv_home_verified1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_verified1_name"
+                android:textColor="@color/grey_100"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified1_img"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified1" />
+
+            <TextView
+                android:id="@+id/tv_home_verified1_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_verified1_job"
+                android:textColor="@color/purple_500"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified1_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified1_name" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified1_tag1"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified1"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified1_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified1_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified1_tag1"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified1_tag1"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified1_tag1"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified1_tag1"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified1_tag1" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified1_tag2"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified1"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified1_tag1"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified1_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified1_tag2"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified1_tag2"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified1_tag2"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified1_tag2"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified1_tag2" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified1_tag3"
+                android:layout_width="55dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified1"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified1_tag2"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified1_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified1_tag3"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified1_tag3"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified1_tag3"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified1_tag3"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified1_tag3" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/iv_bg_grey800_4dp"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_verified1" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_home_verified2_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_cheari"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified2"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified2"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified2"
+                app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+            <TextView
+                android:id="@+id/tv_home_verified2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_verified2_name"
+                android:textColor="@color/grey_100"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified2_img"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified2" />
+
+            <TextView
+                android:id="@+id/tv_home_verified2_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_verified2_job"
+                android:textColor="@color/purple_500"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified2_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified2_name" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified2_tag1"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified2"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified2_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified2_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified2_tag1"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified2_tag1"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified2_tag1"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified2_tag1"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified2_tag1" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified2_tag2"
+                android:layout_width="45dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified2"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified2_tag1"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified2_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified2_tag2"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified2_tag2"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified2_tag2"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified2_tag2"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified2_tag2" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified2_tag3"
+                android:layout_width="55dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified2"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified2_tag2"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified2_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified2_tag3"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified2_tag3"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified2_tag3"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified2_tag3"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified2_tag3" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified3"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/iv_bg_grey800_4dp"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_verified2" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_home_verified3_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_moonsook"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified3"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified3"
+                app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+            <TextView
+                android:id="@+id/tv_home_verified3_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_verified3_name"
+                android:textColor="@color/grey_100"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified3_img"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified3" />
+
+            <TextView
+                android:id="@+id/tv_home_verified3_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_verified3_job"
+                android:textColor="@color/purple_500"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified3_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified3_name" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified3_tag1"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified3_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified3_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified3_tag1"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3_tag1"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified3_tag1"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified3_tag1"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified3_tag1" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified3_tag2"
+                android:layout_width="45dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified3_tag1"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified3_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified2_tag2"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3_tag2"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified3_tag2"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified3_tag2"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified3_tag2" />
+
+            <ImageView
+                android:id="@+id/iv_home_verified3_tag3"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_99dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3"
+                app:layout_constraintStart_toEndOf="@id/iv_home_verified3_tag2"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_verified3_job" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_home_verified3_tag3"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3_tag3"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_verified3_tag3"
+                app:layout_constraintStart_toStartOf="@id/iv_home_verified3_tag3"
+                app:layout_constraintTop_toTopOf="@id/iv_home_verified3_tag3" />
+
+            <TextView
+                android:id="@+id/tv_home_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/tv_home_brand"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_verified3" />
+
+            <ImageView
+                android:id="@+id/iv_home_brand_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/iv_arrow_right"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_verified3" />
+
+            <ImageView
+                android:id="@+id/iv_home_brand1"
+                android:layout_width="65dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand" />
+
+            <TextView
+                android:id="@+id/tv_home_brand1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_brand1"
+                android:textColor="@color/grey_150"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_brand1"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_brand1"
+                app:layout_constraintStart_toStartOf="@id/iv_home_brand1"
+                app:layout_constraintTop_toTopOf="@id/iv_home_brand1" />
+
+
+            <ImageView
+                android:id="@+id/iv_home_brand2"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_brand1"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand" />
+
+            <TextView
+                android:id="@+id/tv_home_brand2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_brand2"
+                android:textColor="@color/grey_400"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_brand2"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_brand2"
+                app:layout_constraintStart_toStartOf="@id/iv_home_brand2"
+                app:layout_constraintTop_toTopOf="@id/iv_home_brand2" />
+
+            <ImageView
+                android:id="@+id/iv_home_brand3"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_brand2"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand" />
+
+            <TextView
+                android:id="@+id/tv_home_brand3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_brand3"
+                android:textColor="@color/grey_400"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_brand3"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_brand3"
+                app:layout_constraintStart_toStartOf="@id/iv_home_brand3"
+                app:layout_constraintTop_toTopOf="@id/iv_home_brand3" />
+
+            <ImageView
+                android:id="@+id/iv_home_brand4"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_brand3"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand" />
+
+            <TextView
+                android:id="@+id/tv_home_brand4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_brand4"
+                android:textColor="@color/grey_400"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_brand4"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_brand4"
+                app:layout_constraintStart_toStartOf="@id/iv_home_brand4"
+                app:layout_constraintTop_toTopOf="@id/iv_home_brand4" />
+
+            <ImageView
+                android:id="@+id/iv_home_brand5"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_brand4"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand" />
+
+            <TextView
+                android:id="@+id/tv_home_brand5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_brand5"
+                android:textColor="@color/grey_400"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_brand5"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_brand5"
+                app:layout_constraintStart_toStartOf="@id/iv_home_brand5"
+                app:layout_constraintTop_toTopOf="@id/iv_home_brand5" />
+
+            <ImageView
+                android:id="@+id/iv_home_brand6"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_brand5"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand" />
+
+            <TextView
+                android:id="@+id/tv_home_brand6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_brand6"
+                android:textColor="@color/grey_400"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_home_brand6"
+                app:layout_constraintEnd_toEndOf="@id/iv_home_brand6"
+                app:layout_constraintStart_toStartOf="@id/iv_home_brand6"
+                app:layout_constraintTop_toTopOf="@id/iv_home_brand6" />
+
+            <ImageView
+                android:id="@+id/iv_home_rank1"
+                android:layout_width="100dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand1" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_home_rank1_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_youngyoong"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank1"
+                app:layout_constraintTop_toTopOf="@id/iv_home_rank1"
+                app:shapeAppearanceOverlay="@style/top4dp_bottom0dp" />
+
+            <TextView
+                android:id="@+id/tv_home_rank1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_rank1_name"
+                android:textColor="@color/grey_100"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank1"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_rank1_img" />
+
+            <TextView
+                android:id="@+id/tv_home_rank1_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_rank_job_singer"
+                android:textColor="@color/purple_500"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank1"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_rank1_name" />
+
+            <ImageView
+                android:id="@+id/iv_home_rank2"
+                android:layout_width="100dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_rank1"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand1" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_home_rank2_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_newjeans"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank2"
+                app:layout_constraintTop_toTopOf="@id/iv_home_rank2"
+                app:shapeAppearanceOverlay="@style/top4dp_bottom0dp" />
+
+            <TextView
+                android:id="@+id/tv_home_rank2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_rank2_name"
+                android:textColor="@color/grey_100"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank2"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_rank2_img" />
+
+            <TextView
+                android:id="@+id/tv_home_rank2_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_rank_job_singer"
+                android:textColor="@color/purple_500"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank2"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_rank2_name" />
+
+            <ImageView
+                android:id="@+id/iv_home_rank3"
+                android:layout_width="100dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_home_rank2"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand1" />
+
+            <TextView
+                android:id="@+id/tv_home_rank3_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_rank3_name"
+                android:textColor="@color/grey_100"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank3"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_rank3_img" />
+
+            <TextView
+                android:id="@+id/tv_home_rank3_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_rank3_job"
+                android:textColor="@color/purple_500"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank3"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_rank3_name" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_home_rank3_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_son"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank3"
+                app:layout_constraintTop_toTopOf="@id/iv_home_rank3"
+                app:shapeAppearanceOverlay="@style/top4dp_bottom0dp" />
+
+            <ImageView
+                android:id="@+id/iv_home_rank4"
+                android:layout_width="50dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_home_rank3"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_brand1" />
+
+            <TextView
+                android:id="@+id/tv_home_rank4_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_rank4_name"
+                android:textColor="@color/grey_100"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank4"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_rank4_img" />
+
+            <TextView
+                android:id="@+id/tv_home_rank4_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_home_rank_job_singer"
+                android:textColor="@color/purple_500"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank4"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_rank4_name" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_home_rank4_img"
+                android:layout_width="50dp"
+                android:layout_height="97dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_chaeunwoo"
+                app:layout_constraintStart_toStartOf="@id/iv_home_rank4"
+                app:layout_constraintTop_toTopOf="@id/iv_home_rank4"
+                app:shapeAppearanceOverlay="@style/top4dp_bottom0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
