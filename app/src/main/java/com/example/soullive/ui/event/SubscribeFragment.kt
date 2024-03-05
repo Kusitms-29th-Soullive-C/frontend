@@ -27,11 +27,18 @@ class SubscribeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setBackButton()
+        nextButton()
     }
     private fun setBackButton() {
         binding.subscribeToolbar.setNavigationOnClickListener {
             val navController = findNavController()
             navController.navigateUp()
+        }
+    }
+
+    private fun nextButton() {
+        binding.btnSubscribeNext.setOnClickListener {
+            findNavController().navigate(R.id.action_subscribe_to_navigation_home)
         }
     }
 

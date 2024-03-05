@@ -30,11 +30,17 @@ class eventPopupFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         closeButton()
+        nextButton()
     }
 
     private fun closeButton() {
         binding.btnClose.setOnClickListener {
             findNavController().navigate(R.id.action_eventPopup_to_navigation_home)
+        }
+    }
+    private fun nextButton() {
+        binding.btnEventPopupNext.setOnClickListener {
+            findNavController().navigate(R.id.action_eventPopup_to_subscribe)
         }
     }
 
