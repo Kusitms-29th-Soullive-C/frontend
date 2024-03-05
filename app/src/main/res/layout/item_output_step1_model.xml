@@ -34,6 +34,9 @@
         android:scaleType="centerCrop"
         android:layout_marginStart="0dp"
         android:layout_alignParentLeft="true"
+        android:background="@drawable/bg_output_rounded_image"
+        android:clipToOutline="true"
+
         />
 
     <TextView
@@ -41,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:textColor="@color/white"
         android:layout_toEndOf="@id/output_step1_imageView"
@@ -78,6 +82,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_toEndOf="@id/output_step1_imageView"
         android:layout_toRightOf="@id/output_step1_imageView"
         android:layout_below="@id/output_step1_itemJob">

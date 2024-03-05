@@ -13,6 +13,7 @@ class SimilarModelAdapter(private var modelList: List<Map<String, Any>>) : Recyc
         var modelName: TextView = view.findViewById(R.id.similar_model_name)
         var modelJob: TextView = view.findViewById(R.id.similar_model_job)
         var modelImage: ImageView = view.findViewById(R.id.similar_model_image)
+        var modelRank : TextView = view.findViewById(R.id.similar_model_rank)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ModelViewHolder {
@@ -31,6 +32,9 @@ class SimilarModelAdapter(private var modelList: List<Map<String, Any>>) : Recyc
         holder.modelName.text = item["이름"] as String
         holder.modelJob.text = item["직업"] as String
         holder.modelImage.setImageResource(item["이미지"] as Int)
+
+        val Rank = position +1
+        holder.modelRank.setText(Rank.toString())
     }
 
     override fun getItemCount(): Int {
