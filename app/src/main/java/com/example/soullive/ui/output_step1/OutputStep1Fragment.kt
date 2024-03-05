@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
@@ -87,17 +88,67 @@ class OutputStep1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val groupedItems = dummyList.chunked(3)
-        val groupedItemsAdapter = GroupedItemsAdapter(groupedItems)
-        binding.outputStep1ModelView.adapter = groupedItemsAdapter
 
         val similarModelAdapter = SimilarModelAdapter(similardummyList)
         binding.outputStep1SimilarModelView.adapter = similarModelAdapter
 
+        setupSpinner()
+        initializeViewPagerWithDummyData()
+        setBackButton()
+    }
+
+
+    private fun initializeViewPagerWithDummyData() {
+        val initialGroupedItems = dummyList.chunked(3)
+        var groupedItemsAdapter = GroupedItemsAdapter(initialGroupedItems)
+        binding.outputStep1ModelView.adapter = groupedItemsAdapter
+
         TabLayoutMediator(binding.outputStep1TabDots, binding.outputStep1ModelView) { tab, position ->
 
         }.attach()
-        setBackButton()
+    }
+
+
+    private fun sortAndGroupListBy(criteria: String) {
+        val sortedList = when (criteria) {
+            "적합도순" -> dummyList.sortedBy { it.rank }
+            "광고비순" -> dummyList.sortedBy { it.relevance }
+            "화제성순" -> dummyList.sortedBy { it.hotness }
+            else -> dummyList
+        }
+
+        val newgroupedItems = sortedList.chunked(3)
+        updateGroupedItemsAdapter(newgroupedItems)
+    }
+
+    private fun setupSpinner() {
+        ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.output_filter_options,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            binding.outputFilterSpinner.adapter = adapter
+        }
+
+        binding.outputFilterSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                when (position) {
+                    0 -> sortAndGroupListBy("적합도순")
+                    1 -> sortAndGroupListBy("화제성순")
+                    2 -> sortAndGroupListBy("광고비순")
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
+    }
+
+
+    private fun updateGroupedItemsAdapter(newgroupedItems: List<List<Model>>) {
+        val groupedItemsAdapter = GroupedItemsAdapter(newgroupedItems)
+        groupedItemsAdapter.updateData(newgroupedItems)
+        binding.outputStep1ModelView.adapter = groupedItemsAdapter
     }
 
     private fun setBackButton() {
