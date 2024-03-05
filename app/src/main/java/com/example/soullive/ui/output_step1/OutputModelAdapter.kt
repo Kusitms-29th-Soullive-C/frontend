@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
 
-class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter<OutputModelAdapter.ItemViewHolder>() {
+class OutputModelAdapter (private val items: List<Model>,private val startRank: Int) : RecyclerView.Adapter<OutputModelAdapter.ItemViewHolder>() {
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val nameTextView: TextView = view.findViewById(R.id.output_step1_itemName)
         private val jobTextView: TextView = view.findViewById(R.id.output_step1_itemJob)
@@ -49,7 +49,7 @@ class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter
         holder.itemView.setOnClickListener{
             holder.detailConatiner.visibility =  if (holder.detailConatiner.visibility == View.GONE) View.VISIBLE else View.GONE
         }
-        val Rank = position +1
+        val Rank = startRank + position
         holder.ItemRankText.setText(Rank.toString())
         holder.bookmark.setOnClickListener {
             val item = items[holder.adapterPosition]

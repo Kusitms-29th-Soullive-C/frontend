@@ -25,9 +25,15 @@ class GroupedItemsAdapter(private var groupedItems: List<List<Model>>) : Recycle
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val startRanks = mutableListOf<Int>()
+        var currentRank = 1
+        for (group in groupedItems) {
+            startRanks.add(currentRank)
+            currentRank += group.size
+        }
         with(holder.itemsRecyclerView) {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-            adapter = OutputModelAdapter(groupedItems[position])
+            adapter = OutputModelAdapter(groupedItems[position],startRanks[position])
         }
     }
 
