@@ -235,7 +235,7 @@
         android:background="@drawable/bg_input_btn_selector"
         android:fontFamily="@font/pretendard_medium"
         android:gravity="center"
-        android:text="@string/btn_next"
+        android:text="@string/일주일간_무료_체험_시작하기"
         android:textColor="@color/btn_input_text_selector"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
