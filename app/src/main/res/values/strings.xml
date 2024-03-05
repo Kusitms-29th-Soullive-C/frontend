@@ -20,6 +20,21 @@
     <string name="원플러스원_구독_이벤트">1+1개월 구독 이벤트</string>
     <string name="모델_검색_무제한">모델 검색 무제한</string>
     <string name="모델_적합도_분석_무제한">모델 적합도 분석 무제한</string>
+    <!--subscribe-->
+    <string name="AI_분석_기능">AI 분석 기능</string>
+    <string name="을">을</string>
+    <string name="무제한">무제한</string>
+    <string name="으로_즐겨보세요">으로 즐겨보세요!</string>
+    <string name="일주일_무료체험_후의_요금제를_선택하세요">일주일 무료체험 후의 요금제를 선택하세요.</string>
+    <string name="인기">인기</string>
+    <string name="삼십이퍼센트_할인">32% 할인</string>
+    <string name="구만팔천원">98,000원</string>
+    <string name="팔천백육십칠원월">8,167원/월</string>
+    <string name="만구천오백원월">19,500원/월</string>
+    <string name="십이개월">12개월</string>
+    <string name="일개월">1개월</string>
+    <string name="상세_조건_확인하기">상세 조건 확인하기</string>
+    <string name="일주일간_무료_체험_시작하기">일주일간 무료 체험 시작하기</string>
     <!--sign up-->
     <string name="회원가입">회원가입</string>
     <string name="기업_이메일">기업 이메일</string>
