@@ -36,6 +36,7 @@ class InputStep5Fragment : Fragment() {
         setProgressBar()
         setImgLoading()
         startBlinkingEffect()
+        gotoOutputButton()
     }
 
     private fun setBackButton() {
@@ -97,6 +98,13 @@ class InputStep5Fragment : Fragment() {
         binding.tvInputStep5Analyze.text = getString(R.string.new_analyze_text)
         binding.tvInputStep5Waiting.text = getString(R.string.new_waiting_text)
         binding.btnInputStep5.isEnabled = true
+    }
+
+
+    private fun gotoOutputButton(){
+        binding.btnInputStep5.setOnClickListener {
+            findNavController().navigate(R.id.action_inputStep5_to_OutputStep1Fragment)
+        }
     }
 
 

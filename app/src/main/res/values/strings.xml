@@ -124,6 +124,30 @@
     <string name="new_analyze_text">분석이 완료되었어요!</string>
     <string name="new_waiting_text">버튼을 눌러 분석 결과를 확인해주세요.</string>
 
+
+    <!--output step1-->
+    <string name="output_step1_title1">분석 결과</string>
+    <string name="output_step1_title2">유사 모델 추천</string>
+    <string name="output_step1_script">찾으신 모델 외에 적합한 모델을 찾아드릴게요.</string>
+    <string name="output_step1_btn_retry">다시 입력하기</string>
+    <string name="output_step1_change">조건 변경</string>
+    <string name="output_step1_filter1">적합도순</string>
+    <string name="output_step1_filter2">화제성순</string>
+    <string name="output_step1_filter3">적합도</string>
+    <string name="output_step1_filter4">타겟 선호도</string>
+    <string name="output_step1_filter5">전략</string>
+    <string-array name="output_filter_options">
+        <item>적합도순</item>
+        <item>화제성순</item>
+        <item>광고비순</item>
+    </string-array>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
     <!--fitness-->
     <string name="fitness_title1">어떤 모델이 광고에 적합한지</string>
     <string name="fitness_title2">고민이신가요?</string>

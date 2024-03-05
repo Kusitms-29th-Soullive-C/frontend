@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_900"
+    tools:context=".ui.output_step1.OutputStep1Fragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/output_step1_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/output_step1_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/output_step1_title1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:fontFamily="@font/pretendard_medium"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/output_step1_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/output_icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        app:layout_constraintEnd_toStartOf="@+id/output_icon2"
+        app:layout_constraintTop_toTopOf="@id/output_step1_toolbar"
+        app:layout_constraintBottom_toBottomOf="@id/output_step1_toolbar"
+        android:layout_marginEnd="16dp" />
+
+    <ImageView
+        android:id="@+id/output_icon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/output_step1_toolbar"
+        app:layout_constraintBottom_toBottomOf="@id/output_step1_toolbar"
+        android:layout_marginEnd="18dp" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/div"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/output_step1_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/output_step1_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <Spinner
+                android:id="@+id/output_filter_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:entries="@array/output_filter_options"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@id/output_step1_modelView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.028"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/output_filter_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_900"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:padding="8dp"
+                android:paddingTop="10dp"
+                android:text="@string/output_step1_filter1"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/output_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:padding="8dp"
+                android:text="@string/output_step1_change"
+                android:textColor="@color/grey_150"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.953"
+                app:layout_constraintStart_toEndOf="@id/output_filter_textview"
+                app:layout_constraintTop_toTopOf="@id/output_filter_textview" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/output_step1_modelView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="16dp"
+                app:layout_constraintBottom_toTopOf="@id/output_step1_tabDots"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/output_step1_tabDots"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/grey_900"
+                app:tabBackground="@drawable/bg_output_tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorColor="@color/grey_700"
+                app:tabIndicatorHeight="0dp"
+                app:tabSelectedTextColor="@color/purple_400"
+                app:layout_constraintTop_toBottomOf="@id/output_step1_modelView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_step1_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_btn_input_selector"
+                android:fontFamily="@font/pretendard_medium"
+                android:gravity="center"
+                android:text="@string/output_step1_btn_retry"
+                android:textColor="@color/grey_150"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/output_step1_tabDots" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_similar_models"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="@color/grey_700"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_step1_next"
+                app:layout_constraintBottom_toTopOf="@id/output_step1_title2"
+             />
+
+            <TextView
+                android:id="@+id/output_step1_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/output_step1_title2"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_similar_models" />
+
+            <TextView
+                android:id="@+id/output_step1_script"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/output_step1_script"
+                android:textColor="@color/grey_150"
+                app:layout_constraintBottom_toTopOf="@+id/similar_filtered_btns"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/output_step1_title2"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+
+            <LinearLayout
+                android:id="@+id/similar_filtered_btns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/output_step1_script">
+
+                <TextView
+                    android:id="@+id/similar_btnFit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_output_rounded_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/output_step1_filter3"
+                    android:padding="8dp"
+                    android:textColor="@color/grey_150"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/similar_btnTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_output_rounded_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/output_step1_filter4"
+                    android:padding="8dp"
+                    android:textColor="@color/grey_150"
+                    app:iconTint="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/similar_btnStrategy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/output_step1_filter5"
+                    android:padding="8dp"
+                    android:textColor="@color/grey_150"
+                    android:background="@drawable/bg_output_rounded_btn"/>
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/output_step1_similarModelView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/similar_filtered_btns"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

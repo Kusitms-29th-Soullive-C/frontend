@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/output_model_Detail"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/output_rank"
+        android:layout_width="match_parent"
+        android:text="순위"
+        android:textColor="@color/primary_500"
+        android:fontFamily="@font/pretendard_bold"
+        android:textSize="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/output_rankTextView"
+        android:layout_width="match_parent"
+        android:text="rank"
+        android:textColor="@color/grey_150"
+        android:fontFamily="@font/pretendard_bold"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/output_relevance"
+        android:layout_width="match_parent"
+        android:text="적합도"
+        android:textColor="@color/primary_500"
+        android:fontFamily="@font/pretendard_bold"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/output_relevanceTextView"
+        android:layout_width="match_parent"
+        android:text="화제성"
+        android:textColor="@color/grey_150"
+        android:fontFamily="@font/pretendard_bold"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/output_hotness"
+        android:layout_width="match_parent"
+        android:text="화제성"
+        android:textColor="@color/primary_500"
+        android:fontFamily="@font/pretendard_bold"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/output_hotnessTextView"
+        android:layout_width="match_parent"
+        android:text="hotness"
+        android:textColor="@color/grey_150"
+        android:fontFamily="@font/pretendard_bold"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/output_negativeIssues"
+        android:layout_width="match_parent"
+        android:text="부정이슈"
+        android:textColor="@color/primary_500"
+        android:fontFamily="@font/pretendard_bold"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/output_negativeIssuesTextView"
+        android:layout_width="match_parent"
+        android:text="issue"
+        android:textColor="@color/grey_150"
+        android:fontFamily="@font/pretendard_bold"
+        android:layout_marginBottom="5dp"
+        android:textSize="12dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/output_imageText"
+        android:layout_width="match_parent"
+        android:text="이미지"
+        android:textColor="@color/primary_500"
+        android:fontFamily="@font/pretendard_bold"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/output_imageTextView"
+        android:layout_width="match_parent"
+        android:text="imageText"
+        android:textColor="@color/grey_150"
+        android:fontFamily="@font/pretendard_bold"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/output_gotoDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자세히 보기"
+            android:textColor="@color/primary_500"
+            android:fontFamily="@font/pretendard_bold"
+            android:layout_marginBottom="10dp"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+</LinearLayout>
