@@ -13,6 +13,12 @@
     <string name="iv_bg_grey500">grey500색상의 배경</string>
     <string name="iv_bg_grey800">grey800색상의 배경</string>
 
+    <!--on boarding-->
+    <string name="모델_정하기_고민_끝">모델 정하기 고민 끝.</string>
+    <string name="에_오신_것을">에 오신 것을</string>
+    <string name="환영합니다">환영합니다!</string>
+    <string name="삼초_가입으로_적합한_모델을_만나보세요">3초 가입으로 적합한 모델을 만나보세요.</string>
+    <string name="시작하기">시작하기</string>
     <!--sign up-->
     <string name="회원가입">회원가입</string>
     <string name="기업_이메일">기업 이메일</string>
@@ -154,5 +160,8 @@
     <string name="tv_home_rank3_job">운동선수</string>
     <string name="tv_home_rank4_name">차은우</string>
     <string name="tv_home_rank_job_singer">가수</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

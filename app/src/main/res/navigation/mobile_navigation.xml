@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/signUpFragment">
+    app:startDestination="@id/onBoardingFragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -116,6 +116,15 @@
         <action
             android:id="@+id/action_signUp_to_navigation_home"
             app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.soullive.ui.on_boarding.onBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoarding_to_signUp"
+            app:destination="@id/signUpFragment" />
     </fragment>
 
 </navigation>
