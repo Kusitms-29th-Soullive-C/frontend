@@ -162,11 +162,47 @@
                 android:fontFamily="@font/pretendard_medium"
                 android:text="@string/output_step1_script"
                 android:textColor="@color/grey_150"
-                app:layout_constraintBottom_toTopOf="@+id/output_step1_similarModelView"
+                app:layout_constraintBottom_toTopOf="@+id/similar_filtered_btns"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/output_step1_title2"
                 app:layout_constraintVertical_bias="1.0" />
 
+
+
+                <LinearLayout
+                    android:id="@+id/similar_filtered_btns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/output_step1_script"
+                    tools:ignore="MissingConstraints">
+
+                    <Button
+                        android:id="@+id/similar_btnFit"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="적합도"
+                        android:background="@drawable/bg_output_rounded_btn" />
+
+
+                    <Button
+                        android:id="@+id/similar_btnTarget"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="타겟 선호도"
+                        android:background="@drawable/bg_output_rounded_btn" />
+
+
+                    <Button
+                        android:id="@+id/similar_btnStrategy"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="전략"
+                        android:background="@drawable/bg_output_rounded_btn" />
+                </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/output_step1_similarModelView"
@@ -179,7 +215,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/output_step1_script"
+                app:layout_constraintTop_toBottomOf="@id/similar_filtered_btns"
                 tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

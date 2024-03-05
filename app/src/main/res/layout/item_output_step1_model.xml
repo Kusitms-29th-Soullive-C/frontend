@@ -26,32 +26,28 @@
         android:layout_toEndOf="@id/output_step1_imageView"
         android:layout_toRightOf="@id/output_step1_imageView"/>
 
-
     <ImageView
         android:id="@+id/output_icon_bookmark"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/ic_bookmark"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@id/output_step1_itemName"
-        android:layout_toRightOf="@id/output_step1_imageView"
-        />
-
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"/>
 
     <TextView
         android:id="@+id/output_step1_itemJob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/primary_500"
         android:padding="3dp"
         android:layout_marginLeft="10dp"
         android:layout_below="@id/output_step1_itemName"
         android:layout_toEndOf="@id/output_step1_imageView"
-        android:layout_toRightOf="@id/output_step1_imageView"
-         />
+        android:layout_toRightOf="@id/output_step1_imageView"/>
 
     <LinearLayout
         android:id="@+id/output_keywords_container"
@@ -62,9 +58,15 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@id/output_step1_imageView"
         android:layout_toRightOf="@id/output_step1_imageView"
-        android:layout_below="@id/output_step1_itemJob"
-        >
+        android:layout_below="@id/output_step1_itemJob">
     </LinearLayout>
 
+    <include
+        layout="@layout/item_output_step1_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/output_keywords_container"/>
 
 </RelativeLayout>

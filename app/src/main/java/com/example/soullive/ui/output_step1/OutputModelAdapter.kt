@@ -15,12 +15,18 @@ class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter
         private val jobTextView: TextView = view.findViewById(R.id.output_step1_itemJob)
         private val ModelImageView : ImageView = view.findViewById(R.id.output_step1_imageView)
         val keywordsContainer: LinearLayout = view.findViewById(R.id.output_keywords_container)
+        val detailConatiner : LinearLayout = view.findViewById(R.id.output_model_Detail)
+        val rankTextView : TextView = view.findViewById(R.id.output_rankTextView)
+        val relevanceTextView : TextView = view.findViewById(R.id.output_relevanceTextView)
 
 
         fun bind(item: Model) {
             nameTextView.text = item.name
             jobTextView.text = item.job
+            rankTextView.text = "${item.rank}순위"
+            relevanceTextView.text = "적합도 ${item.relevance}점"
             ModelImageView.setImageResource(item.imageResId)
+
 
             val keywords = item.keywords as? List<String> ?: emptyList()
             keywordsContainer.removeAllViews()
@@ -40,6 +46,9 @@ class OutputModelAdapter (private val items: List<Model>) : RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.bind(items[position])
+        holder.itemView.setOnClickListener{
+            holder.detailConatiner.visibility =  if (holder.detailConatiner.visibility == View.GONE) View.VISIBLE else View.GONE
+        }
     }
 
     override fun getItemCount(): Int = items.size

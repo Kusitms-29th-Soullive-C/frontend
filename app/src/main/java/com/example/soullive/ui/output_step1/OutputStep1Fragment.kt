@@ -35,42 +35,60 @@ class OutputStep1Fragment : Fragment() {
     private lateinit var OutputModelAdapter : OutputModelAdapter
 
     val dummyList = listOf(
-        Model("고윤정","배우", listOf("Keyword1", "Keyword2"), 3, 95,3,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리", R.drawable.ic_goyoonjung),
-        Model("고윤정2","배우", listOf("Keyword1", "Keyword2"), 2, 91,4,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_goyoonjung),
-        Model("고윤정3","배우", listOf("Keyword1", "Keyword2"), 5, 33,1,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_goyoonjung),
-        Model("고윤정4","배우", listOf("Keyword1", "Keyword2"), 4, 100,5,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_goyoonjung),
-        Model("고윤정5","배우", listOf("Keyword1", "Keyword2"), 1, 98,2,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_goyoonjung),
+        Model("고윤정","배우", listOf("Keyword1", "Keyword2"), 1, 95,3,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리", R.drawable.ic_goyoonjung),
+        Model("잇섭","유튜버", listOf("Keyword1", "Keyword2"), 2, 88,4,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_itsub),
+        Model("한소희","배우", listOf("도도한", "럭셔리한","호감형의"), 3, 33,1,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_sohee),
+        Model("고윤정4","배우", listOf("Keyword1", "Keyword2"), 4, 100,5,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_output4),
+        Model("이재욱","배우", listOf("Keyword1", "Keyword2"), 5, 98,2,"성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.","럭셔리",R.drawable.ic_output5),
     )
 
     val similardummyList = listOf(
         mapOf(
             "이름" to "고윤정",
             "직업" to "모델",
+            "적합도" to 9,
+            "타겟선호도" to 1,
+            "전략" to 2,
             "이미지" to R.drawable.ic_goyoonjung
         ),
         mapOf(
             "이름" to "고윤정2",
             "직업" to "모델",
+            "적합도" to 8,
+            "타겟선호도" to 5,
+            "전략" to 3,
             "이미지" to R.drawable.ic_goyoonjung
         ),
         mapOf(
             "이름" to "고윤정3",
             "직업" to "모델",
+            "적합도" to 7,
+            "타겟선호도" to 3,
+            "전략" to 4,
             "이미지" to R.drawable.ic_goyoonjung
         ),
         mapOf(
             "이름" to "고윤정4",
             "직업" to "모델",
+            "적합도" to 6,
+            "타겟선호도" to 10,
+            "전략" to 5,
             "이미지" to R.drawable.ic_goyoonjung
         ),
         mapOf(
             "이름" to "고윤정5",
             "직업" to "모델",
+            "적합도" to 5,
+            "타겟선호도" to 11,
+            "전략" to 6,
             "이미지" to R.drawable.ic_goyoonjung
         ),
         mapOf(
             "이름" to "고윤정6",
             "직업" to "모델",
+            "적합도" to 4,
+            "타겟선호도" to 1,
+            "전략" to 8,
             "이미지" to R.drawable.ic_goyoonjung
         ),
     )
@@ -91,6 +109,19 @@ class OutputStep1Fragment : Fragment() {
 
         val similarModelAdapter = SimilarModelAdapter(similardummyList)
         binding.outputStep1SimilarModelView.adapter = similarModelAdapter
+
+        binding.similarBtnFit.setOnClickListener {
+            filterAndSortList("적합도")
+        }
+
+        binding.similarBtnTarget.setOnClickListener {
+            filterAndSortList("타겟 선호도")
+        }
+
+        binding.similarBtnStrategy.setOnClickListener {
+            filterAndSortList("전략")
+        }
+
 
         setupSpinner()
         initializeViewPagerWithDummyData()
@@ -149,6 +180,20 @@ class OutputStep1Fragment : Fragment() {
         val groupedItemsAdapter = GroupedItemsAdapter(newgroupedItems)
         groupedItemsAdapter.updateData(newgroupedItems)
         binding.outputStep1ModelView.adapter = groupedItemsAdapter
+    }
+
+    private fun filterAndSortList(criteria: String) {
+        val sortedList = when(criteria) {
+            "적합도" -> similardummyList.sortedByDescending { it["적합도"] as Int }
+            "타겟 선호도" -> similardummyList.sortedByDescending { it["타겟선호도"] as Int }
+            "전략" -> similardummyList.sortedByDescending { it["전략"] as Int }
+            else -> similardummyList
+        }
+        updateSimilarModelAdapter(sortedList)
+    }
+
+    private fun updateSimilarModelAdapter(newList: List<Map<String, Any>>) {
+        (binding.outputStep1SimilarModelView.adapter as? SimilarModelAdapter)?.updateData(newList)
     }
 
     private fun setBackButton() {
