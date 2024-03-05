@@ -89,6 +89,11 @@
     <string name="output_step1_filter3">적합도</string>
     <string name="output_step1_filter4">타겟 선호도</string>
     <string name="output_step1_filter5">전략</string>
+    <string-array name="output_filter_options">
+        <item>적합도순</item>
+        <item>화제성순</item>
+        <item>광고비순</item>
+    </string-array>
 
 
 

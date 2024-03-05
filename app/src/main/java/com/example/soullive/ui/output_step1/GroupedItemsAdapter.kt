@@ -7,11 +7,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
 
-class GroupedItemsAdapter(private val groupedItems: List<List<Model>>) : RecyclerView.Adapter<GroupedItemsAdapter.ViewHolder>() {
+class GroupedItemsAdapter(private var groupedItems: List<List<Model>>) : RecyclerView.Adapter<GroupedItemsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val itemsRecyclerView: RecyclerView = view.findViewById(R.id.output_step1_modelGroup)
     }
+
+    fun updateData(newGroupedItems: List<List<Model>>) {
+        this.groupedItems = newGroupedItems
+        notifyDataSetChanged()
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.page_models_layout, parent, false)

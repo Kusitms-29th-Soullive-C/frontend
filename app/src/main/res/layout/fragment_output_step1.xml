@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
     <TextView
         android:id="@+id/output_step1_title1"
         android:layout_width="wrap_content"
@@ -28,6 +29,7 @@
         app:layout_constraintBottom_toBottomOf="@id/output_step1_toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/output_icon1"
@@ -71,6 +73,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <Spinner
+                android:id="@+id/output_filter_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:entries="@array/output_filter_options"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@id/output_step1_modelView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.028"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/output_step1_modelView"
                 android:layout_width="match_parent"
@@ -100,11 +119,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="24dp"
-                android:background="@color/grey_500"
+                android:background="@drawable/bg_btn_input_selector"
                 android:fontFamily="@font/pretendard_medium"
                 android:gravity="center"
                 android:text="@string/output_step1_btn_retry"
-                android:textColor="@color/white"
+                android:textColor="@color/grey_150"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -130,27 +149,36 @@
                 android:text="@string/output_step1_title2"
                 android:textColor="@color/white"
                 android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider_similar_models" />
 
-        <TextView
-            android:id="@+id/output_step1_script"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/output_step1_script"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/grey_150"
-            android:fontFamily="@font/pretendard_medium"
-            app:layout_constraintTop_toBottomOf="@id/output_step1_title2"/>
+            <TextView
+                android:id="@+id/output_step1_script"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/output_step1_script"
+                android:textColor="@color/grey_150"
+                app:layout_constraintBottom_toTopOf="@+id/output_step1_similarModelView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/output_step1_title2"
+                app:layout_constraintVertical_bias="1.0" />
 
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/output_step1_similarModelView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal"
                 android:scrollbars="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/output_step1_script"
                 tools:ignore="MissingConstraints" />
 
