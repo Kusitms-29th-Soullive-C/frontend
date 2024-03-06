@@ -164,6 +164,12 @@
         <item>광고비순</item>
     </string-array>
 
+    <!--output search-->
+    <string name="output_search_subtitle">MY 전략에 맞는 인플루언서 검색</string>
+    <string name="output_search_keyword1">프리미엄</string>
+    <string name="output_search_keyword2">프리미엄라인인 S시리즈 강조</string>
+    <string name="output_search_keyword3">새로 들어간 AI</string>
+    <string name="output_search_keyword4">새로 들어간 AI통역 기능 각인</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

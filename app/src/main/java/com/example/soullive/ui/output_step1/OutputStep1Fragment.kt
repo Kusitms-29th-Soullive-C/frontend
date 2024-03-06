@@ -131,7 +131,7 @@ class OutputStep1Fragment : Fragment() {
             binding.outputFilterSpinner.performClick()
         }
 
-
+        setSearchButton()
         setupSpinner()
         initializeViewPagerWithDummyData()
         setBackButton()
@@ -216,6 +216,12 @@ class OutputStep1Fragment : Fragment() {
         binding.outputStep1Toolbar.setNavigationOnClickListener {
             val navController = findNavController()
             navController.navigateUp()
+        }
+    }
+
+    private fun setSearchButton() {
+        binding.outputIcon1.setOnClickListener() {
+            findNavController().navigate(R.id.action_outputStep1_to_outputSearch)
         }
     }
 

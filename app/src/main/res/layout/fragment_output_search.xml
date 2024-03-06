@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_900"
+    >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/output_search_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_left" />
+
+    <EditText
+        android:id="@+id/output_input_search_field"
+        android:layout_width="340dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_grey700_4dp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:hint="@string/궁금한_인플루언서를_검색해보세요"
+        android:inputType="text"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey_300"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/output_search_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Suspicious0dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/output_recent_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_800"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/output_search_toolbar">
+
+        <TextView
+            android:id="@+id/output_tv_recent_search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="@string/output_search_subtitle"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/output_tv_search_keyword3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_keyword"
+            android:backgroundTint="@color/grey_500"
+            android:fontFamily="@font/pretendard_medium"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="@string/output_search_keyword3"
+            android:textColor="@color/grey_150"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_search_keyword1"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <TextView
+            android:id="@+id/output_tv_search_keyword1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_keyword"
+            android:backgroundTint="@color/grey_500"
+            android:fontFamily="@font/pretendard_medium"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="@string/output_search_keyword1"
+            android:textColor="@color/grey_150"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_recent_search_title"
+            app:layout_constraintVertical_bias="0.245" />
+
+        <TextView
+            android:id="@+id/output_tv_search_keyword2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_keyword"
+            android:backgroundTint="@color/grey_500"
+            android:fontFamily="@font/pretendard_medium"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="@string/output_search_keyword2"
+            android:textColor="@color/grey_150"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/output_tv_search_keyword1"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_recent_search_title"
+            app:layout_constraintVertical_bias="0.245" />
+
+        <TextView
+            android:id="@+id/output_tv_search_keyword4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_keyword"
+            android:backgroundTint="@color/grey_500"
+            android:fontFamily="@font/pretendard_medium"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="@string/output_search_keyword4"
+            android:textColor="@color/grey_150"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/output_tv_search_keyword3"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_search_keyword1"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/output_real_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/grey_800"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/output_recent_search">
+
+        <TextView
+            android:id="@+id/output_tv_real_time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="@string/실시간_검색_순위"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/output_tv_real_time_rank1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--일-->
+        <TextView
+            android:id="@+id/output_tv_real_time_rank1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:padding="4dp"
+            android:text="@string/일"
+            android:textColor="@color/purple_400"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/output_iv_real_time_verified1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified1" />
+
+        <ImageView
+            android:id="@+id/output_iv_real_time_verified1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/iv_bg_grey800_4dp"
+            android:src="@drawable/bg_grey700_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/output_tv_real_time_rank1"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_real_time_title" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/output_iv_real_time_verified1_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/model_goyunjung"
+            app:layout_constraintBottom_toBottomOf="@id/output_iv_real_time_verified1"
+            app:layout_constraintStart_toStartOf="@id/output_iv_real_time_verified1"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified1"
+            app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/고윤정"
+            android:textColor="@color/grey_150"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified1_img"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified1" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified1_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/배우"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified1_img"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_real_time_verified1_name" />
+
+        <!--이-->
+        <TextView
+            android:id="@+id/output_tv_real_time_rank2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:padding="4dp"
+            android:text="@string/이"
+            android:textColor="@color/purple_400"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/output_iv_real_time_verified2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified2" />
+
+        <ImageView
+            android:id="@+id/output_iv_real_time_verified2"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/iv_bg_grey800_4dp"
+            android:src="@drawable/bg_grey700_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/output_tv_real_time_rank2"
+            app:layout_constraintTop_toBottomOf="@id/output_iv_real_time_verified1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/output_iv_real_time_verified2_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/model_suji"
+            app:layout_constraintBottom_toBottomOf="@id/output_iv_real_time_verified2"
+            app:layout_constraintStart_toStartOf="@id/output_iv_real_time_verified2"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified2"
+            app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/수지"
+            android:textColor="@color/grey_150"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified2_img"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified2" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified2_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/가수앤배우"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified2_img"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_real_time_verified2_name" />
+
+        <!--삼-->
+        <TextView
+            android:id="@+id/output_tv_real_time_rank3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:padding="4dp"
+            android:text="@string/삼"
+            android:textColor="@color/purple_400"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/output_iv_real_time_verified3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified3" />
+
+        <ImageView
+            android:id="@+id/output_iv_real_time_verified3"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/iv_bg_grey800_4dp"
+            android:src="@drawable/bg_grey700_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/output_tv_real_time_rank3"
+            app:layout_constraintTop_toBottomOf="@id/output_iv_real_time_verified2" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/output_iv_real_time_verified3_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/model_leejubin"
+            app:layout_constraintBottom_toBottomOf="@id/output_iv_real_time_verified3"
+            app:layout_constraintStart_toStartOf="@id/output_iv_real_time_verified3"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified3"
+            app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified3_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/이주빈"
+            android:textColor="@color/grey_150"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified3_img"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified3" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified3_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/배우"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified3_img"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_real_time_verified3_name" />
+
+        <!--사-->
+        <TextView
+            android:id="@+id/output_tv_real_time_rank4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:padding="4dp"
+            android:text="@string/사"
+            android:textColor="@color/purple_400"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/output_iv_real_time_verified4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified4" />
+
+        <ImageView
+            android:id="@+id/output_iv_real_time_verified4"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/iv_bg_grey800_4dp"
+            android:src="@drawable/bg_grey700_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/output_tv_real_time_rank4"
+            app:layout_constraintTop_toBottomOf="@id/output_iv_real_time_verified3" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/output_iv_real_time_verified4_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/model_jeonjongseo"
+            app:layout_constraintBottom_toBottomOf="@id/output_iv_real_time_verified4"
+            app:layout_constraintStart_toStartOf="@id/output_iv_real_time_verified4"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified4"
+            app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified4_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/고윤정"
+            android:textColor="@color/grey_150"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified4_img"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified4" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified4_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/배우"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified4_img"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_real_time_verified4_name" />
+
+
+        <!--오-->
+        <TextView
+            android:id="@+id/output_tv_real_time_rank5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:padding="4dp"
+            android:text="@string/오"
+            android:textColor="@color/purple_400"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/output_iv_real_time_verified5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified5" />
+
+        <ImageView
+            android:id="@+id/output_iv_real_time_verified5"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/iv_bg_grey800_4dp"
+            android:src="@drawable/bg_grey700_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/output_tv_real_time_rank5"
+            app:layout_constraintTop_toBottomOf="@id/output_iv_real_time_verified4" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/output_iv_real_time_verified5_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/model_jisu"
+            app:layout_constraintBottom_toBottomOf="@id/output_iv_real_time_verified5"
+            app:layout_constraintStart_toStartOf="@id/output_iv_real_time_verified5"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified5"
+            app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified5_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/지수"
+            android:textColor="@color/grey_150"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified5_img"
+            app:layout_constraintTop_toTopOf="@id/output_iv_real_time_verified5" />
+
+        <TextView
+            android:id="@+id/output_tv_real_time_verified5_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="@string/가수"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/output_iv_real_time_verified5_img"
+            app:layout_constraintTop_toBottomOf="@id/output_tv_real_time_verified5_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
