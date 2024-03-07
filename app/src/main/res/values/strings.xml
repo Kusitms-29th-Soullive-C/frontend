@@ -232,4 +232,8 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
+    <!--bookmark-->
+    <string name="저장한_분석결과가_없어요">저장한 분석결과가 없어요</string>
+    <string name="적합도_분석_후_결과를_북마크해보세요">적합도 분석 후 결과를 북마크해보세요.</string>
+
 </resources>
