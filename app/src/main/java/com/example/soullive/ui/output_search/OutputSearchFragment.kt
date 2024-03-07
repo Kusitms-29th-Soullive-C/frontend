@@ -79,13 +79,10 @@ class OutputSearchFragment : Fragment() {
 
     private fun setBackButton() {
         binding.outputSearchToolbar.setNavigationOnClickListener {
+            findNavController().navigate(R.id.action_outputSearch_to_output)
         }
     }
 
-    private fun updateRecyclerView(filteredData: List<Map<String, Any>>) {
-        searchResultAdapter = OutputSearchAdapter(filteredData)
-        binding.outputSearchResult.adapter = searchResultAdapter
-    }
     private fun setupRecyclerView() {
         searchResultAdapter = OutputSearchAdapter(SearchDummyData)
         binding.outputSearchResult.apply {

@@ -31,7 +31,7 @@ class onBoardingFragment : Fragment() {
 
     private fun nextButton() {
         binding.btnOnBoardingNext.setOnClickListener {
-            findNavController().navigate(R.id.test)
+            findNavController().navigate(R.id.action_onBoarding_to_signUp)
         }
     }
 
