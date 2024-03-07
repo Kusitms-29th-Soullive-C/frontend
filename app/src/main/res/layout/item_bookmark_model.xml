@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_grey800_4dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/output_step1_imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
+
+        <TextView
+            android:id="@+id/output_step1_itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/output_step1_imageView"
+            android:layout_toRightOf="@id/output_step1_imageView"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/output_icon_bookmark"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="16dp"
+            android:onClick="toggleBookmark"
+            android:src="@drawable/ic_bookmark" />
+
+        <TextView
+            android:id="@+id/output_step1_itemJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/output_step1_itemName"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/output_step1_imageView"
+            android:layout_toRightOf="@id/output_step1_imageView"
+            android:padding="3dp"
+            android:textColor="@color/primary_500"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/output_keywords_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/output_step1_itemJob"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/output_step1_imageView"
+            android:layout_toRightOf="@id/output_step1_imageView"
+            android:orientation="horizontal" />
+
+        <include
+            layout="@layout/item_output_step1_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/output_keywords_container"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
+</LinearLayout>
