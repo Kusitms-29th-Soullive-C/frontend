@@ -45,6 +45,10 @@ class OutputDetailFragment : Fragment() {
                 else -> "광고전적"
             }
         }.attach()
+
+        binding.ivDetailBookmark.setOnClickListener {
+            it.isSelected = !it.isSelected
+        }
     }
 
     override fun onDestroyView() {
