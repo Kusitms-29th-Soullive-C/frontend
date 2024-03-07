@@ -22,17 +22,8 @@ class BookmarkFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val bookmarkViewModel =
-            ViewModelProvider(this).get(BookmarkViewModel::class.java)
-
         _binding = FragmentBookmarkBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.bookmark
-        bookmarkViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {
