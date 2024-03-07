@@ -130,6 +130,9 @@
         <action
             android:id="@+id/action_onBoarding_to_signUp"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/test"
+            app:destination="@id/outputSearchFragment" />
     </fragment>
     <fragment
         android:id="@+id/eventPopupFragment"

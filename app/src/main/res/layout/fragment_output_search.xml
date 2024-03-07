@@ -37,6 +37,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="Suspicious0dp" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/output_search_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_grey600_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/output_input_search_field" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/output_recent_search"
         android:layout_width="match_parent"
@@ -45,7 +57,7 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/output_search_toolbar">
+        app:layout_constraintTop_toBottomOf="@id/output_search_result">
 
         <TextView
             android:id="@+id/output_tv_recent_search_title"
