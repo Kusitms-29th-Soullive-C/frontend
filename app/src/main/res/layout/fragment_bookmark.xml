@@ -23,7 +23,42 @@
 
     </com.google.android.material.appbar.MaterialToolbar>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bookmark1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/bookmark_toolbar"
+        tools:listitem="@layout/item_bookmark_model" />
 
+    <TextView
+        android:id="@+id/tv_bookmark1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="@string/다른_기업이_함께_저장한_모델"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_bookmark1" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bookmark2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_bookmark1"
+        tools:listitem="@layout/item_output_step1_similar" />
+
+    <!--empty-->
     <ImageView
         android:id="@+id/img_bookmark_empty"
         android:layout_width="wrap_content"
@@ -53,5 +88,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_bookmark_empty1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -235,5 +235,6 @@
     <!--bookmark-->
     <string name="저장한_분석결과가_없어요">저장한 분석결과가 없어요</string>
     <string name="적합도_분석_후_결과를_북마크해보세요">적합도 분석 후 결과를 북마크해보세요.</string>
+    <string name="다른_기업이_함께_저장한_모델">다른 기업이 함께 저장한 모델</string>
 
 </resources>
