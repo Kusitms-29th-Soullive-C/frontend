@@ -13,6 +13,7 @@
     <string name="iv_bg_grey500">grey500색상의 배경</string>
     <string name="iv_bg_grey800">grey800색상의 배경</string>
     <string name="iv_bg_grey700">grey700색상의 배경</string>
+    <string name="iv_bg_purple400">purple400색상의 배경</string>
 
     <!--on boarding-->
     <string name="모델_정하기_고민_끝">모델 정하기 고민 끝.</string>
@@ -253,5 +254,14 @@
     <string name="tv_detail_reputation_script3">로 배우 중</string>
     <string name="tv_detail_reputation_script4">11위</string>
     <string name="tv_detail_reputation_script5">입니다.</string>
+    <string name="tv_detail_view2_analyze">브랜드 분석</string>
+    <string name="tv_detail_view2_graph1">참여자 수</string>
+    <string name="tv_detail_view2_graph1_num">939,882</string>
+    <string name="tv_detail_view2_graph2">미디어지수</string>
+    <string name="tv_detail_view2_graph2_num">1,951,148</string>
+    <string name="tv_detail_view2_graph3">소통지수</string>
+    <string name="tv_detail_view2_graph3_num">1,868,456</string>
+    <string name="tv_detail_view2_graph4">커뮤니티지수</string>
+    <string name="tv_detail_view2_graph4_num">1,322,997</string>
 
 </resources>

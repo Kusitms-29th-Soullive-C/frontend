@@ -5,131 +5,408 @@
     android:layout_height="match_parent"
     android:background="@color/grey_600">
 
-    <ImageView
-        android:id="@+id/iv_detail_reputation"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:contentDescription="@string/iv_bg_grey800"
-        android:src="@drawable/bg_grey800_12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_detail_tab2_reputation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="@string/tv_detail_view1_brand"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/iv_detail_reputation"
-        app:layout_constraintTop_toTopOf="@id/iv_detail_reputation" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_detail_reputation_script1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="14dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="@string/tv_detail_reputation_script1"
-        android:textColor="@color/grey_150"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/iv_detail_reputation"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_tab2_reputation" />
+            <ImageView
+                android:id="@+id/iv_detail_reputation"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_detail_reputation_script2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="@string/tv_detail_reputation_script2"
-        android:textColor="@color/purple_400"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/iv_detail_reputation"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script1" />
+            <TextView
+                android:id="@+id/tv_detail_tab2_reputation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view1_brand"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_reputation"
+                app:layout_constraintTop_toTopOf="@id/iv_detail_reputation" />
 
-    <TextView
-        android:id="@+id/tv_detail_reputation_script3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="@string/tv_detail_reputation_script3"
-        android:textColor="@color/grey_150"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/tv_detail_reputation_script2"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script1" />
+            <TextView
+                android:id="@+id/tv_detail_reputation_script1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_reputation_script1"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_reputation"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_tab2_reputation" />
 
-    <TextView
-        android:id="@+id/tv_detail_reputation_script4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="@string/tv_detail_reputation_script4"
-        android:textColor="@color/purple_400"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/tv_detail_reputation_script3"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script1" />
+            <TextView
+                android:id="@+id/tv_detail_reputation_script2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_reputation_script2"
+                android:textColor="@color/purple_400"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_reputation"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script1" />
 
-    <TextView
-        android:id="@+id/tv_detail_reputation_script5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="@string/tv_detail_reputation_script5"
-        android:textColor="@color/grey_150"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/tv_detail_reputation_script4"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script1" />
+            <TextView
+                android:id="@+id/tv_detail_reputation_script3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_reputation_script3"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/tv_detail_reputation_script2"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script1" />
 
-    <ImageView
-        android:id="@+id/iv_detail_tab2_brand"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
-        android:contentDescription="@string/iv_bg_grey700"
-        android:src="@drawable/bg_grey700_8dp"
-        app:layout_constraintBottom_toBottomOf="@id/iv_detail_reputation"
-        app:layout_constraintEnd_toEndOf="@id/iv_detail_reputation"
-        app:layout_constraintStart_toStartOf="@id/iv_detail_reputation"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script2" />
+            <TextView
+                android:id="@+id/tv_detail_reputation_script4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_reputation_script4"
+                android:textColor="@color/purple_400"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/tv_detail_reputation_script3"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script1" />
 
-    <TextView
-        android:id="@+id/tv_detail_tab2_brand_rank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:fontFamily="@font/pretendard_bold"
-        android:text="@string/tv_detail_view1_brand_rank"
-        android:textColor="@color/purple_400"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/iv_detail_tab2_brand"
-        app:layout_constraintStart_toStartOf="@id/iv_detail_tab2_brand"
-        app:layout_constraintTop_toTopOf="@id/iv_detail_tab2_brand" />
+            <TextView
+                android:id="@+id/tv_detail_reputation_script5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_reputation_script5"
+                android:textColor="@color/grey_150"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/tv_detail_reputation_script4"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script1" />
 
-    <TextView
-        android:id="@+id/tv_detail_view1_brand_rank_num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="@string/tv_detail_view1_brand_rank_num"
-        android:textColor="@color/purple_100"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/iv_detail_tab2_brand"
-        app:layout_constraintEnd_toEndOf="@id/iv_detail_tab2_brand"
-        app:layout_constraintStart_toStartOf="@id/iv_detail_tab2_brand"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_tab2_brand_rank" />
+            <ImageView
+                android:id="@+id/iv_detail_tab2_brand"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey700"
+                android:src="@drawable/bg_grey700_8dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_detail_reputation"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_reputation"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_reputation"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_reputation_script2" />
+
+            <TextView
+                android:id="@+id/tv_detail_tab2_brand_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="@string/tv_detail_view1_brand_rank"
+                android:textColor="@color/purple_400"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_tab2_brand"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_tab2_brand"
+                app:layout_constraintTop_toTopOf="@id/iv_detail_tab2_brand" />
+
+            <TextView
+                android:id="@+id/tv_detail_view1_brand_rank_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view1_brand_rank_num"
+                android:textColor="@color/purple_100"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_detail_tab2_brand"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_tab2_brand"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_tab2_brand"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_tab2_brand_rank" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_analyze"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/iv_bg_grey800"
+                android:src="@drawable/bg_grey800_12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_detail_reputation" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_analyze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_analyze"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_analyze"
+                app:layout_constraintTop_toTopOf="@id/iv_detail_view2_analyze" />
+
+            <ImageView
+                android:id="@+id/tv_detail_view2_analyze_graph_box"
+                android:layout_width="@id/iv_detail_reputation"
+                android:layout_height="@id/iv_detail_view2_analyze"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/iv_bg_grey700"
+                android:src="@drawable/bg_grey700_8dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_detail_view2_analyze"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_analyze"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_analyze"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_view2_analyze" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_graph1_grey"
+                android:layout_width="0dp"
+                android:layout_height="@id/tv_detail_view2_analyze_graph_box"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="50dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintEnd_toStartOf="@id/iv_detail_view2_graph2_grey"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintTop_toTopOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.16" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_graph1_purple"
+                android:layout_width="0dp"
+                android:layout_height="@id/tv_detail_view2_analyze_graph_box"
+                android:layout_marginTop="120dp"
+                android:contentDescription="@string/iv_bg_purple400"
+                android:src="@drawable/bg_purple400_10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_detail_view2_graph1_grey"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_graph1_grey"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_graph1_grey"
+                app:layout_constraintTop_toTopOf="@id/iv_detail_view2_graph1_grey" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_graph1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_graph1"
+                android:textColor="@color/grey_50"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_graph1_purple"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_graph1_purple"
+                app:layout_constraintTop_toBottomOf="@id/iv_detail_view2_graph1_purple" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_graph1_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_graph1_num"
+                android:textColor="@color/purple_400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintEnd_toEndOf="@id/tv_detail_view2_graph1"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_view2_graph1"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_view2_graph1" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_graph2_grey"
+                android:layout_width="0dp"
+                android:layout_height="@id/tv_detail_view2_analyze_graph_box"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="50dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintEnd_toStartOf="@id/iv_detail_view2_graph3_grey"
+                app:layout_constraintStart_toEndOf="@id/iv_detail_view2_graph1_grey"
+                app:layout_constraintTop_toTopOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.16" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_graph2_purple"
+                android:layout_width="0dp"
+                android:layout_height="@id/tv_detail_view2_analyze_graph_box"
+                android:layout_marginTop="70dp"
+                android:contentDescription="@string/iv_bg_purple400"
+                android:src="@drawable/bg_purple400_10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_detail_view2_graph2_grey"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_graph2_grey"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_graph2_grey"
+                app:layout_constraintTop_toTopOf="@id/iv_detail_view2_graph2_grey" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_graph2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_graph2"
+                android:textColor="@color/grey_50"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_graph2_purple"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_graph2_purple"
+                app:layout_constraintTop_toBottomOf="@id/iv_detail_view2_graph2_purple" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_graph2_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_graph2_num"
+                android:textColor="@color/purple_400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintEnd_toEndOf="@id/tv_detail_view2_graph2"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_view2_graph2"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_view2_graph2" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_graph3_grey"
+                android:layout_width="0dp"
+                android:layout_height="@id/tv_detail_view2_analyze_graph_box"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="50dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintEnd_toStartOf="@id/iv_detail_view2_graph4_grey"
+                app:layout_constraintStart_toEndOf="@id/iv_detail_view2_graph2_grey"
+                app:layout_constraintTop_toTopOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.16" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_graph3_purple"
+                android:layout_width="0dp"
+                android:layout_height="@id/tv_detail_view2_analyze_graph_box"
+                android:layout_marginTop="80dp"
+                android:contentDescription="@string/iv_bg_purple400"
+                android:src="@drawable/bg_purple400_10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_detail_view2_graph3_grey"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_graph3_grey"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_graph3_grey"
+                app:layout_constraintTop_toTopOf="@id/iv_detail_view2_graph3_grey" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_graph3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_graph3"
+                android:textColor="@color/grey_50"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_graph3_purple"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_graph3_purple"
+                app:layout_constraintTop_toBottomOf="@id/iv_detail_view2_graph3_purple" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_graph3_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_graph1_num"
+                android:textColor="@color/purple_400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintEnd_toEndOf="@id/tv_detail_view2_graph3"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_view2_graph3"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_view2_graph3" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_graph4_grey"
+                android:layout_width="0dp"
+                android:layout_height="@id/tv_detail_view2_analyze_graph_box"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="50dp"
+                android:contentDescription="@string/iv_bg_grey500"
+                android:src="@drawable/bg_grey500_10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintEnd_toEndOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintStart_toEndOf="@id/iv_detail_view2_graph3_grey"
+                app:layout_constraintTop_toTopOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.16" />
+
+            <ImageView
+                android:id="@+id/iv_detail_view2_graph4_purple"
+                android:layout_width="0dp"
+                android:layout_height="@id/tv_detail_view2_analyze_graph_box"
+                android:layout_marginTop="100dp"
+                android:contentDescription="@string/iv_bg_purple400"
+                android:src="@drawable/bg_purple400_10dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_detail_view2_graph4_grey"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_graph4_grey"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_graph4_grey"
+                app:layout_constraintTop_toTopOf="@id/iv_detail_view2_graph4_grey" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_graph4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_graph4"
+                android:textColor="@color/grey_50"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_detail_view2_graph4_purple"
+                app:layout_constraintStart_toStartOf="@id/iv_detail_view2_graph4_purple"
+                app:layout_constraintTop_toBottomOf="@id/iv_detail_view2_graph4_purple" />
+
+            <TextView
+                android:id="@+id/tv_detail_view2_graph4_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="@string/tv_detail_view2_graph4_num"
+                android:textColor="@color/purple_400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_detail_view2_analyze_graph_box"
+                app:layout_constraintEnd_toEndOf="@id/tv_detail_view2_graph4"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_view2_graph4"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_view2_graph4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
