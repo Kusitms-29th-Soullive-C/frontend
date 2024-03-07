@@ -8,7 +8,7 @@
     tools:context=".ui.bookmark.BookmarkFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/fitness_toolbar"
+        android:id="@+id/bookmark_toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/grey_900"
@@ -24,19 +24,34 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
 
-    <TextView
-        android:id="@+id/bookmark"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/img_bookmark_empty"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/img_bookmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/bookmark_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_bookmark_empty1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/저장한_분석결과가_없어요"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_bookmark_empty" />
+
+    <TextView
+        android:id="@+id/tv_bookmark_empty2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/적합도_분석_후_결과를_북마크해보세요"
+        android:textColor="@color/grey_150"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_bookmark_empty1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
