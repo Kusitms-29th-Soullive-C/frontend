@@ -2,12 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/output_model_search"
+    android:background="@drawable/bg_grey500_4dp"
+    android:layout_marginTop="10dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="12dp"
-    android:background="@color/grey_800"
-    android:paddingHorizontal="20dp"
-    android:paddingVertical="24dp"
     app:layout_constraintStart_toStartOf="parent">
 
     <ImageView
@@ -18,20 +16,19 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="12dp"
         android:contentDescription="@string/iv_bg_grey800_4dp"
         android:src="@drawable/bg_grey700_4dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/model_search_shape"
-        app:layout_constraintBottom_toBottomOf="@id/model_search_image"
-        app:layout_constraintStart_toStartOf="@id/model_search_image"
-        app:layout_constraintTop_toTopOf="@id/model_search_image"
-        app:shapeAppearanceOverlay="@style/left4dp_right0dp"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/model_goyunjung" />
+        app:layout_constraintBottom_toBottomOf="@id/model_search_image"
+        app:layout_constraintStart_toStartOf="@id/model_search_image"
+        app:layout_constraintTop_toTopOf="@id/model_search_image"
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/left4dp_right0dp" />
 
     <TextView
         android:id="@+id/model_search_name"
@@ -50,13 +47,11 @@
         android:id="@+id/model_search_job"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/model_search_name"
-        app:layout_constraintTop_toBottomOf="@id/model_search_name"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="2dp"
         android:fontFamily="@font/pretendard_medium"
         android:text="@string/배우"
         android:textColor="@color/purple_500"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/model_search_name"
+        app:layout_constraintTop_toBottomOf="@id/model_search_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
