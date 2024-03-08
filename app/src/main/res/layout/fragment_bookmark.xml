@@ -65,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:src="@drawable/img_bookmark"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bookmark_toolbar" />
@@ -75,6 +76,7 @@
         android:layout_height="wrap_content"
         android:text="@string/저장한_분석결과가_없어요"
         android:textColor="@color/purple_500"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_bookmark_empty" />
@@ -85,6 +87,7 @@
         android:layout_height="wrap_content"
         android:text="@string/적합도_분석_후_결과를_북마크해보세요"
         android:textColor="@color/grey_150"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_bookmark_empty1" />
