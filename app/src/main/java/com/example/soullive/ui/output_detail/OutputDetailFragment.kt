@@ -22,8 +22,19 @@ class OutputDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setViewPagerTabs()
+        setBookmarkClick()
+        setDownloadClick()
+    }
 
-        val adapter = object : FragmentStateAdapter(this) {
+    private fun setViewPagerTabs() {
+        val adapter = getViewPagerAdapter()
+        binding.viewpager.adapter = adapter
+        setupTabLayout()
+    }
+
+    private fun getViewPagerAdapter(): FragmentStateAdapter {
+        return object : FragmentStateAdapter(this) {
             override fun getItemCount(): Int = 4
 
             override fun createFragment(position: Int): Fragment {
@@ -35,19 +46,32 @@ class OutputDetailFragment : Fragment() {
                 }
             }
         }
-        binding.viewpager.adapter = adapter
+    }
 
+    private fun setupTabLayout() {
         TabLayoutMediator(binding.tlOutputDetail, binding.viewpager) { tab, position ->
-            tab.text = when (position) {
-                0 -> "전체보기"
-                1 -> "브랜드평판"
-                2 -> "전략방향"
-                else -> "광고전적"
-            }
+            tab.text = getTabTitle(position)
         }.attach()
+    }
 
+    private fun getTabTitle(position: Int): String {
+        return when (position) {
+            0 -> "전체보기"
+            1 -> "브랜드평판"
+            2 -> "전략방향"
+            else -> "광고전적"
+        }
+    }
+
+    private fun setBookmarkClick() {
         binding.ivDetailBookmark.setOnClickListener {
             it.isSelected = !it.isSelected
+        }
+    }
+
+    private fun setDownloadClick() {
+        binding.ivDownload.setOnClickListener {
+            DownloadDialogFragment().show(childFragmentManager, "downloadDialog")
         }
     }
 
