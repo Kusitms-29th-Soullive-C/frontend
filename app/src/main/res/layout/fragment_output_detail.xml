@@ -28,6 +28,7 @@
         app:layout_constraintTop_toTopOf="@id/output_detail_toolbar" />
 
     <ImageView
+        android:id="@+id/iv_download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -49,26 +50,26 @@
         app:layout_constraintTop_toBottomOf="@id/output_detail_toolbar" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv_home_verified3_img"
+        android:id="@+id/iv_detail_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="fitXY"
-        android:src="@drawable/model_moonsook"
+        android:src="@drawable/ic_goyoonjung"
         app:layout_constraintBottom_toBottomOf="@id/iv_output_detail"
         app:layout_constraintStart_toStartOf="@id/iv_output_detail"
         app:layout_constraintTop_toTopOf="@id/iv_output_detail" />
 
     <TextView
-        android:id="@+id/tv_home_verified3_name"
+        android:id="@+id/tv_detail_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/pretendard_medium"
-        android:text="@string/tv_home_verified3_name"
+        android:text="@string/model_goyyonjung"
         android:textColor="@color/grey_100"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@id/iv_home_verified3_img"
+        app:layout_constraintStart_toEndOf="@id/iv_detail_img"
         app:layout_constraintTop_toTopOf="@id/iv_output_detail" />
 
     <TextView
@@ -80,12 +81,12 @@
         android:text="@string/tv_home_verified3_job"
         android:textColor="@color/purple_500"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@id/iv_home_verified3_img"
-        app:layout_constraintTop_toBottomOf="@id/tv_home_verified3_name" />
+        app:layout_constraintStart_toEndOf="@id/iv_detail_img"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_img" />
 
     <ImageView
         android:id="@+id/iv_home_verified3_tag1"
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
@@ -93,13 +94,13 @@
         android:contentDescription="@string/iv_bg_grey500"
         android:src="@drawable/bg_grey500_99dp"
         app:layout_constraintBottom_toBottomOf="@id/iv_output_detail"
-        app:layout_constraintStart_toEndOf="@id/iv_home_verified3_img"
+        app:layout_constraintStart_toEndOf="@id/iv_detail_img"
         app:layout_constraintTop_toBottomOf="@id/tv_home_verified3_job" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tv_home_verified3_tag1"
+        android:text="@string/output_detail_model_tag1"
         android:textColor="@color/grey_150"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3_tag1"
@@ -109,7 +110,7 @@
 
     <ImageView
         android:id="@+id/iv_home_verified3_tag2"
-        android:layout_width="45dp"
+        android:layout_width="65dp"
         android:layout_height="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
@@ -123,7 +124,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tv_home_verified2_tag2"
+        android:text="@string/output_detail_model_tag2"
         android:textColor="@color/grey_150"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3_tag2"
@@ -133,7 +134,7 @@
 
     <ImageView
         android:id="@+id/iv_home_verified3_tag3"
-        android:layout_width="70dp"
+        android:layout_width="55dp"
         android:layout_height="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
@@ -147,7 +148,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tv_home_verified3_tag3"
+        android:text="@string/output_detail_model_tag3"
         android:textColor="@color/grey_150"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/iv_home_verified3_tag3"
@@ -186,7 +187,9 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_output_detail" />
+        app:layout_constraintTop_toBottomOf="@id/tl_output_detail"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
