@@ -34,6 +34,7 @@
     <string name="원플러스원_구독_이벤트">1+1개월 구독 이벤트</string>
     <string name="모델_검색_무제한">모델 검색 무제한</string>
     <string name="모델_적합도_분석_무제한">모델 적합도 분석 무제한</string>
+
     <!--subscribe-->
     <string name="AI_분석_기능">AI 분석 기능</string>
     <string name="을">을</string>
@@ -50,6 +51,7 @@
     <string name="일개월">1개월</string>
     <string name="상세_조건_확인하기">상세 조건 확인하기</string>
     <string name="일주일간_무료_체험_시작하기">일주일간 무료 체험 시작하기</string>
+
     <!--sign up-->
     <string name="회원가입">회원가입</string>
     <string name="기업_이메일">기업 이메일</string>
@@ -62,6 +64,24 @@
     <string name="SoulFit">SoulFit</string>
     <string name="이용약관">이용약관</string>
     <string name="본인은_기업_관계자이며_약관_내용을_확인하였습니다">본인은 기업 관계자이며, 약관 내용을 확인하였습니다.</string>
+    <!--search-->
+    <string name="궁금한_인플루언서를_검색해보세요">궁금한 인플루언서를 검색해보세요.</string>
+    <string name="최근_검색어">최근 검색어</string>
+    <string name="실시간_검색_순위">실시간 검색 순위</string>
+    <string name="고윤정">고윤정</string>
+    <string name="수지">수지</string>
+    <string name="가수">가수</string>
+    <string name="배우">배우</string>
+    <string name="가수앤배우">가수&amp;배우</string>
+    <string name="일">1</string>
+    <string name="이">2</string>
+    <string name="삼">3</string>
+    <string name="사">4</string>
+    <string name="오">5</string>
+    <string name="이주빈">이주빈</string>
+    <string name="전종서">전종서</string>
+    <string name="지수">지수</string>
+
     <!--search-->
     <string name="궁금한_인플루언서를_검색해보세요">궁금한 인플루언서를 검색해보세요.</string>
     <string name="최근_검색어">최근 검색어</string>
@@ -167,8 +187,12 @@
         <item>광고비순</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+  <!--output search-->
+    <string name="output_search_subtitle">MY 전략에 맞는 인플루언서 검색</string>
+    <string name="output_search_keyword1">프리미엄</string>
+    <string name="output_search_keyword2">프리미엄라인인 S시리즈 강조</string>
+    <string name="output_search_keyword3">새로 들어간 AI</string>
+    <string name="output_search_keyword4">새로 들어간 AI통역 기능 각인</string>
 
     <!--output dialog-->
     <string name="output_dialog_title">처음부터 다시 정보를 입력할까요?</string>

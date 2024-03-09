@@ -1,17 +1,13 @@
 package com.example.soullive.ui.output_step1
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
 import androidx.navigation.fragment.findNavController
-import androidx.viewpager2.widget.ViewPager2
 import com.example.soullive.R
 import com.example.soullive.databinding.FragmentOutputStep1Binding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -33,8 +29,6 @@ class OutputStep1Fragment : Fragment() {
 
     private var _binding: FragmentOutputStep1Binding? = null
     private val binding get() = _binding!!
-    private lateinit var viewPager: ViewPager2
-    private lateinit var OutputModelAdapter: OutputModelAdapter
 
     val dummyList = listOf(
         Model("고윤정", "배우", listOf("Keyword1", "Keyword2"), 1, 95, 3, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_goyoonjung),
@@ -108,39 +102,14 @@ class OutputStep1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        val similarModelAdapter = SimilarModelAdapter(similardummyList)
-        binding.outputStep1SimilarModelView.adapter = similarModelAdapter
-        val similarFilterButtons = listOf(binding.similarBtnFit, binding.similarBtnTarget, binding.similarBtnStrategy)
-
-        binding.similarBtnFit.setOnClickListener {
-            updateSelection(it, similarFilterButtons)
-            filterAndSortList("적합도")
-        }
-
-        binding.similarBtnTarget.setOnClickListener {
-            updateSelection(it, similarFilterButtons)
-            filterAndSortList("타겟 선호도")
-        }
-
-        binding.similarBtnStrategy.setOnClickListener {
-            updateSelection(it, similarFilterButtons)
-            filterAndSortList("전략")
-        }
-
-        binding.outputFilterTextview.setOnClickListener {
-            binding.outputFilterSpinner.performClick()
-        }
-
-        binding.outputBtnRestart.setOnClickListener {
-            OutputDialogFragment().show(parentFragmentManager, "outputDialog")
-        }
-
+        setModelAdapter()
+        setSearchButton()
+        setRestartBtn()
+        setOutputDialog()
         setupSpinner()
         initializeViewPagerWithDummyData()
         setBackButton()
     }
-
 
     private fun initializeViewPagerWithDummyData() {
         val initialGroupedItems = dummyList.chunked(3)
@@ -163,6 +132,44 @@ class OutputStep1Fragment : Fragment() {
 
         val newgroupedItems = sortedList.chunked(3)
         updateGroupedItemsAdapter(newgroupedItems)
+    }
+
+    private fun setModelAdapter(){
+        val similarModelAdapter = SimilarModelAdapter(similardummyList)
+        binding.outputStep1SimilarModelView.adapter = similarModelAdapter
+        val similarFilterButtons = listOf(binding.similarBtnFit, binding.similarBtnTarget, binding.similarBtnStrategy)
+
+        binding.similarBtnFit.setOnClickListener {
+            updateSelection(it, similarFilterButtons)
+            filterAndSortList("적합도")
+        }
+
+        binding.similarBtnTarget.setOnClickListener {
+            updateSelection(it, similarFilterButtons)
+            filterAndSortList("타겟 선호도")
+        }
+
+        binding.similarBtnStrategy.setOnClickListener {
+            updateSelection(it, similarFilterButtons)
+            filterAndSortList("전략")
+        }
+
+        binding.outputFilterTextview.setOnClickListener {
+            binding.outputFilterSpinner.performClick()
+        }
+    }
+
+    private fun setRestartBtn(){
+        binding.outputBtnRestart.setOnClickListener {
+            OutputDialogFragment().show(parentFragmentManager, "outputDialog")
+        }
+
+    }
+
+    private fun setOutputDialog(){
+        binding.outputBtnRestart.setOnClickListener {
+            OutputDialogFragment().show(parentFragmentManager, "outputDialog")
+        }
     }
 
     private fun setupSpinner() {
@@ -223,10 +230,15 @@ class OutputStep1Fragment : Fragment() {
         }
     }
 
+    private fun setSearchButton() {
+        binding.outputIcon1.setOnClickListener() {
+            findNavController().navigate(R.id.action_outputStep1_to_outputSearch)
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }

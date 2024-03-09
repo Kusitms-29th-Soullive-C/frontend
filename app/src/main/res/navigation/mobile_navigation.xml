@@ -42,7 +42,7 @@
         android:label="InputStartFragment">
         <action
             android:id="@+id/action_inputStart_to_inputStep1"
-            app:destination="@id/inputStep1Fragment"></action>
+            app:destination="@id/inputStep1Fragment"/>
     </fragment>
 
     <fragment
@@ -164,10 +164,23 @@
         android:id="@+id/outputStep1Fragment"
         android:name="com.example.soullive.ui.output_step1.OutputStep1Fragment"
         android:label="OutputStep1Fragment"
-        tools:layout="@layout/fragment_output_step1" >
+        tools:layout="@layout/fragment_output_step1">
+        <action
+            android:id="@+id/action_outputStep1_to_outputSearch"
+            app:destination="@id/outputSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/outputSearchFragment"
+        android:name="com.example.soullive.ui.output_search.OutputSearchFragment"
+        android:label="OutputSearchFragment"
+        tools:layout="@layout/fragment_output_search">
+        <action
+            android:id="@+id/action_outputSearch_to_output"
+            app:destination="@id/outputStep1Fragment" />
         <action
             android:id="@+id/action_outputstep1_to_inputstep1"
-            app:destination="@id/inputStep1Fragment"></action>
+            app:destination="@id/inputStep1Fragment"/>
     </fragment>
 
     <fragment
@@ -177,7 +190,7 @@
         tools:layout="@layout/fragment_output_dialog">
         <action
             android:id="@+id/action_outputdialog_to_inputstep1"
-            app:destination="@id/inputStep1Fragment"></action>
+            app:destination="@id/inputStep1Fragment"/>
     </fragment>
 
     <fragment
