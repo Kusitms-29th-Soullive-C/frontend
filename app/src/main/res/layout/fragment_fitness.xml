@@ -31,7 +31,6 @@
             android:src="@drawable/ic_settings" />
 
         <ImageView
-            android:id="@+id/iv_fitness_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
