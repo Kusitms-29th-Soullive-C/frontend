@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_fitness_to_inputStart"
             app:destination="@id/inputStartFragment" />
+        <action
+            android:id="@+id/action_navigation_fitness_to_outputDetail"
+            app:destination="@id/outputDetailFragment" />
     </fragment>
 
     <fragment
@@ -39,8 +42,7 @@
         android:label="InputStartFragment">
         <action
             android:id="@+id/action_inputStart_to_inputStep1"
-            app:destination="@id/inputStep1Fragment">
-        </action>
+            app:destination="@id/inputStep1Fragment"></action>
     </fragment>
 
     <fragment
@@ -112,9 +114,9 @@
             android:id="@+id/action_inputStep5_to_OutputStep1Fragment"
             app:destination="@id/outputStep1Fragment"
             app:popUpTo="@id/outputStep1Fragment"
-            app:popUpToInclusive="true"
-            />
+            app:popUpToInclusive="true" />
     </fragment>
+
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.soullive.ui.sign_up.SignUpFragment"
@@ -124,20 +126,22 @@
             android:id="@+id/action_signUp_to_eventPopup"
             app:destination="@id/eventPopupFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.soullive.ui.on_boarding.onBoardingFragment"
         android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" >
+        tools:layout="@layout/fragment_on_boarding">
         <action
             android:id="@+id/action_onBoarding_to_signUp"
             app:destination="@id/signUpFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/eventPopupFragment"
         android:name="com.example.soullive.ui.event.eventPopupFragment"
         android:label="fragment_event_popup"
-        tools:layout="@layout/fragment_event_popup" >
+        tools:layout="@layout/fragment_event_popup">
         <action
             android:id="@+id/action_eventPopup_to_navigation_home"
             app:destination="@id/navigation_home" />
@@ -145,11 +149,12 @@
             android:id="@+id/action_eventPopup_to_subscribe"
             app:destination="@id/subscribeFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/subscribeFragment"
         android:name="com.example.soullive.ui.event.SubscribeFragment"
         android:label="fragment_subscribe"
-        tools:layout="@layout/fragment_subscribe" >
+        tools:layout="@layout/fragment_subscribe">
         <action
             android:id="@+id/action_subscribe_to_navigation_home"
             app:destination="@id/navigation_home" />
@@ -159,6 +164,25 @@
         android:id="@+id/outputStep1Fragment"
         android:name="com.example.soullive.ui.output_step1.OutputStep1Fragment"
         android:label="OutputStep1Fragment"
-        tools:layout="@layout/fragment_output_step1" />
+        tools:layout="@layout/fragment_output_step1" >
+        <action
+            android:id="@+id/action_outputstep1_to_inputstep1"
+            app:destination="@id/inputStep1Fragment"></action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/outputDialogFragment"
+        android:name="com.example.soullive.ui.output_step1.OutputDialogFragment"
+        android:label="OutputDialogFragment"
+        tools:layout="@layout/fragment_output_dialog">
+        <action
+            android:id="@+id/action_outputdialog_to_inputstep1"
+            app:destination="@id/inputStep1Fragment"></action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/outputDetailFragment"
+        android:name="com.example.soullive.ui.output_detail.OutputDetailFragment"
+        android:label="OutputDetailFragment" />
 
 </navigation>
