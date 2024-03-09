@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.inputStep4Fragment -> View.GONE
                 R.id.inputStep5Fragment -> View.GONE
                 R.id.outputStep1Fragment -> View.GONE
+                R.id.outputDetailFragment ->View.GONE
                 else -> View.VISIBLE
             }
         }
