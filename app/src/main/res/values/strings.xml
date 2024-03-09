@@ -12,6 +12,9 @@
     <string name="iv_bg_grey800_4dp">grey400 색상의 배경</string>
     <string name="iv_bg_grey500">grey500색상의 배경</string>
     <string name="iv_bg_grey800">grey800색상의 배경</string>
+    <string name="iv_bg_grey700">grey700색상의 배경</string>
+    <string name="iv_bg_purple400">purple400색상의 배경</string>
+    <string name="confirm">확인</string>
 
     <!--on boarding-->
     <string name="모델_정하기_고민_끝">모델 정하기 고민 끝.</string>
@@ -143,11 +146,6 @@
     </string-array>
 
 
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
     <!--fitness-->
     <string name="fitness_title1">어떤 모델이 광고에 적합한지</string>
     <string name="fitness_title2">고민이신가요?</string>
@@ -210,5 +208,70 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- output_detail + tab1 -->
+    <string name="tv_output_detail">상세 분석</string>
+    <string name="download">다운로드 이미지</string>
+    <string name="model_goyyonjung">고윤정</string>
+    <string name="output_detail_model_tag1">묘한 매력이 있는</string>
+    <string name="output_detail_model_tag2">럭셔리한</string>
+    <string name="output_detail_model_tag3">세련된</string>
+    <string name="tv_detail_view1_follower">유효 팔로워 수</string>
+    <string name="tv_detail_view1_follower_num">4.4K</string>
+    <string name="tv_detail_view1_brand">브랜드 평판 지수</string>
+    <string name="tv_detail_view1_brand_rank">11위</string>
+    <string name="tv_detail_view1_brand_rank_num">3,749,215</string>
+    <string name="iv_detail_follower_graph">팔로워 수 그래프</string>
+    <string name="tv_detail_follower_graph_box">팔로워 수</string>
+    <string name="tv_detail_follower_graph_box_date">2022년 01월-12월</string>
+    <string name="tv_detail_model_topic_box">모델의 화제성</string>
+    <string name="iv_detail_model_topic_graph">모델 화제성 그래프</string>
+    <string name="tv_detail_topic_dropdown">고윤정은 최근 환혼과 무빙으로 인기가 급격히 높아진 연기자로 젊은 여자 연기자가 많이 안나오는 요즘 앞으로의 인기는 더 오를 것으로 판단됨.</string>
+    <string name="iv_arrow_down">아래 화살표</string>
+    <string name="tv_detail_model_issue_box">부정이슈</string>
+    <string name="iv_detail_model_issue_graph">부정이슈 그래프</string>
+    <string name="tv_detail_issue_dropdown">성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.</string>
+    <string name="tv_detail_fitness_box">기업과 모델의 적합도</string>
+    <string name="tv_detail_fitness">적합함</string>
+    <string name="iv_fitness_company">pruple500 색상의 기업 아이콘</string>
+    <string name="iv_fitness_model">pruple500 색상의 모델 아이콘</string>
+    <string name="tv_detail_fitness_company_tag1">사람</string>
+    <string name="tv_detail_fitness_company_tag2">시스템</string>
+    <string name="tv_detail_fitness_company_tag3">청량함</string>
+    <string name="tv_detail_fitness_model_tag1">NEW GENERATION</string>
+    <string name="tv_detail_fitness_model_tag2">여전사</string>
+    <string name="tv_detail_model_strategy_box">전략방향</string>
+    <string name="tv_detail_strategy1_img">새롭게 떠오른</string>
+    <string name="tv_detail_strategy2_img">드라마에서 악역에게 시원한 한방을 때려준\n고윤정의 이미지</string>
+    <string name="tv_detail_strategy3_img">&lt;언젠가는 슬기로울 전공의생활&gt; 주연\n프리미엄한 이미지</string>
+    <string name="tv_detail_strategy_dropdown">크러시가 새로운 세대의 맥주를 추구하기 때문에 새롭게 떠오른 고윤정과 이미지가 잘 부합함.\n\n그리고 시원하고 청량함을 강조하는 크러시는 드라마에서 악역에게 시원한 한방을 때려준 고윤정의 이미지와도 잘 어울림.\n\n앞으로 슬기로운 전공의 생활 드라마 주연으로 확정이 되었기 때문에 더 프리미엄한 이미지를 가질 수 있을 것으로 판단됨.</string>
+    <string name="tv_detail_advertisement_box">광고실적</string>
+    <string name="iv_detail_advertisement_arrow">광고 실적을 나열하는 화살표</string>
+    <string name="iv_detail_advertisement1">엘지 로고</string>
+    <string name="iv_detail_advertisement2">팔도 로고</string>
+    <string name="iv_detail_advertisement3">D\'Maris 로고</string>
+    <string name="iv_detail_advertisement4">삼성카드 로고</string>
+    <string name="iv_detail_advertisement5">클리오 로고</string>
+
+    <!--output detail tab2-->
+    <string name="tv_detail_reputation_script1">2024년 2월 배우 브랜드 평판지수로, 해당 모델은 브랜드 평판 지수</string>
+    <string name="tv_detail_reputation_script2">3,749,215</string>
+    <string name="tv_detail_reputation_script3">로 배우 중</string>
+    <string name="tv_detail_reputation_script4">11위</string>
+    <string name="tv_detail_reputation_script5">입니다.</string>
+    <string name="tv_detail_view2_analyze">브랜드 분석</string>
+    <string name="tv_detail_view2_graph1">참여자 수</string>
+    <string name="tv_detail_view2_graph1_num">939,882</string>
+    <string name="tv_detail_view2_graph2">미디어지수</string>
+    <string name="tv_detail_view2_graph2_num">1,951,148</string>
+    <string name="tv_detail_view2_graph3">소통지수</string>
+    <string name="tv_detail_view2_graph3_num">1,868,456</string>
+    <string name="tv_detail_view2_graph4">커뮤니티지수</string>
+    <string name="tv_detail_view2_graph4_num">1,322,997</string>
+
+    <!--output dialog download -->
+    <string name="tv_dialog_download">해당 모델의 상세분석 화면을 \nPDF로 다운로드할게요.</string>
+    <string name="tv_dialog_download_script">앞으로는 내 파일에서 해당 자료를 볼 수 있어요.</string>
+    <string name="dialog_never_see">다시 보지 않기</string>
 
 </resources>
