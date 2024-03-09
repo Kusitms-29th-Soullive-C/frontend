@@ -9,7 +9,12 @@
         android:id="@+id/navigation_home"
         android:name="com.example.soullive.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/homeSearchFragment" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/navigation_fitness"
@@ -42,7 +47,7 @@
         android:label="InputStartFragment">
         <action
             android:id="@+id/action_inputStart_to_inputStep1"
-            app:destination="@id/inputStep1Fragment"/>
+            app:destination="@id/inputStep1Fragment"></action>
     </fragment>
 
     <fragment
@@ -197,5 +202,15 @@
         android:id="@+id/outputDetailFragment"
         android:name="com.example.soullive.ui.output_detail.OutputDetailFragment"
         android:label="OutputDetailFragment" />
+
+    <fragment
+        android:id="@+id/homeSearchFragment"
+        android:name="com.example.soullive.ui.home_search.SearchFragment"
+        android:label="HomeSearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_to_navigation_home"
+            app:destination="@id/navigation_home"></action>
+    </fragment>
 
 </navigation>

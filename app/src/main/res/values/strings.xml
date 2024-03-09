@@ -194,12 +194,18 @@
     <string name="output_search_keyword3">새로 들어간 AI</string>
     <string name="output_search_keyword4">새로 들어간 AI통역 기능 각인</string>
 
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
     <!--output dialog-->
     <string name="output_dialog_title">처음부터 다시 정보를 입력할까요?</string>
     <string name="output_dialog_script">Soulfit은 학습할수록 똑똑해져요!</string>
     <string name="output_dialog_btn1">아니요</string>
     <string name="output_dialog_btn2">좋아요</string>
     <string name="output_dialog_ticket">남은 분석권 1개</string>
+
 
     <!--fitness-->
     <string name="fitness_title1">어떤 모델이 광고에 적합한지</string>
@@ -260,9 +266,32 @@
     <string name="tv_home_rank3_job">운동선수</string>
     <string name="tv_home_rank4_name">차은우</string>
     <string name="tv_home_rank_job_singer">가수</string>
+    <string name="카리나">카리나</string>
+    <string name="잇섭">잇섭</string>
+    <string name="황정음">황정음</string>
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+
+    <!--search-->
+    <string name="궁금한_인플루언서를_검색해보세요">궁금한 인플루언서를 검색해보세요.</string>
+    <string name="최근_검색어">최근 검색어</string>
+    <string name="실시간_검색_순위">실시간 검색 순위</string>
+    <string name="고윤정">고윤정</string>
+    <string name="수지">수지</string>
+    <string name="가수">가수</string>
+    <string name="배우">배우</string>
+    <string name="가수앤배우">가수&amp;배우</string>
+    <string name="일">1</string>
+    <string name="이">2</string>
+    <string name="삼">3</string>
+    <string name="사">4</string>
+    <string name="오">5</string>
+    <string name="이주빈">이주빈</string>
+    <string name="전종서">전종서</string>
+    <string name="지수">지수</string>
 
     <!-- output_detail + tab1 -->
     <string name="tv_output_detail">상세 분석</string>
@@ -328,5 +357,6 @@
     <string name="tv_dialog_download">해당 모델의 상세분석 화면을 \nPDF로 다운로드할게요.</string>
     <string name="tv_dialog_download_script">앞으로는 내 파일에서 해당 자료를 볼 수 있어요.</string>
     <string name="dialog_never_see">다시 보지 않기</string>
+
 
 </resources>

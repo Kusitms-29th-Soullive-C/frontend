@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_900"
-    tools:context=".ui.home.SearchFragment">
+    tools:context=".ui.home_search.SearchFragment">
+
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/search_toolbar"
@@ -37,6 +38,22 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="Suspicious0dp" />
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_search_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp"
+        android:background="@color/grey_800"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_search_field" />
+
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recent_search"
         android:layout_width="match_parent"
@@ -44,8 +61,9 @@
         android:background="@color/grey_800"
         android:paddingHorizontal="20dp"
         android:paddingVertical="24dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_toolbar">
+        app:layout_constraintTop_toBottomOf="@id/home_search_result">
 
         <TextView
             android:id="@+id/tv_recent_search_title"
@@ -169,7 +187,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/model_goyunjung"
+            android:src="@drawable/ic_goyoonjung"
             app:layout_constraintBottom_toBottomOf="@id/iv_real_time_verified1"
             app:layout_constraintStart_toStartOf="@id/iv_real_time_verified1"
             app:layout_constraintTop_toTopOf="@id/iv_real_time_verified1"
@@ -234,7 +252,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/model_suji"
+            android:src="@drawable/ic_goyoonjung"
             app:layout_constraintBottom_toBottomOf="@id/iv_real_time_verified2"
             app:layout_constraintStart_toStartOf="@id/iv_real_time_verified2"
             app:layout_constraintTop_toTopOf="@id/iv_real_time_verified2"
@@ -299,7 +317,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/model_leejubin"
+            android:src="@drawable/ic_goyoonjung"
             app:layout_constraintBottom_toBottomOf="@id/iv_real_time_verified3"
             app:layout_constraintStart_toStartOf="@id/iv_real_time_verified3"
             app:layout_constraintTop_toTopOf="@id/iv_real_time_verified3"
@@ -364,7 +382,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/model_jeonjongseo"
+            android:src="@drawable/ic_goyoonjung"
             app:layout_constraintBottom_toBottomOf="@id/iv_real_time_verified4"
             app:layout_constraintStart_toStartOf="@id/iv_real_time_verified4"
             app:layout_constraintTop_toTopOf="@id/iv_real_time_verified4"
@@ -430,7 +448,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/model_jisu"
+            android:src="@drawable/ic_goyoonjung"
             app:layout_constraintBottom_toBottomOf="@id/iv_real_time_verified5"
             app:layout_constraintStart_toStartOf="@id/iv_real_time_verified5"
             app:layout_constraintTop_toTopOf="@id/iv_real_time_verified5"
