@@ -1,6 +1,7 @@
 package com.example.soullive.ui.output_step1
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -131,6 +132,9 @@ class OutputStep1Fragment : Fragment() {
             binding.outputFilterSpinner.performClick()
         }
 
+        binding.outputBtnRestart.setOnClickListener {
+            OutputDialogFragment().show(parentFragmentManager, "outputDialog")
+        }
 
         setupSpinner()
         initializeViewPagerWithDummyData()

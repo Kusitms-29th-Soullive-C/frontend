@@ -145,6 +145,12 @@
         <item>광고비순</item>
     </string-array>
 
+    <!--output dialog-->
+    <string name="output_dialog_title">처음부터 다시 정보를 입력할까요?</string>
+    <string name="output_dialog_script">Soulfit은 학습할수록 똑똑해져요!</string>
+    <string name="output_dialog_btn1">아니요</string>
+    <string name="output_dialog_btn2">좋아요</string>
+    <string name="output_dialog_ticket">남은 분석권 1개</string>
 
     <!--fitness-->
     <string name="fitness_title1">어떤 모델이 광고에 적합한지</string>
