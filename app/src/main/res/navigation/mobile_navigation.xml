@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_fitness_to_inputStart"
             app:destination="@id/inputStartFragment" />
+        <action
+            android:id="@+id/action_navigation_fitness_to_outputDetail"
+            app:destination="@id/outputDetailFragment" />
     </fragment>
 
     <fragment
@@ -118,6 +121,7 @@
             app:popUpTo="@id/outputStep1Fragment"
             app:popUpToInclusive="true" />
     </fragment>
+
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.soullive.ui.sign_up.SignUpFragment"
@@ -127,6 +131,7 @@
             android:id="@+id/action_signUp_to_eventPopup"
             app:destination="@id/eventPopupFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.soullive.ui.on_boarding.onBoardingFragment"
@@ -136,6 +141,7 @@
             android:id="@+id/action_onBoarding_to_signUp"
             app:destination="@id/signUpFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/eventPopupFragment"
         android:name="com.example.soullive.ui.event.eventPopupFragment"
@@ -148,6 +154,7 @@
             android:id="@+id/action_eventPopup_to_subscribe"
             app:destination="@id/subscribeFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/subscribeFragment"
         android:name="com.example.soullive.ui.event.SubscribeFragment"
@@ -162,7 +169,39 @@
         android:id="@+id/outputStep1Fragment"
         android:name="com.example.soullive.ui.output_step1.OutputStep1Fragment"
         android:label="OutputStep1Fragment"
-        tools:layout="@layout/fragment_output_step1" />
+        tools:layout="@layout/fragment_output_step1">
+        <action
+            android:id="@+id/action_outputStep1_to_outputSearch"
+            app:destination="@id/outputSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/outputSearchFragment"
+        android:name="com.example.soullive.ui.output_search.OutputSearchFragment"
+        android:label="OutputSearchFragment"
+        tools:layout="@layout/fragment_output_search">
+        <action
+            android:id="@+id/action_outputSearch_to_output"
+            app:destination="@id/outputStep1Fragment" />
+        <action
+            android:id="@+id/action_outputstep1_to_inputstep1"
+            app:destination="@id/inputStep1Fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/outputDialogFragment"
+        android:name="com.example.soullive.ui.output_step1.OutputDialogFragment"
+        android:label="OutputDialogFragment"
+        tools:layout="@layout/fragment_output_dialog">
+        <action
+            android:id="@+id/action_outputdialog_to_inputstep1"
+            app:destination="@id/inputStep1Fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/outputDetailFragment"
+        android:name="com.example.soullive.ui.output_detail.OutputDetailFragment"
+        android:label="OutputDetailFragment" />
 
     <fragment
         android:id="@+id/homeSearchFragment"
