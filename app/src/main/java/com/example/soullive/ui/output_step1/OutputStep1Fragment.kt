@@ -31,11 +31,11 @@ class OutputStep1Fragment : Fragment() {
     private val binding get() = _binding!!
 
     val dummyList = listOf(
-        Model("고윤정", "배우", listOf("Keyword1", "Keyword2"), 1, 95, 3, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_goyoonjung),
-        Model("잇섭", "유튜버", listOf("Keyword1", "Keyword2"), 2, 88, 4, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_itsub),
-        Model("한소희", "배우", listOf("도도한", "럭셔리한", "호감형의"), 3, 33, 1, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_sohee),
-        Model("고윤정4", "배우", listOf("Keyword1", "Keyword2"), 4, 100, 5, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_output4),
-        Model("이재욱", "배우", listOf("Keyword1", "Keyword2"), 5, 98, 2, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_output5),
+        Model("고윤정", "배우", listOf("스타일리시한", "매력적인", "패션 센스"), 1, 95, 3, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_goyoonjung),
+        Model("잇섭", "유튜버", listOf("정보통", "매력있는", "신뢰도 높은"), 2, 88, 4, "이전에 갤럭시 광고 관련 논란을 빚어 계약 성사가 어려울 듯함", "똑똑한", R.drawable.ic_itsub),
+        Model("한소희", "배우", listOf("도도한", "럭셔리한", "호감형의"), 3, 33, 1, "모친 빚투 논란", "예쁨", R.drawable.ic_sohee),
+        Model("이선빈", "배우", listOf("다재다능한", "매력적인", "예술적인"), 4, 100, 5, "알려진 바 없음", "럭셔리", R.drawable.ic_output4),
+        Model("이재욱", "배우", listOf("잘생긴", "훈훈한"), 5, 98, 2, "최근 카리나와의 열애설 논란","잘생긴", R.drawable.ic_output5),
     )
 
     val similardummyList = listOf(
