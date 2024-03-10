@@ -17,12 +17,7 @@ data class KeywordModel(
     val keyword: String,
 ) {
     companion object {
-        val KeywordList = mutableListOf(
-            KeywordModel("프리미엄"),
-            KeywordModel("프리미엄라인인 S시리즈 강조"),
-            KeywordModel("새로 들어간 AI "),
-            KeywordModel("새로 들어간 AI통역 기능 각인"),
-        )
+        val KeywordList: MutableList<KeywordModel> = mutableListOf()
     }
 }
 
