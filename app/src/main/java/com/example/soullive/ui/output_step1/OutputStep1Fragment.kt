@@ -110,11 +110,7 @@ class OutputStep1Fragment : Fragment() {
         setupSpinner()
         initializeViewPagerWithDummyData()
         setBackButton()
-
-        val gotoDetailTextView = view.findViewById<TextView>(R.id.output_gotoDetail)
-        gotoDetailTextView.setOnClickListener {
-            findNavController().navigate(R.id.action_outputStep1_to_outputDetail)
-        }
+        goToDetail()
     }
 
     private fun initializeViewPagerWithDummyData() {
@@ -241,6 +237,13 @@ class OutputStep1Fragment : Fragment() {
     private fun setSearchButton() {
         binding.outputIcon1.setOnClickListener() {
             findNavController().navigate(R.id.action_outputStep1_to_outputSearch)
+        }
+    }
+
+    private fun goToDetail() {
+        val gotoDetailTextView = view?.findViewById<TextView>(R.id.output_gotoDetail)
+        gotoDetailTextView?.setOnClickListener {
+            findNavController().navigate(R.id.action_outputStep1_to_outputDetail)
         }
     }
 
