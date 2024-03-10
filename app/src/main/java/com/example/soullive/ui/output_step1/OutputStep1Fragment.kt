@@ -296,8 +296,7 @@ class OutputStep1Fragment : Fragment() {
 
     private fun setBackButton() {
         binding.outputStep1Toolbar.setNavigationOnClickListener {
-            val navController = findNavController()
-            navController.navigateUp()
+            findNavController().navigate(R.id.action_outputStep1_to_navigation_home)
         }
     }
 

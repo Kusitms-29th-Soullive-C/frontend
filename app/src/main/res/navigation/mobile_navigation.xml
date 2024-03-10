@@ -173,6 +173,9 @@
         <action
             android:id="@+id/action_outputStep1_to_outputDetail"
             app:destination="@id/outputDetailFragment" />
+        <action
+            android:id="@+id/action_outputStep1_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 
     <fragment
@@ -210,7 +213,7 @@
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_search_to_navigation_home"
-            app:destination="@id/navigation_home"/>
+            app:destination="@id/navigation_home" />
     </fragment>
 
 </navigation>
