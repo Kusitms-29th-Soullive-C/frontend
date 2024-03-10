@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.soullive.R
 import com.google.android.material.tabs.TabLayoutMediator
 import com.example.soullive.databinding.FragmentOutputDetailBinding
 
@@ -25,6 +27,13 @@ class OutputDetailFragment : Fragment() {
         setViewPagerTabs()
         setBookmarkClick()
         setDownloadClick()
+        setBackButton()
+    }
+
+    private fun setBackButton() {
+        binding.outputDetailToolbar.setNavigationOnClickListener {
+            findNavController().navigate(R.id.action_outputDetail_to_outputStep1)
+        }
     }
 
     private fun setViewPagerTabs() {

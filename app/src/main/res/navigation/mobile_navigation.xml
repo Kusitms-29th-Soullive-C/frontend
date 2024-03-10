@@ -204,7 +204,11 @@
     <fragment
         android:id="@+id/outputDetailFragment"
         android:name="com.example.soullive.ui.output_detail.OutputDetailFragment"
-        android:label="OutputDetailFragment" />
+        android:label="OutputDetailFragment" >
+        <action
+            android:id="@+id/action_outputDetail_to_outputStep1"
+            app:destination="@id/outputStep1Fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/homeSearchFragment"
