@@ -28,9 +28,6 @@ class FitnessFragment : Fragment() {
         binding.fitnessBtn.setOnClickListener {
             findNavController().navigate(R.id.action_fitness_to_inputStart)
         }
-        binding.ivFitnessSearch.setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_fitness_to_outputDetail)
-        }
     }
 
     override fun onDestroyView() {

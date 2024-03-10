@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.soullive.R
 import com.example.soullive.databinding.FragmentOutputStep1Binding
@@ -159,6 +160,7 @@ class OutputStep1Fragment : Fragment() {
         setupSpinner()
         initializeViewPagerWithDummyData()
         setBackButton()
+        goToDetail()
     }
 
     private fun initializeViewPagerWithDummyData() {
@@ -214,6 +216,8 @@ class OutputStep1Fragment : Fragment() {
         binding.outputFilterTextview.setOnClickListener {
             binding.outputFilterSpinner.performClick()
         }
+
+
     }
 
     private fun setRestartBtn() {
@@ -303,6 +307,13 @@ class OutputStep1Fragment : Fragment() {
         }
     }
 
+
+    private fun goToDetail() {
+        val gotoDetailTextView = view?.findViewById<TextView>(R.id.output_gotoDetail)
+        gotoDetailTextView?.setOnClickListener {
+            findNavController().navigate(R.id.action_outputStep1_to_outputDetail)
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

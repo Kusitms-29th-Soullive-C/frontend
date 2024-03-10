@@ -61,7 +61,10 @@
     <string name="SoulFit">SoulFit</string>
     <string name="이용약관">이용약관</string>
     <string name="본인은_기업_관계자이며_약관_내용을_확인하였습니다">본인은 기업 관계자이며, 약관 내용을 확인하였습니다.</string>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3bab5021e16b8d6286f78dee5a9e302501d55cdc
 
     <!--search-->
     <string name="궁금한_인플루언서를_검색해보세요">궁금한 인플루언서를 검색해보세요.</string>
@@ -247,16 +250,16 @@
     <string name="tv_home_rank3_job">운동선수</string>
     <string name="tv_home_rank4_name">차은우</string>
     <string name="tv_home_rank_job_singer">가수</string>
-    <string name="카리나">카리나</string>
-    <string name="잇섭">잇섭</string>
-    <string name="황정음">황정음</string>
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3bab5021e16b8d6286f78dee5a9e302501d55cdc
     <!-- output_detail + tab1 -->
     <string name="tv_output_detail">상세 분석</string>
     <string name="download">다운로드 이미지</string>

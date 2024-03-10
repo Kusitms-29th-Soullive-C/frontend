@@ -24,9 +24,6 @@
         <action
             android:id="@+id/action_fitness_to_inputStart"
             app:destination="@id/inputStartFragment" />
-        <action
-            android:id="@+id/action_navigation_fitness_to_outputDetail"
-            app:destination="@id/outputDetailFragment" />
     </fragment>
 
     <fragment
@@ -47,7 +44,7 @@
         android:label="InputStartFragment">
         <action
             android:id="@+id/action_inputStart_to_inputStep1"
-            app:destination="@id/inputStep1Fragment"></action>
+            app:destination="@id/inputStep1Fragment" />
     </fragment>
 
     <fragment
@@ -213,7 +210,7 @@
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_search_to_navigation_home"
-            app:destination="@id/navigation_home"></action>
+            app:destination="@id/navigation_home"/>
     </fragment>
 
 </navigation>
