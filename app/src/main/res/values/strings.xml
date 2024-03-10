@@ -22,9 +22,6 @@
     <string name="환영합니다">환영합니다!</string>
     <string name="삼초_가입으로_적합한_모델을_만나보세요">3초 가입으로 적합한 모델을 만나보세요.</string>
     <string name="시작하기">시작하기</string>
-    <string name="카리나">카리나</string>
-    <string name="잇섭">잇섭</string>
-    <string name="황정음">황정음</string>
 
 
     <!--event popup-->
@@ -64,23 +61,7 @@
     <string name="SoulFit">SoulFit</string>
     <string name="이용약관">이용약관</string>
     <string name="본인은_기업_관계자이며_약관_내용을_확인하였습니다">본인은 기업 관계자이며, 약관 내용을 확인하였습니다.</string>
-    <!--search-->
-    <string name="궁금한_인플루언서를_검색해보세요">궁금한 인플루언서를 검색해보세요.</string>
-    <string name="최근_검색어">최근 검색어</string>
-    <string name="실시간_검색_순위">실시간 검색 순위</string>
-    <string name="고윤정">고윤정</string>
-    <string name="수지">수지</string>
-    <string name="가수">가수</string>
-    <string name="배우">배우</string>
-    <string name="가수앤배우">가수&amp;배우</string>
-    <string name="일">1</string>
-    <string name="이">2</string>
-    <string name="삼">3</string>
-    <string name="사">4</string>
-    <string name="오">5</string>
-    <string name="이주빈">이주빈</string>
-    <string name="전종서">전종서</string>
-    <string name="지수">지수</string>
+
 
     <!--search-->
     <string name="궁금한_인플루언서를_검색해보세요">궁금한 인플루언서를 검색해보세요.</string>
@@ -275,23 +256,6 @@
 
 
 
-    <!--search-->
-    <string name="궁금한_인플루언서를_검색해보세요">궁금한 인플루언서를 검색해보세요.</string>
-    <string name="최근_검색어">최근 검색어</string>
-    <string name="실시간_검색_순위">실시간 검색 순위</string>
-    <string name="고윤정">고윤정</string>
-    <string name="수지">수지</string>
-    <string name="가수">가수</string>
-    <string name="배우">배우</string>
-    <string name="가수앤배우">가수&amp;배우</string>
-    <string name="일">1</string>
-    <string name="이">2</string>
-    <string name="삼">3</string>
-    <string name="사">4</string>
-    <string name="오">5</string>
-    <string name="이주빈">이주빈</string>
-    <string name="전종서">전종서</string>
-    <string name="지수">지수</string>
 
     <!-- output_detail + tab1 -->
     <string name="tv_output_detail">상세 분석</string>

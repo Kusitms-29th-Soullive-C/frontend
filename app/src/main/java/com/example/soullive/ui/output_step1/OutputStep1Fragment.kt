@@ -31,11 +31,61 @@ class OutputStep1Fragment : Fragment() {
     private val binding get() = _binding!!
 
     val dummyList = listOf(
-        Model("고윤정", "배우", listOf("Keyword1", "Keyword2"), 1, 95, 3, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_goyoonjung),
-        Model("잇섭", "유튜버", listOf("Keyword1", "Keyword2"), 2, 88, 4, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_itsub),
-        Model("한소희", "배우", listOf("도도한", "럭셔리한", "호감형의"), 3, 33, 1, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_sohee),
-        Model("고윤정4", "배우", listOf("Keyword1", "Keyword2"), 4, 100, 5, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_output4),
-        Model("이재욱", "배우", listOf("Keyword1", "Keyword2"), 5, 98, 2, "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.", "럭셔리", R.drawable.ic_output5),
+        Model(
+            "고윤정",
+            "배우",
+            listOf("Keyword1", "Keyword2"),
+            1,
+            95,
+            3,
+            "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.",
+            "럭셔리",
+            R.drawable.ic_goyoonjung
+        ),
+        Model(
+            "잇섭",
+            "유튜버",
+            listOf("Keyword1", "Keyword2"),
+            2,
+            88,
+            4,
+            "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.",
+            "럭셔리",
+            R.drawable.ic_itsub
+        ),
+        Model(
+            "한소희",
+            "배우",
+            listOf("도도한", "럭셔리한", "호감형의"),
+            3,
+            33,
+            1,
+            "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.",
+            "럭셔리",
+            R.drawable.ic_sohee
+        ),
+        Model(
+            "고윤정4",
+            "배우",
+            listOf("Keyword1", "Keyword2"),
+            4,
+            100,
+            5,
+            "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.",
+            "럭셔리",
+            R.drawable.ic_output4
+        ),
+        Model(
+            "이재욱",
+            "배우",
+            listOf("Keyword1", "Keyword2"),
+            5,
+            98,
+            2,
+            "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.",
+            "럭셔리",
+            R.drawable.ic_output5
+        ),
     )
 
     val similardummyList = listOf(
@@ -113,10 +163,16 @@ class OutputStep1Fragment : Fragment() {
 
     private fun initializeViewPagerWithDummyData() {
         val initialGroupedItems = dummyList.chunked(3)
-        var groupedItemsAdapter = GroupedItemsAdapter(initialGroupedItems)
+        var groupedItemsAdapter =
+            GroupedItemsAdapter(initialGroupedItems, onGotoDetailClicked = { model ->
+                findNavController().navigate(R.id.action_outputStep1_to_outputDetail)
+            })
         binding.outputStep1ModelView.adapter = groupedItemsAdapter
 
-        TabLayoutMediator(binding.outputStep1TabDots, binding.outputStep1ModelView) { tab, position ->
+        TabLayoutMediator(
+            binding.outputStep1TabDots,
+            binding.outputStep1ModelView
+        ) { tab, position ->
 
         }.attach()
     }
@@ -134,10 +190,11 @@ class OutputStep1Fragment : Fragment() {
         updateGroupedItemsAdapter(newgroupedItems)
     }
 
-    private fun setModelAdapter(){
+    private fun setModelAdapter() {
         val similarModelAdapter = SimilarModelAdapter(similardummyList)
         binding.outputStep1SimilarModelView.adapter = similarModelAdapter
-        val similarFilterButtons = listOf(binding.similarBtnFit, binding.similarBtnTarget, binding.similarBtnStrategy)
+        val similarFilterButtons =
+            listOf(binding.similarBtnFit, binding.similarBtnTarget, binding.similarBtnStrategy)
 
         binding.similarBtnFit.setOnClickListener {
             updateSelection(it, similarFilterButtons)
@@ -159,14 +216,14 @@ class OutputStep1Fragment : Fragment() {
         }
     }
 
-    private fun setRestartBtn(){
+    private fun setRestartBtn() {
         binding.outputBtnRestart.setOnClickListener {
             OutputDialogFragment().show(parentFragmentManager, "outputDialog")
         }
 
     }
 
-    private fun setOutputDialog(){
+    private fun setOutputDialog() {
         binding.outputBtnRestart.setOnClickListener {
             OutputDialogFragment().show(parentFragmentManager, "outputDialog")
         }
@@ -182,23 +239,33 @@ class OutputStep1Fragment : Fragment() {
             binding.outputFilterSpinner.adapter = adapter
         }
 
-        binding.outputFilterSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                when (position) {
-                    0 -> sortAndGroupListBy("적합도순")
-                    1 -> sortAndGroupListBy("화제성순")
-                    2 -> sortAndGroupListBy("광고비순")
+        binding.outputFilterSpinner.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
+                ) {
+                    when (position) {
+                        0 -> sortAndGroupListBy("적합도순")
+                        1 -> sortAndGroupListBy("화제성순")
+                        2 -> sortAndGroupListBy("광고비순")
+                    }
+                    binding.outputFilterTextview.text =
+                        parent.getItemAtPosition(position).toString()
                 }
-                binding.outputFilterTextview.text = parent.getItemAtPosition(position).toString()
-            }
 
-            override fun onNothingSelected(parent: AdapterView<*>) {}
-        }
+                override fun onNothingSelected(parent: AdapterView<*>) {}
+            }
     }
 
 
     private fun updateGroupedItemsAdapter(newgroupedItems: List<List<Model>>) {
-        val groupedItemsAdapter = GroupedItemsAdapter(newgroupedItems)
+        val groupedItemsAdapter =
+            GroupedItemsAdapter(newgroupedItems, onGotoDetailClicked = { model ->
+                findNavController().navigate(R.id.action_outputStep1_to_outputDetail)
+            })
         groupedItemsAdapter.updateData(newgroupedItems)
         binding.outputStep1ModelView.adapter = groupedItemsAdapter
     }
@@ -235,6 +302,7 @@ class OutputStep1Fragment : Fragment() {
             findNavController().navigate(R.id.action_outputStep1_to_outputSearch)
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
