@@ -3,11 +3,12 @@ package com.example.soullive.ui.output_step1
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
 
-class GroupedItemsAdapter(private var groupedItems: List<List<Model>>) : RecyclerView.Adapter<GroupedItemsAdapter.ViewHolder>() {
+class GroupedItemsAdapter(private var groupedItems: List<List<Model>>, private val onGotoDetailClicked: (Model) -> Unit) : RecyclerView.Adapter<GroupedItemsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val itemsRecyclerView: RecyclerView = view.findViewById(R.id.output_step1_modelGroup)
@@ -32,8 +33,11 @@ class GroupedItemsAdapter(private var groupedItems: List<List<Model>>) : Recycle
         }
         with(holder.itemsRecyclerView) {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-            adapter = OutputModelAdapter(groupedItems[position], startRanks[position])
+            adapter = OutputModelAdapter(groupedItems[position], startRanks[position], onGotoDetailClick = { model ->
+                onGotoDetailClicked.invoke(model)
+            } )
         }
+
     }
 
     override fun getItemCount(): Int = groupedItems.size

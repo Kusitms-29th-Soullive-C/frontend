@@ -33,7 +33,7 @@ class SimilarModelAdapter(private var modelList: List<Map<String, Any>>) : Recyc
         holder.modelImage.setImageResource(item["이미지"] as Int)
 
         val Rank = position + 1
-        holder.modelRank.setText(Rank.toString())
+        holder.modelRank.text = Rank.toString()
     }
 
     override fun getItemCount(): Int {
