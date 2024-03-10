@@ -91,52 +91,52 @@ class OutputStep1Fragment : Fragment() {
 
     val similardummyList = listOf(
         mapOf(
-            "이름" to "고윤정",
+            "이름" to "이주빈",
             "직업" to "모델",
             "적합도" to 9,
             "타겟선호도" to 1,
             "전략" to 2,
-            "이미지" to R.drawable.ic_goyoonjung
+            "이미지" to R.drawable.model_leejubin
         ),
         mapOf(
-            "이름" to "고윤정2",
+            "이름" to "문숙",
             "직업" to "모델",
             "적합도" to 8,
             "타겟선호도" to 5,
             "전략" to 3,
-            "이미지" to R.drawable.ic_goyoonjung
+            "이미지" to R.drawable.model_moonsook
         ),
         mapOf(
-            "이름" to "고윤정3",
-            "직업" to "모델",
+            "이름" to "수지",
+            "직업" to "가수",
             "적합도" to 7,
             "타겟선호도" to 3,
             "전략" to 4,
-            "이미지" to R.drawable.ic_goyoonjung
+            "이미지" to R.drawable.model_suji
         ),
         mapOf(
-            "이름" to "고윤정4",
-            "직업" to "모델",
+            "이름" to "임영웅",
+            "직업" to "가수",
             "적합도" to 6,
             "타겟선호도" to 10,
             "전략" to 5,
-            "이미지" to R.drawable.ic_goyoonjung
+            "이미지" to R.drawable.model_youngyoong
         ),
         mapOf(
-            "이름" to "고윤정5",
-            "직업" to "모델",
+            "이름" to "지수",
+            "직업" to "아이돌",
             "적합도" to 5,
             "타겟선호도" to 11,
             "전략" to 6,
-            "이미지" to R.drawable.ic_goyoonjung
+            "이미지" to R.drawable.model_jisu
         ),
         mapOf(
-            "이름" to "고윤정6",
+            "이름" to "고수",
             "직업" to "모델",
             "적합도" to 4,
             "타겟선호도" to 1,
             "전략" to 8,
-            "이미지" to R.drawable.ic_goyoonjung
+            "이미지" to R.drawable.ic_gosu
         ),
     )
 
