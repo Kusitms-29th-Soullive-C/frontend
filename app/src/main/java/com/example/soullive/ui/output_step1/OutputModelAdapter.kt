@@ -20,6 +20,9 @@ class OutputModelAdapter(private val items: List<Model>, private val startRank: 
         val detailConatiner: LinearLayout = view.findViewById(R.id.output_model_Detail)
         val rankTextView: TextView = view.findViewById(R.id.output_rankTextView)
         val relevanceTextView: TextView = view.findViewById(R.id.output_relevanceTextView)
+        val negativeIssue : TextView = view.findViewById(R.id.output_negativeIssuesTextView)
+        val hotness : TextView = view.findViewById(R.id.output_hotnessTextView)
+        val imageText : TextView = view.findViewById(R.id.output_imageTextView)
         val bookmark: ImageView = view.findViewById(R.id.output_icon_bookmark)
         val ItemRankText: TextView = view.findViewById(R.id.output_item_index)
         val goToDetail : TextView = view.findViewById(R.id.output_gotoDetail)
@@ -30,6 +33,9 @@ class OutputModelAdapter(private val items: List<Model>, private val startRank: 
             jobTextView.text = item.job
             rankTextView.text = "${item.rank}순위"
             relevanceTextView.text = "적합도 ${item.relevance}점"
+            negativeIssue.text = item.negativeIssues
+            hotness.text = "타겟 선호도 ${item.hotness}위"
+            imageText.text = item.ImageText
             ModelImageView.setImageResource(item.imageResId)
 
             val keywords = item.keywords as? List<String> ?: emptyList()
