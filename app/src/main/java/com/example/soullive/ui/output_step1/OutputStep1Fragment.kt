@@ -39,6 +39,7 @@ data class ApiResponse(
     val message: String,
     val data: List<ModelData>
 )
+
 data class ModelData(
     val outputId: Int,
     val modelId: Int,
@@ -201,7 +202,6 @@ class OutputStep1Fragment : Fragment() {
         setRestartBtn()
         setOutputDialog()
         setupSpinner()
-        initializeViewPagerWithDummyData()
         setBackButton()
         initializeRetrofit()
         goToDetail()
@@ -226,6 +226,7 @@ class OutputStep1Fragment : Fragment() {
                 if (response.status == 200) {
                     apiList.addAll(response.data.map { it.toModel() })
                     Log.d("api", apiList.toString())
+                    initializeViewPagerWithDummyData()
                 } else {
                     Log.d("api", "API 호출 실패: ${response.message}")
                 }
@@ -234,8 +235,9 @@ class OutputStep1Fragment : Fragment() {
             }
         }
     }
+
     private fun initializeViewPagerWithDummyData() {
-        val initialGroupedItems = dummyList.chunked(3)
+        val initialGroupedItems = apiList.chunked(3)
         var groupedItemsAdapter =
             GroupedItemsAdapter(initialGroupedItems, onGotoDetailClicked = { model ->
                 findNavController().navigate(R.id.action_outputStep1_to_outputDetail)
@@ -253,10 +255,10 @@ class OutputStep1Fragment : Fragment() {
 
     private fun sortAndGroupListBy(criteria: String) {
         val sortedList = when (criteria) {
-            "적합도순" -> dummyList.sortedBy { it.rank }
-            "광고비순" -> dummyList.sortedBy { it.relevance }
-            "화제성순" -> dummyList.sortedBy { it.hotness }
-            else -> dummyList
+            "적합도순" -> apiList.sortedBy { it.rank }
+            "광고비순" -> apiList.sortedBy { it.relevance }
+            "화제성순" -> apiList.sortedBy { it.hotness }
+            else -> apiList
         }
 
         val newgroupedItems = sortedList.chunked(3)
