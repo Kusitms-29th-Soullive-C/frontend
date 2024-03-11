@@ -1,6 +1,7 @@
 package com.example.soullive.ui.output_step1
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,13 @@ import androidx.navigation.fragment.findNavController
 import com.example.soullive.R
 import com.example.soullive.databinding.FragmentOutputStep1Binding
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
+import com.example.soullive.BuildConfig
 
 data class Model(
     val name: String,
@@ -26,10 +34,45 @@ data class Model(
     var isBookmarked: Boolean = false,
 )
 
+data class ApiResponse(
+    val status: Int,
+    val message: String,
+    val data: List<ModelData>
+)
+data class ModelData(
+    val outputId: Int,
+    val modelId: Int,
+    val modelName: String,
+    val job: String,
+    val mood: List<String>,
+    val ranking: Int,
+    val fitness: Int,
+    val issue: Int,
+    val negativity: String,
+    val image: String,
+    val strategy: String
+) {
+    fun toModel(): Model {
+        return Model(
+            modelName,
+            job,
+            mood,
+            ranking,
+            fitness,
+            issue,
+            negativity,
+            image,
+            R.drawable.ic_goyoonjung
+        )
+    }
+}
+
 class OutputStep1Fragment : Fragment() {
 
     private var _binding: FragmentOutputStep1Binding? = null
     private val binding get() = _binding!!
+
+    private val apiList = mutableListOf<Model>()
 
     val dummyList = listOf(
         Model(
@@ -160,9 +203,37 @@ class OutputStep1Fragment : Fragment() {
         setupSpinner()
         initializeViewPagerWithDummyData()
         setBackButton()
+        initializeRetrofit()
         goToDetail()
     }
 
+    interface ApiService {
+        @GET("api/output/1/list")
+        suspend fun getModels(): ApiResponse
+    }
+
+    private fun initializeRetrofit() {
+        val retrofit = Retrofit.Builder()
+            .baseUrl(BuildConfig.API_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val apiService = retrofit.create(ApiService::class.java)
+
+        CoroutineScope(Dispatchers.Main).launch {
+            try {
+                val response = apiService.getModels()
+                if (response.status == 200) {
+                    apiList.addAll(response.data.map { it.toModel() })
+                    Log.d("api", apiList.toString())
+                } else {
+                    Log.d("api", "API 호출 실패: ${response.message}")
+                }
+            } catch (e: Exception) {
+                Log.d("api", "API 호출 실패", e)
+            }
+        }
+    }
     private fun initializeViewPagerWithDummyData() {
         val initialGroupedItems = dummyList.chunked(3)
         var groupedItemsAdapter =
