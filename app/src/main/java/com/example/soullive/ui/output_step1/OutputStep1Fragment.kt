@@ -30,7 +30,7 @@ data class Model(
     val hotness: Int,
     val negativeIssues: String,
     val ImageText: String,
-    val imageResId: Int,
+    val imageUrl: String,
     var isBookmarked: Boolean = false,
 )
 
@@ -44,6 +44,7 @@ data class ModelData(
     val outputId: Int,
     val modelId: Int,
     val modelName: String,
+    val modelImg: String,
     val job: String,
     val mood: List<String>,
     val ranking: Int,
@@ -63,7 +64,7 @@ data class ModelData(
             issue,
             negativity,
             image,
-            R.drawable.ic_goyoonjung
+            modelImg
         )
     }
 }
@@ -85,7 +86,7 @@ class OutputStep1Fragment : Fragment() {
             3,
             "성형논란이 있었으나 악의적 편집으로 밝혀짐. 이 사건 때 동창들이 나서서 변호를 해주는 것으로 보아 학창시절 논란은 없을 것으로 판단 됨.",
             "럭셔리",
-            R.drawable.ic_goyoonjung
+            "url"
         ),
         Model(
             "잇섭",
@@ -96,7 +97,7 @@ class OutputStep1Fragment : Fragment() {
             4,
             "이전에 갤럭시 광고 관련 논란을 빚어 계약 성사가 어려울 듯함",
             "똑똑한",
-            R.drawable.ic_itsub
+            "url"
         ),
         Model(
             "한소희",
@@ -107,7 +108,7 @@ class OutputStep1Fragment : Fragment() {
             1,
             "모친 빚투 논란",
             "예쁨",
-            R.drawable.ic_sohee
+            "url"
         ),
         Model(
             "이선빈",
@@ -118,7 +119,7 @@ class OutputStep1Fragment : Fragment() {
             5,
             "알려진 바 없음",
             "럭셔리",
-            R.drawable.ic_output4
+            "url"
         ),
         Model(
             "이재욱",
@@ -129,7 +130,7 @@ class OutputStep1Fragment : Fragment() {
             2,
             "최근 카리나와의 열애설 논란",
             "잘생긴",
-            R.drawable.ic_output5
+            "url"
         ),
     )
 

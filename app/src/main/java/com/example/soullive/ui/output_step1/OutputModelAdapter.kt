@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soullive.R
+import com.squareup.picasso.Picasso
+
 
 class OutputModelAdapter(private val items: List<Model>, private val startRank: Int, private val onGotoDetailClick: (Model) -> Unit) : RecyclerView.Adapter<OutputModelAdapter.ItemViewHolder>() {
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -36,7 +38,7 @@ class OutputModelAdapter(private val items: List<Model>, private val startRank: 
             negativeIssue.text = item.negativeIssues
             hotness.text = "타겟 선호도 ${item.hotness}위"
             imageText.text = item.ImageText
-            ModelImageView.setImageResource(item.imageResId)
+            Picasso.get().load(item.imageUrl).into(ModelImageView)
 
             val keywords = item.keywords as? List<String> ?: emptyList()
             keywordsContainer.removeAllViews()
